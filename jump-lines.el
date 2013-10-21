@@ -1,12 +1,19 @@
 
 ;; ----------- [ Binary navigation
  (defun move-middle-line  () (interactive)
+   (forward-word 1)
+   (backward-word 1)
+
+   (setq l (what-cursor-position))
+   (setq l (replace-regexp-in-string ".+=" "" l))
+   (setq m (string-to-number l))
+
    (move-end-of-line 1)
    (setq l (what-cursor-position))
    (setq l (replace-regexp-in-string ".+=" "" l))
    (setq n (/ (string-to-number l) 2))
-   (move-to-column n)
-
+   (move-to-column (+ n m))
+   
 )
 
 (defun jump-forward (lines)

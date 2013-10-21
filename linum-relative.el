@@ -106,13 +106,13 @@
 				     linum-relative-current-symbol
 			         (number-to-string diff)))
 	     (face (if current-p 'linum-relative-current-face 'linum)))
+ 
     (propertize (format linum-relative-format 
-			;; (substring "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" 
+			(if (< (string-to-number current-symbol) 78) 
 			(substring "     a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  q  r  s  t  u  v  w  x  y  z aa bb cc dd ee ff gg hh ii jj kk ll mm nn oo pp qq rr ss tt uu vv ww xx yy zzaaabbbcccdddeeefffhhhgggiiijjjkkklllmmmnnnooopppqqqrrrssstttuuuvvvwwwxxxyyyzzz"
 				    
 				   (* 3 (string-to-number current-symbol))
-				    (+ (* 3 (string-to-number current-symbol)) 3) 
-				     ))
+				   (+ (* 3 (string-to-number current-symbol)) 3)) "-" )) 
 		'face face)))
 
 
