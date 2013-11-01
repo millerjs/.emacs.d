@@ -4,8 +4,7 @@
 (load-file "~/.emacs.d/title.el")
 (load-file "~/.emacs.d/latex_macros.el")
 (load-file "~/.emacs.d/rainbow-delimiters.el")
-;; (load-file "~/.emacs.d/control-lock.el")
-(load-file "~/.emacs.d/navigation-mode.el")
+(load-file "~/.emacs.d/external_scripts.el")
 (load-file "~/.emacs.d/jump-lines.el")
 (require 'rainbow-delimiters)
 (require 'linum-relative)
@@ -41,6 +40,8 @@
 (global-set-key (kbd "C-x C-m") 'comment-or-uncomment-region-or-line)
 (global-set-key (kbd "C-x s") 'save-buffer)
 (global-set-key (kbd "C-c s") 'ispell)
+(global-set-key (kbd "C-c f") 'add-environ)
+
 
 (global-set-key (kbd "C-x w") 'just-one-space) 
 (global-set-key (kbd "C-x g") 'replace-string)
@@ -366,4 +367,26 @@
 ;; (global-set-key (kbd "C-f") 'nav-mode)
 
 
+;; Creating a new menu pane in the menu bar to the right of “Tools” menu
 
+(define-key global-map [menu-bar tools] nil)
+(define-key global-map [menu-bar file] nil)
+(define-key global-map [menu-bar edit] nil)
+(define-key global-map [menu-bar options] nil)
+(define-key global-map [menu-bar buffer] nil)
+
+(define-key-after
+  global-map
+  [menu-bar mymenu]
+  (cons
+   "     a    b    c    d    e    f    g    h    i    j    k    l    m    n    o    p    q    r    s    t    u    v    w    x    y    z"
+   (make-sparse-keymap "hoot hoot"))
+  'tools )
+
+(global-set-key (kbd "C-M-f") 'jump-forward-column)
+(global-set-key (kbd "C-M-b") 'jump-backward-column)
+
+
+
+
+  

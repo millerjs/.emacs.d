@@ -1,22 +1,17 @@
 
 
 
+(defun add-environ (env)
+  (interactive "sEnvironment: ") 
 
-;; (defun add-title ()
-;;   (interactive) 
-;;   (goto-char (line-beginning-position))
+  (insert 
+   (concatenate 'string "\\begin{"  env "}\n\n\\end{" env "}\n" )
+  )
+   (previous-line 2)
 
-;;   (insert 
-;;    (concatenate 'string "  ----------- [ "  
-;; 		(read-from-minibuffer "Title: " (format "%s" ""))"\n"))
 
-;;   (forward-line -1)
-;;   (indent-according-to-mode)
-;;   (comment-or-uncomment-region-or-line)
-;;   (forward-line 1)
-;;   (indent-according-to-mode)
+)
 
-;;   )
 
 
 (defun add-equation ()

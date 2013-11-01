@@ -1,6 +1,5 @@
 
 (define-minor-mode nav-mode
-  "Fuck yea, navigation."
   :lighter " nav"
   :keymap (let ((map (make-sparse-keymap)))
 
