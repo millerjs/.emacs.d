@@ -1,0 +1,476 @@
+;; Object hw4/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "hw4/"
+  :tables (list 
+   (semanticdb-table "main.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [256 276])
+            ("iostream" include (:system-flag t) nil [277 296])
+            ("cstdlib" include (:system-flag t) nil [297 315])
+            ("stdio.h" include (:system-flag t) nil [316 334])
+            ("sstream" include (:system-flag t) nil [335 353])
+            ("iostream" include (:system-flag t) nil [354 373])
+            ("fstream" include (:system-flag t) nil [374 392])
+            ("vector" include (:system-flag t) nil [393 410])
+            ("boost" include (:system-flag t) nil [411 411])
+            ("util.h" include nil nil [412 429])
+            ("matrix.h" include nil nil [431 450])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [462 471])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [472 485]))                  
+                :type "int")
+                nil [452 572]))          
+    :file "main.cpp"
+    :pointmax 575
+    :fsize 574
+    :lastmodtime '(21264 30625)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("UTILS" variable (:default-value ("../../utils")) nil [1 21])
+            ("OBJS" variable (:default-value ("main.o" "matrix.o")) nil [21 45])
+            ("DEPS" variable (:default-value ("$(OBJS:.o=.d)")) nil [45 66])
+            ("BIN" variable (:default-value ("hw3")) nil [66 76])
+            ("DFLAGS" variable nil nil [77 86])
+            ("CC" variable (:default-value ("g++")) nil [87 96])
+            ("CFLAGS" variable (:default-value ("-I../../include" "-g" "-Wall" "-fpic" "-MMD" "-MP" "-DDEBUG" "-O3" "-std=c++0x")) nil [97 170])
+            ("LDLIBS" variable (:default-value ("-lm" "-lrt" "-pthread")) nil [170 198])
+            ("all" function (:arguments ("hw3")) nil [199 209])
+            ("hw3" function (:arguments ("$(OBJS)")) nil [210 269])
+            ("%.d" function (:arguments ("%.cpp")) nil [270 281])
+            ("check-syntax" function nil nil [282 328])
+            ("clean" function nil nil [329 362]))          
+    :file "Makefile"
+    :pointmax 362
+    :fsize 361
+    :lastmodtime '(21264 26227)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "util.h"
+    :major-mode 'c-mode
+    :tags nil
+    :file "util.h"
+    :pointmax 2815
+    :fsize 2814
+    :lastmodtime '(21263 30866)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "matrix.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [256 276])
+            ("iostream" include (:system-flag t) nil [277 296])
+            ("cstdlib" include (:system-flag t) nil [297 315])
+            ("stdio.h" include (:system-flag t) nil [316 334])
+            ("sstream" include (:system-flag t) nil [335 353])
+            ("cassert" include (:system-flag t) nil [354 372])
+            ("_MATRIX_H" variable (:constant-flag t) nil [401 410])
+            ("_" variable (:constant-flag t) nil [420 421])
+            ("matrix" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [441 448])
+                    ("rows" variable (:type "int") (reparse-symbol classsubparts) [453 462])
+                    ("cols" variable (:type "int") (reparse-symbol classsubparts) [467 476])
+                    ("x" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol classsubparts) [483 494])
+                    ("()" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("r" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [542 554])
+                            ("c" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [555 567]))                          
+                        :type ("matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [524 568])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("other" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("matrix" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [593 613]))                          
+                        :type ("matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [574 614])
+                    ("matrix" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("other" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("matrix" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [626 646]))                          
+                        :type ("matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [619 647])
+                    ("matrix" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [653 662])
+                    ("copy" function
+                       (:prototype-flag t
+                        :type ("matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [667 681])
+                    ("matrix" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [693 699])
+                            ("n" variable (:type "int") (reparse-symbol arg-sub-list) [700 706]))                          
+                        :type ("matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [686 707])
+                    ("matrix" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [719 725])
+                            ("n" variable (:type "int") (reparse-symbol arg-sub-list) [726 732])
+                            ("init" variable (:type "double") (reparse-symbol arg-sub-list) [733 745]))                          
+                        :type ("matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [712 746])
+                    ("matrix" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [751 761])
+                    ("[]" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [789 795]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [776 796])
+                    ("" variable
+                       (:functionpointer-flag t
+                        :type ("matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [831 857])
+                    ("" variable
+                       (:functionpointer-flag t
+                        :type ("matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [862 891])
+                    ("" variable
+                       (:functionpointer-flag t
+                        :type ("matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [896 927])
+                    ("product" function
+                       (:prototype-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [932 949])
+                    ("+" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("a" variable (:type "double") (reparse-symbol arg-sub-list) [993 1002]))                          
+                        :type ("matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [974 1003])
+                    ("+" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :type ("matrix" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1027 1037]))                          
+                        :type ("matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1008 1038])
+                    ("+=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("a" variable (:type "double") (reparse-symbol arg-sub-list) [1063 1072]))                          
+                        :type ("matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1043 1073])
+                    ("-" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("a" variable (:type "double") (reparse-symbol arg-sub-list) [1124 1133]))                          
+                        :type ("matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1105 1134])
+                    ("-" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :type ("matrix" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1158 1168]))                          
+                        :type ("matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1139 1169])
+                    ("~" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :type ("matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1195 1215])
+                    ("normalize" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1237 1254])
+                    ("abs" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1259 1270]))                  
+                :type "class")
+                nil [426 1274])
+            ("<<" function
+               (:prototype-flag t
+                :operator-flag t
+                :arguments 
+                  ( ("o" variable
+                       (:reference 1
+                        :type ("ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1298 1309])
+                    ("v" variable (:type ("matrix" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1310 1319]))                  
+                :type ("ostream" type (:type "class") nil nil))
+                nil [1276 1320])
+            ("sum" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("m" variable
+                       (:reference 1
+                        :type ("matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1332 1342]))                  
+                :type "double")
+                nil [1321 1343]))          
+    :file "matrix.h"
+    :pointmax 1353
+    :fsize 1352
+    :lastmodtime '(21264 30446)
+    :unmatched-syntax '((punctuation 775 . 776) (punctuation 774 . 775) (DOUBLE 767 . 773) (symbol 420 . 421))
+    :lexical-table 
+        '(("_MATRIX_H")
+          ("_" . ((punctuation "-" 422 . 423) (number "1" 423 . 424)))
+          )
+
+    )
+   (semanticdb-table "matrix.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [259 279])
+            ("iostream" include (:system-flag t) nil [280 299])
+            ("cstdlib" include (:system-flag t) nil [300 318])
+            ("stdio.h" include (:system-flag t) nil [319 337])
+            ("sstream" include (:system-flag t) nil [338 356])
+            ("iomanip" include (:system-flag t) nil [357 375])
+            ("cmath" include (:system-flag t) nil [376 392])
+            ("matrix.h" include nil nil [394 413])
+            ("util.h" include nil nil [414 431])
+            ("_new_2d_array" function
+               (:pointer 2
+                :arguments 
+                  ( ("r" variable (:type "int") (reparse-symbol arg-sub-list) [456 462])
+                    ("c" variable (:type "int") (reparse-symbol arg-sub-list) [463 469])
+                    ("init" variable (:type "double") (reparse-symbol arg-sub-list) [470 482]))                  
+                :type "double")
+                nil [433 641])
+            ("matrix" function
+               (:constructor-flag t
+                :parent "matrix"
+                :arguments 
+                  ( ("_m" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [658 671])
+                    ("_n" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [672 685])
+                    ("init" variable (:type "double") (reparse-symbol arg-sub-list) [686 698]))                  
+                :type ("matrix" type (:type "class") nil nil))
+                nil [643 874])
+            ("matrix" function
+               (:constructor-flag t
+                :parent "matrix"
+                :arguments 
+                  ( ("_m" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [891 904])
+                    ("_n" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [905 918]))                  
+                :type ("matrix" type (:type "class") nil nil))
+                nil [876 1092])
+            ("matrix" function
+               (:constructor-flag t
+                :parent "matrix"
+                :type ("matrix" type (:type "class") nil nil))
+                nil [1094 1150])
+            ("matrix" function
+               (:destructor-flag t
+                :parent "matrix"
+                :type "void")
+                nil [1152 1355])
+            ("=" function
+               (:operator-flag t
+                :parent "matrix"
+                :arguments 
+                  ( ("other" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1384 1404]))                  
+                :type ("matrix" type (:type "class") nil nil))
+                nil [1357 1682])
+            ("matrix" function
+               (:constructor-flag t
+                :parent "matrix"
+                :arguments 
+                  ( ("other" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1699 1719]))                  
+                :type ("matrix" type (:type "class") nil nil))
+                nil [1684 1954])
+            ("copy" function
+               (:parent "matrix"
+                :type ("matrix" type (:type "class") nil nil))
+                nil [1956 2143])
+            ("[]" function
+               (:operator-flag t
+                :parent "matrix"
+                :arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [2175 2181]))                  
+                :type "int")
+                nil [2154 2234])
+            ("" variable
+               (:functionpointer-flag t
+                :type ("matrix" type (:type "class") nil nil))
+                nil [2236 2428])
+            ("~" function
+               (:operator-flag t
+                :parent "matrix"
+                :type ("matrix" type (:type "class") nil nil))
+                nil [2430 2612])
+            ("" variable
+               (:functionpointer-flag t
+                :type ("matrix" type (:type "class") nil nil))
+                nil [2614 2809])
+            ("" variable
+               (:functionpointer-flag t
+                :type ("matrix" type (:type "class") nil nil))
+                nil [2811 3135])
+            ("+" function
+               (:operator-flag t
+                :parent "matrix"
+                :arguments 
+                  ( ("a" variable (:type "double") (reparse-symbol arg-sub-list) [3164 3173]))                  
+                :type ("matrix" type (:type "class") nil nil))
+                nil [3137 3351])
+            ("+=" function
+               (:operator-flag t
+                :parent "matrix"
+                :arguments 
+                  ( ("a" variable (:type "double") (reparse-symbol arg-sub-list) [3381 3390]))                  
+                :type ("matrix" type (:type "class") nil nil))
+                nil [3353 3549])
+            ("+" function
+               (:operator-flag t
+                :parent "matrix"
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :type ("matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3578 3588]))                  
+                :type ("matrix" type (:type "class") nil nil))
+                nil [3551 3747])
+            ("-" function
+               (:operator-flag t
+                :parent "matrix"
+                :arguments 
+                  ( ("a" variable (:type "double") (reparse-symbol arg-sub-list) [3776 3785]))                  
+                :type ("matrix" type (:type "class") nil nil))
+                nil [3749 3944])
+            ("-" function
+               (:operator-flag t
+                :parent "matrix"
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :type ("matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3973 3983]))                  
+                :type ("matrix" type (:type "class") nil nil))
+                nil [3946 4142])
+            ("sum" function
+               (:arguments 
+                  ( ("m" variable
+                       (:reference 1
+                        :type ("matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4156 4166]))                  
+                :type "double")
+                nil [4145 4323])
+            ("normalize" function
+               (:parent "matrix"
+                :type "void")
+                nil [4325 4625])
+            ("product" function
+               (:parent "matrix"
+                :type "double")
+                nil [4627 4814])
+            ("abs" function
+               (:parent "matrix"
+                :type "void")
+                nil [4816 4982])
+            ("<<" function
+               (:operator-flag t
+                :arguments 
+                  ( ("o" variable
+                       (:reference 1
+                        :type ("ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5006 5017])
+                    ("v" variable (:type ("matrix" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5018 5027]))                  
+                :type ("ostream" type (:type "class") nil nil))
+                nil [4984 5378])
+            ("()" function
+               (:operator-flag t
+                :parent "matrix"
+                :arguments 
+                  ( ("r" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [5407 5419])
+                    ("c" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [5420 5432]))                  
+                :type ("matrix" type (:type "class") nil nil))
+                nil [5381 5913]))          
+    :file "matrix.cpp"
+    :pointmax 5930
+    :fsize 5913
+    :lastmodtime '(21264 30585)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jsmiller!school!ml!jsmiller-cs254-win-14!hw4!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,49 @@
+;; Object c/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "c/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("DEPS" variable (:default-value ("$(OBJS:.o=.d)")) nil [1 22])
+            ("CC" variable (:default-value ("gcc")) nil [22 31])
+            ("CFLAGS" variable (:default-value ("-g3" "-Wall" "-fpic" "-std=gnu99" "-MMD" "-MP" "-DDEBUG" "-D_DEBUG" "-O3" "-Werror")) nil [31 105])
+            ("LDLIBS" variable (:default-value ("-lm" "-lrt" "-pthread" "-D_POSIX_C_SOURCE=200112L" "-D_GNU_SOURCE")) nil [105 173])
+            ("BIN" variable (:default-value ("libutil.a")) nil [188 204])
+            ("OBJS" variable (:default-value ("util.o")) nil [204 218])
+            ("all" function (:arguments ("$(BIN)")) nil [219 231])
+            ("$(BIN)" function (:arguments ("$(OBJS)")) nil [232 275])
+            ("sample" function (:arguments ("$(BIN)")) nil [276 337])
+            ("%.d" function (:arguments ("%.c")) nil [338 347])
+            ("check-syntax" function nil nil [348 394])
+            ("clean" function nil nil [395 428]))          
+    :file "Makefile"
+    :pointmax 377
+    :fsize 427
+    :lastmodtime '(21265 49029)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "main.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [14 23])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [24 37]))                  
+                :type "int")
+                nil [5 43]))          
+    :file "main.c"
+    :pointmax 44
+    :fsize 43
+    :lastmodtime '(21265 49053)
+    :unmatched-syntax '((semantic-list 9 . 33) (symbol 5 . 9) (INT 1 . 4) (semantic-list 9 . 33) (symbol 5 . 9) (INT 1 . 4) (semantic-list 9 . 34) (symbol 5 . 9) (INT 1 . 4) (symbol 5 . 9) (INT 1 . 4))
+    )
+   )
+  :file "!home!jsmiller!lab!c!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

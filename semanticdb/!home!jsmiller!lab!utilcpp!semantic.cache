@@ -1,0 +1,29 @@
+;; Object utilcpp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "utilcpp/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("DEPS" variable (:default-value ("$(OBJS:.o=.d)")) nil [1 22])
+            ("CC" variable (:default-value ("gcc")) nil [22 31])
+            ("CFLAGS" variable (:default-value ("-g3" "-Wall" "-fpic" "-std=gnu99" "-MMD" "-MP" "-DDEBUG" "-D_DEBUG" "-O3" "-Werror")) nil [31 105])
+            ("LDLIBS" variable (:default-value ("-lm" "-lrt" "-pthread" "-D_POSIX_C_SOURCE=200112L" "-D_GNU_SOURCE")) nil [105 173])
+            ("BIN" variable (:default-value ("libutilcpp.a")) nil [188 207])
+            ("OBJS" variable (:default-value ("matrix.o")) nil [207 223])
+            ("all" function (:arguments ("$(BIN)")) nil [224 236])
+            ("$(BIN)" function (:arguments ("$(OBJS)")) nil [237 277])
+            ("%.d" function (:arguments ("%.cpp")) nil [278 289])
+            ("check-syntax" function nil nil [290 336])
+            ("clean" function nil nil [337 377]))          
+    :file "Makefile"
+    :pointmax 458
+    :fsize 376
+    :lastmodtime '(21265 49721)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jsmiller!lab!utilcpp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

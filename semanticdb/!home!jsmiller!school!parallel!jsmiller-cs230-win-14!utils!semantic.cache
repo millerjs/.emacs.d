@@ -1,0 +1,132 @@
+;; Object utils/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "utils/"
+  :tables (list 
+   (semanticdb-table "hashpackettest.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("time.h" include (:system-flag t) nil [2 19])
+            ("hashpackettest.h" include nil nil [20 47])
+            ("stopwatch.h" include nil nil [48 70])
+            ("hashgenerator.h" include nil nil [71 97])
+            ("paddedprim.h" include nil nil [98 121])
+            ("statistics.h" include nil nil [122 145])
+            ("stdbool.h" include (:system-flag t) nil [146 166])
+            ("pthread.h" include (:system-flag t) nil [167 187])
+            ("hashpacketworker.h" include nil nil [188 217])
+            ("millToTimeSpec" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ts" variable
+                       (:pointer 1
+                        :type ("timespec" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [246 266])
+                    ("ms" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [267 284]))                  
+                :type "void")
+                nil [219 351])
+            ("serialHashPacketTest" function
+               (:arguments 
+                  ( ("numMilliseconds" variable (:type "int") (reparse-symbol arg-sub-list) [380 400])
+                    ("fractionAdd" variable (:type "float") (reparse-symbol arg-sub-list) [408 426])
+                    ("fractionRemove" variable (:type "float") (reparse-symbol arg-sub-list) [434 455])
+                    ("hitRate" variable (:type "float") (reparse-symbol arg-sub-list) [463 477])
+                    ("maxBucketSize" variable (:type "int") (reparse-symbol arg-sub-list) [485 503])
+                    ("mean" variable (:type "long") (reparse-symbol arg-sub-list) [511 521])
+                    ("initSize" variable (:type "int") (reparse-symbol arg-sub-list) [529 542]))                  
+                :type "void")
+                nil [354 2032])
+            ("parallelHashPacketTest" function
+               (:arguments 
+                  ( ("numMilliseconds" variable (:type "int") (reparse-symbol arg-sub-list) [2062 2082])
+                    ("fractionAdd" variable (:type "float") (reparse-symbol arg-sub-list) [2090 2108])
+                    ("fractionRemove" variable (:type "float") (reparse-symbol arg-sub-list) [2116 2137])
+                    ("hitRate" variable (:type "float") (reparse-symbol arg-sub-list) [2145 2159])
+                    ("maxBucketSize" variable (:type "int") (reparse-symbol arg-sub-list) [2167 2185])
+                    ("mean" variable (:type "long") (reparse-symbol arg-sub-list) [2193 2203])
+                    ("initSize" variable (:type "int") (reparse-symbol arg-sub-list) [2211 2224])
+                    ("numWorkers" variable (:type "int") (reparse-symbol arg-sub-list) [2232 2247]))                  
+                :type "void")
+                nil [2034 3159]))          
+    :file "hashpackettest.c"
+    :pointmax 3160
+    :fsize 3159
+    :lastmodtime '(21231 243)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "hashpacketworker.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("HASHPACKETWORKER_H_" variable (:constant-flag t) nil [38 57])
+            ("paddedprim.h" include nil nil [59 82])
+            ("hashgenerator.h" include nil nil [83 109])
+            ("hashtable.h" include nil nil [110 132])
+            ("SerialPacketWorker_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("done" variable
+                             (:pointer 1
+                              :type ("PaddedPrimBool_NonVolatile_t" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [152 188])
+                          ("source" variable
+                             (:pointer 1
+                              :type ("HashPacketGenerator_t" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [190 221])
+                          ("table" variable
+                             (:pointer 1
+                              :type ("SerialHashTable_t" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [223 249])
+                          ("totalPackets" variable (:type "long") (reparse-symbol classsubparts) [251 269])
+                          ("residue" variable (:type "long") (reparse-symbol classsubparts) [271 284])
+                          ("fingerprint" variable (:type "long") (reparse-symbol classsubparts) [286 303]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [134 326])
+            ("serialWorker" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type ("SerialPacketWorker_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [347 375]))                  
+                :type "void")
+                nil [329 376]))          
+    :file "hashpacketworker.h"
+    :pointmax 412
+    :fsize 411
+    :lastmodtime '(21231 243)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("HASHPACKETWORKER_H_")
+          )
+
+    )
+   (semanticdb-table "hashpacketworker.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("hashpacketworker.h" include nil nil [2 31])
+            ("fingerprint.h" include nil nil [32 56])
+            ("hashtable.h" include nil nil [57 79])
+            ("paddedprim.h" include nil nil [80 103])
+            ("serialWorker" function
+               (:arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type ("SerialPacketWorker_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [123 151]))                  
+                :type "void")
+                nil [105 662]))          
+    :file "hashpacketworker.c"
+    :pointmax 663
+    :fsize 662
+    :lastmodtime '(21231 243)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jsmiller!school!parallel!jsmiller-cs230-win-14!utils!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

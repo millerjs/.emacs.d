@@ -1,0 +1,2064 @@
+;; Object Downloads/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Downloads/"
+  :tables (list 
+   (semanticdb-table "simclist.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("SIMCLIST_H" variable (:constant-flag t) nil [29 39])
+            ("list_hashcomputer_string" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("list_hash_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("el" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [25135 25150]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [25098 25151])
+            ("list_hashcomputer_double" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("list_hash_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("el" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [24983 24998]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [24946 24999])
+            ("list_hashcomputer_float" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("list_hash_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("el" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [24831 24846]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [24795 24847])
+            ("list_hashcomputer_uint64_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("list_hash_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("el" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [24681 24696]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [24642 24697])
+            ("list_hashcomputer_uint32_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("list_hash_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("el" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [24525 24540]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [24486 24541])
+            ("list_hashcomputer_uint16_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("list_hash_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("el" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [24369 24384]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [24330 24385])
+            ("list_hashcomputer_uint8_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("list_hash_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("el" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [24213 24228]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [24175 24229])
+            ("list_hashcomputer_int64_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("list_hash_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("el" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [24059 24074]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [24021 24075])
+            ("list_hashcomputer_int32_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("list_hash_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("el" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [23905 23920]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [23867 23921])
+            ("list_hashcomputer_int16_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("list_hash_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("el" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [23751 23766]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [23713 23767])
+            ("list_hashcomputer_int8_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("list_hash_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("el" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [23597 23612]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [23560 23613])
+            ("list_meter_string" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("size_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("el" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [23374 23389]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [23349 23390])
+            ("list_meter_double" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("size_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("el" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [23241 23256]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [23216 23257])
+            ("list_meter_float" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("size_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("el" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [23108 23123]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [23084 23124])
+            ("list_meter_uint64_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("size_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("el" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [22977 22992]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [22950 22993])
+            ("list_meter_uint32_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("size_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("el" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [22840 22855]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [22813 22856])
+            ("list_meter_uint16_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("size_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("el" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [22703 22718]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [22676 22719])
+            ("list_meter_uint8_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("size_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("el" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [22566 22581]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [22540 22582])
+            ("list_meter_int64_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("size_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("el" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [22431 22446]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [22405 22447])
+            ("list_meter_int32_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("size_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("el" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [22296 22311]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [22270 22312])
+            ("list_meter_int16_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("size_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("el" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [22161 22176]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [22135 22177])
+            ("list_meter_int8_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("size_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("el" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [22026 22041]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [22001 22042])
+            ("list_comparator_string" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21808 21822])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21823 21837]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [21781 21838])
+            ("list_comparator_double" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21658 21672])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21673 21687]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [21631 21688])
+            ("list_comparator_float" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21508 21522])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21523 21537]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [21482 21538])
+            ("list_comparator_uint64_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21360 21374])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21375 21389]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [21331 21390])
+            ("list_comparator_uint32_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21206 21220])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21221 21235]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [21177 21236])
+            ("list_comparator_uint16_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21052 21066])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21067 21081]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [21023 21082])
+            ("list_comparator_uint8_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20898 20912])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20913 20927]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [20870 20928])
+            ("list_comparator_int64_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20746 20760])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20761 20775]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [20718 20776])
+            ("list_comparator_int32_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20594 20608])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20609 20623]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [20566 20624])
+            ("list_comparator_int16_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20442 20456])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20457 20471]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [20414 20472])
+            ("list_comparator_int8_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20290 20304])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20305 20319]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [20263 20320])
+            ("list_restore_file" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("size_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20022 20032])
+                    ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [20033 20054]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [19997 20055])
+            ("list_restore_filedescriptor" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("size_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19530 19540])
+                    ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [19541 19548]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [19495 19549])
+            ("list_dump_file" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("size_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18778 18794])
+                    ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [18795 18816]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18756 18817])
+            ("list_dump_filedescriptor" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("size_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18348 18364])
+                    ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [18365 18372]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18316 18373])
+            ("list_dump_getinfo_file" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("dumpinfo" variable
+                       (:pointer 1
+                        :type ("list_dump_info_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17669 17696])
+                    ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17697 17718]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17642 17719])
+            ("list_dump_getinfo_filedescriptor" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("dumpinfo" variable
+                       (:pointer 1
+                        :type ("list_dump_info_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17604 17631])
+                    ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [17632 17639]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17567 17640])
+            ("list_hash" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("list_hash_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17548 17564]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17526 17565])
+            ("list_iterator_stop" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17380 17390]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17357 17391])
+            ("list_iterator_hasnext" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17204 17220]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17178 17221])
+            ("list_iterator_next" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16995 17005]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16970 17006])
+            ("list_iterator_start" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16816 16826]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16792 16827])
+            ("list_sort" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16536 16546])
+                    ("versus" variable (:type "int") (reparse-symbol arg-sub-list) [16547 16558]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16522 16559])
+            ("list_concat" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("l1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16126 16143])
+                    ("l2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16144 16161])
+                    ("dest" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16162 16175]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16110 16176])
+            ("list_contains" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15518 15534])
+                    ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [15535 15552]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15500 15553])
+            ("list_seek" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14761 14777])
+                    ("indicator" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [14778 14794]))                  
+                :constant-flag t
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [14739 14795])
+            ("list_locate" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14224 14240])
+                    ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [14241 14258]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [14208 14259])
+            ("list_empty" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13646 13662]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13631 13663])
+            ("list_size" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "unsigned int"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13463 13479]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13440 13480])
+            ("list_clear" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13275 13285]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13260 13286])
+            ("list_delete_range" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12955 12965])
+                    ("posstart" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [12966 12988])
+                    ("posend" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [12989 13009]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12933 13010])
+            ("list_delete_at" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12562 12572])
+                    ("pos" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [12573 12590]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12543 12591])
+            ("list_insert_at" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12267 12277])
+                    ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [12278 12295])
+                    ("pos" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [12296 12313]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12248 12314])
+            ("list_extract_at" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11953 11963])
+                    ("pos" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [11964 11981]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11931 11982])
+            ("list_get_min" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11680 11696]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11661 11697])
+            ("list_get_max" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11396 11412]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11377 11413])
+            ("list_get_at" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11094 11110])
+                    ("pos" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [11111 11128]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11076 11129])
+            ("list_fetch" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10853 10863]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10836 10864])
+            ("list_prepend" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10577 10587])
+                    ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10588 10605]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10560 10606])
+            ("list_append" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10259 10269])
+                    ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10270 10288]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10243 10289])
+            ("list_attributes_unserializer" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9923 9933])
+                    ("unserializer_fun" variable (:type ("element_unserializer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9934 9972]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9890 9973])
+            ("list_attributes_serializer" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9065 9075])
+                    ("serializer_fun" variable (:type ("element_serializer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9076 9110]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9034 9111])
+            ("list_attributes_hash_computer" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8216 8226])
+                    ("hash_computer_fun" variable (:type ("element_hash_computer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8227 8267]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8182 8268])
+            ("list_attributes_copy" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7358 7368])
+                    ("metric_fun" variable (:type ("element_meter" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7369 7394])
+                    ("copy_data" variable (:type "int") (reparse-symbol arg-sub-list) [7395 7409]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7333 7410])
+            ("list_attributes_seeker" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6596 6606])
+                    ("seeker_fun" variable (:type ("element_seeker" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6607 6633]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6569 6634])
+            ("list_attributes_comparator" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6173 6183])
+                    ("comparator_fun" variable (:type ("element_comparator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6184 6218]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6142 6219])
+            ("list_destroy" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5722 5732]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5704 5733])
+            ("list_init" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5415 5425]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5401 5426])
+            ("list_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("" type
+                     (:members 
+                        ( ("head_sentinel" variable
+                             (:pointer 1
+                              :type ("list_entry_s" type
+                                   (:prototype t
+                                    :type "struct")
+                                    nil nil))
+                              (reparse-symbol classsubparts) [4686 4721])
+                          ("tail_sentinel" variable
+                             (:pointer 1
+                              :type ("list_entry_s" type
+                                   (:prototype t
+                                    :type "struct")
+                                    nil nil))
+                              (reparse-symbol classsubparts) [4726 4761])
+                          ("mid" variable
+                             (:pointer 1
+                              :type ("list_entry_s" type
+                                   (:prototype t
+                                    :type "struct")
+                                    nil nil))
+                              (reparse-symbol classsubparts) [4766 4791])
+                          ("numels" variable (:type "unsigned int") (reparse-symbol classsubparts) [4797 4817])
+                          ("spareels" variable
+                             (:pointer 2
+                              :type ("list_entry_s" type
+                                   (:prototype t
+                                    :type "struct")
+                                    nil nil))
+                              (reparse-symbol classsubparts) [4857 4888])
+                          ("spareelsnum" variable (:type "unsigned int") (reparse-symbol classsubparts) [4893 4918])
+                          ("iter_active" variable (:type "int") (reparse-symbol classsubparts) [5087 5103])
+                          ("iter_pos" variable (:type "unsigned int") (reparse-symbol classsubparts) [5108 5130])
+                          ("iter_curentry" variable
+                             (:pointer 1
+                              :type ("list_entry_s" type
+                                   (:prototype t
+                                    :type "struct")
+                                    nil nil))
+                              (reparse-symbol classsubparts) [5135 5170])
+                          ("attrs" variable (:type ("list_attributes_s" type
+                               (:prototype t
+                                :type "struct")
+                                nil nil)) (reparse-symbol classsubparts) [5202 5233]))                        
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [4665 5243])
+            ("list_attributes_s" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("comparator" variable (:type ("element_comparator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4142 4172])
+                    ("seeker" variable (:type ("element_seeker" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4225 4247])
+                    ("meter" variable (:type ("element_meter" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4320 4340])
+                    ("copy_data" variable (:type "int") (reparse-symbol classsubparts) [4345 4359])
+                    ("hasher" variable (:type ("element_hash_computer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4428 4457])
+                    ("serializer" variable (:type ("element_serializer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4516 4546])
+                    ("unserializer" variable (:type ("element_unserializer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4607 4641]))                  )
+                (reparse-symbol extern-c-contents) [4056 4644])
+            ("list_entry_s" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [3893 3904])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("list_entry_s" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3958 3984])
+                    ("prev" variable
+                       (:pointer 1
+                        :type ("list_entry_s" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3989 4015]))                  )
+                (reparse-symbol extern-c-contents) [3867 4018])
+            ("element_unserializer" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :functionpointer-flag t)
+                (reparse-symbol extern-c-contents) [3740 3808])
+            ("element_serializer" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :functionpointer-flag t)
+                (reparse-symbol extern-c-contents) [2795 2863])
+            ("element_hash_computer" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("list_hash_t" type (:type "class") nil nil)
+                :functionpointer-flag t)
+                (reparse-symbol extern-c-contents) [1844 1897])
+            ("element_meter" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("size_t" type (:type "class") nil nil)
+                :functionpointer-flag t)
+                (reparse-symbol extern-c-contents) [1522 1562])
+            ("element_seeker" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :functionpointer-flag t)
+                (reparse-symbol extern-c-contents) [1209 1270])
+            ("element_comparator" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :functionpointer-flag t)
+                (reparse-symbol extern-c-contents) [793 849])
+            ("list_dump_info_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("" type
+                     (:members 
+                        ( ("version" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [255 272])
+                          ("timestamp" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [302 320])
+                          ("listhash" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [396 413]))                        
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [234 491])
+            ("list_hash_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :superclasses "int32_t"
+                :typedef ("int32_t" type (:type "class") nil nil))
+                (reparse-symbol extern-c-contents) [204 232])
+            ("sys/types.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [100 122])
+            ("errno.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [81 99])
+            ("C" extern (:members 
+              ( ("errno.h" include
+                   (:typemodifiers ("extern" "\"C\"")
+                    :system-flag t)
+                    (reparse-symbol extern-c-contents) [81 99])
+                ("sys/types.h" include
+                   (:typemodifiers ("extern" "\"C\"")
+                    :system-flag t)
+                    (reparse-symbol extern-c-contents) [100 122])
+                ("list_hash_t" type
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "typedef"
+                    :superclasses "int32_t"
+                    :typedef ("int32_t" type (:type "class") nil nil))
+                    (reparse-symbol extern-c-contents) [204 232])
+                ("list_dump_info_t" type
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "typedef"
+                    :typedef ("" type
+                         (:members 
+                            ( ("version" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [255 272])
+                              ("timestamp" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [302 320])
+                              ("listhash" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [396 413]))                            
+                          :type "struct")
+                          nil nil))
+                    (reparse-symbol extern-c-contents) [234 491])
+                ("element_comparator" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :functionpointer-flag t)
+                    (reparse-symbol extern-c-contents) [793 849])
+                ("element_seeker" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :functionpointer-flag t)
+                    (reparse-symbol extern-c-contents) [1209 1270])
+                ("element_meter" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("size_t" type (:type "class") nil nil)
+                    :functionpointer-flag t)
+                    (reparse-symbol extern-c-contents) [1522 1562])
+                ("element_hash_computer" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("list_hash_t" type (:type "class") nil nil)
+                    :functionpointer-flag t)
+                    (reparse-symbol extern-c-contents) [1844 1897])
+                ("element_serializer" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "void"
+                    :functionpointer-flag t)
+                    (reparse-symbol extern-c-contents) [2795 2863])
+                ("element_unserializer" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "void"
+                    :functionpointer-flag t)
+                    (reparse-symbol extern-c-contents) [3740 3808])
+                ("list_entry_s" type
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "struct"
+                    :members 
+                      ( ("data" variable
+                           (:pointer 1
+                            :type "void")
+                            (reparse-symbol classsubparts) [3893 3904])
+                        ("next" variable
+                           (:pointer 1
+                            :type ("list_entry_s" type
+                                 (:prototype t
+                                  :type "struct")
+                                  nil nil))
+                            (reparse-symbol classsubparts) [3958 3984])
+                        ("prev" variable
+                           (:pointer 1
+                            :type ("list_entry_s" type
+                                 (:prototype t
+                                  :type "struct")
+                                  nil nil))
+                            (reparse-symbol classsubparts) [3989 4015]))                      )
+                    (reparse-symbol extern-c-contents) [3867 4018])
+                ("list_attributes_s" type
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "struct"
+                    :members 
+                      ( ("comparator" variable (:type ("element_comparator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4142 4172])
+                        ("seeker" variable (:type ("element_seeker" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4225 4247])
+                        ("meter" variable (:type ("element_meter" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4320 4340])
+                        ("copy_data" variable (:type "int") (reparse-symbol classsubparts) [4345 4359])
+                        ("hasher" variable (:type ("element_hash_computer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4428 4457])
+                        ("serializer" variable (:type ("element_serializer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4516 4546])
+                        ("unserializer" variable (:type ("element_unserializer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4607 4641]))                      )
+                    (reparse-symbol extern-c-contents) [4056 4644])
+                ("list_t" type
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "typedef"
+                    :typedef ("" type
+                         (:members 
+                            ( ("head_sentinel" variable
+                                 (:pointer 1
+                                  :type ("list_entry_s" type
+                                       (:prototype t
+                                        :type "struct")
+                                        nil nil))
+                                  (reparse-symbol classsubparts) [4686 4721])
+                              ("tail_sentinel" variable
+                                 (:pointer 1
+                                  :type ("list_entry_s" type
+                                       (:prototype t
+                                        :type "struct")
+                                        nil nil))
+                                  (reparse-symbol classsubparts) [4726 4761])
+                              ("mid" variable
+                                 (:pointer 1
+                                  :type ("list_entry_s" type
+                                       (:prototype t
+                                        :type "struct")
+                                        nil nil))
+                                  (reparse-symbol classsubparts) [4766 4791])
+                              ("numels" variable (:type "unsigned int") (reparse-symbol classsubparts) [4797 4817])
+                              ("spareels" variable
+                                 (:pointer 2
+                                  :type ("list_entry_s" type
+                                       (:prototype t
+                                        :type "struct")
+                                        nil nil))
+                                  (reparse-symbol classsubparts) [4857 4888])
+                              ("spareelsnum" variable (:type "unsigned int") (reparse-symbol classsubparts) [4893 4918])
+                              ("iter_active" variable (:type "int") (reparse-symbol classsubparts) [5087 5103])
+                              ("iter_pos" variable (:type "unsigned int") (reparse-symbol classsubparts) [5108 5130])
+                              ("iter_curentry" variable
+                                 (:pointer 1
+                                  :type ("list_entry_s" type
+                                       (:prototype t
+                                        :type "struct")
+                                        nil nil))
+                                  (reparse-symbol classsubparts) [5135 5170])
+                              ("attrs" variable (:type ("list_attributes_s" type
+                                   (:prototype t
+                                    :type "struct")
+                                    nil nil)) (reparse-symbol classsubparts) [5202 5233]))                            
+                          :type "struct")
+                          nil nil))
+                    (reparse-symbol extern-c-contents) [4665 5243])
+                ("list_init" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [5415 5425]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [5401 5426])
+                ("list_destroy" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "void"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [5722 5732]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [5704 5733])
+                ("list_attributes_comparator" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [6173 6183])
+                        ("comparator_fun" variable (:type ("element_comparator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6184 6218]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [6142 6219])
+                ("list_attributes_seeker" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [6596 6606])
+                        ("seeker_fun" variable (:type ("element_seeker" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6607 6633]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [6569 6634])
+                ("list_attributes_copy" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [7358 7368])
+                        ("metric_fun" variable (:type ("element_meter" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7369 7394])
+                        ("copy_data" variable (:type "int") (reparse-symbol arg-sub-list) [7395 7409]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [7333 7410])
+                ("list_attributes_hash_computer" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [8216 8226])
+                        ("hash_computer_fun" variable (:type ("element_hash_computer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8227 8267]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [8182 8268])
+                ("list_attributes_serializer" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [9065 9075])
+                        ("serializer_fun" variable (:type ("element_serializer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9076 9110]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [9034 9111])
+                ("list_attributes_unserializer" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [9923 9933])
+                        ("unserializer_fun" variable (:type ("element_unserializer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9934 9972]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [9890 9973])
+                ("list_append" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [10259 10269])
+                        ("data" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [10270 10288]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [10243 10289])
+                ("list_prepend" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [10577 10587])
+                        ("data" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [10588 10605]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [10560 10606])
+                ("list_fetch" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "void"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [10853 10863]))                      
+                    :pointer 1
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [10836 10864])
+                ("list_get_at" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "void"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [11094 11110])
+                        ("pos" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [11111 11128]))                      
+                    :pointer 1
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [11076 11129])
+                ("list_get_max" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "void"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [11396 11412]))                      
+                    :pointer 1
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [11377 11413])
+                ("list_get_min" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "void"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [11680 11696]))                      
+                    :pointer 1
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [11661 11697])
+                ("list_extract_at" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "void"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [11953 11963])
+                        ("pos" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [11964 11981]))                      
+                    :pointer 1
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [11931 11982])
+                ("list_insert_at" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [12267 12277])
+                        ("data" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [12278 12295])
+                        ("pos" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [12296 12313]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [12248 12314])
+                ("list_delete_at" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [12562 12572])
+                        ("pos" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [12573 12590]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [12543 12591])
+                ("list_delete_range" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [12955 12965])
+                        ("posstart" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [12966 12988])
+                        ("posend" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [12989 13009]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [12933 13010])
+                ("list_clear" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [13275 13285]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [13260 13286])
+                ("list_size" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "unsigned int"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [13463 13479]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [13440 13480])
+                ("list_empty" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [13646 13662]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [13631 13663])
+                ("list_locate" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [14224 14240])
+                        ("data" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [14241 14258]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [14208 14259])
+                ("list_seek" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "void"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [14761 14777])
+                        ("indicator" variable
+                           (:pointer 1
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [14778 14794]))                      
+                    :constant-flag t
+                    :pointer 1
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [14739 14795])
+                ("list_contains" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [15518 15534])
+                        ("data" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [15535 15552]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [15500 15553])
+                ("list_concat" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("l1" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [16126 16143])
+                        ("l2" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [16144 16161])
+                        ("dest" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [16162 16175]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [16110 16176])
+                ("list_sort" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [16536 16546])
+                        ("versus" variable (:type "int") (reparse-symbol arg-sub-list) [16547 16558]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [16522 16559])
+                ("list_iterator_start" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [16816 16826]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [16792 16827])
+                ("list_iterator_next" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "void"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [16995 17005]))                      
+                    :pointer 1
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [16970 17006])
+                ("list_iterator_hasnext" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [17204 17220]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [17178 17221])
+                ("list_iterator_stop" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [17380 17390]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [17357 17391])
+                ("list_hash" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("list_hash_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [17548 17564]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [17526 17565])
+                ("list_dump_getinfo_filedescriptor" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("dumpinfo" variable
+                           (:pointer 1
+                            :type ("list_dump_info_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [17604 17631])
+                        ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [17632 17639]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [17567 17640])
+                ("list_dump_getinfo_file" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("dumpinfo" variable
+                           (:pointer 1
+                            :type ("list_dump_info_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [17669 17696])
+                        ("filename" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "char")
+                            (reparse-symbol arg-sub-list) [17697 17718]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [17642 17719])
+                ("list_dump_filedescriptor" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("size_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [18348 18364])
+                        ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [18365 18372]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [18316 18373])
+                ("list_dump_file" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("size_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [18778 18794])
+                        ("filename" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "char")
+                            (reparse-symbol arg-sub-list) [18795 18816]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [18756 18817])
+                ("list_restore_filedescriptor" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("size_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [19530 19540])
+                        ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [19541 19548]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [19495 19549])
+                ("list_restore_file" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("size_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("l" variable
+                           (:pointer 1
+                            :type ("list_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [20022 20032])
+                        ("filename" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "char")
+                            (reparse-symbol arg-sub-list) [20033 20054]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [19997 20055])
+                ("list_comparator_int8_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("a" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [20290 20304])
+                        ("b" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [20305 20319]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [20263 20320])
+                ("list_comparator_int16_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("a" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [20442 20456])
+                        ("b" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [20457 20471]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [20414 20472])
+                ("list_comparator_int32_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("a" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [20594 20608])
+                        ("b" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [20609 20623]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [20566 20624])
+                ("list_comparator_int64_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("a" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [20746 20760])
+                        ("b" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [20761 20775]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [20718 20776])
+                ("list_comparator_uint8_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("a" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [20898 20912])
+                        ("b" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [20913 20927]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [20870 20928])
+                ("list_comparator_uint16_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("a" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [21052 21066])
+                        ("b" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [21067 21081]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [21023 21082])
+                ("list_comparator_uint32_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("a" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [21206 21220])
+                        ("b" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [21221 21235]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [21177 21236])
+                ("list_comparator_uint64_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("a" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [21360 21374])
+                        ("b" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [21375 21389]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [21331 21390])
+                ("list_comparator_float" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("a" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [21508 21522])
+                        ("b" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [21523 21537]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [21482 21538])
+                ("list_comparator_double" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("a" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [21658 21672])
+                        ("b" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [21673 21687]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [21631 21688])
+                ("list_comparator_string" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("a" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [21808 21822])
+                        ("b" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [21823 21837]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [21781 21838])
+                ("list_meter_int8_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("size_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("el" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [22026 22041]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [22001 22042])
+                ("list_meter_int16_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("size_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("el" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [22161 22176]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [22135 22177])
+                ("list_meter_int32_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("size_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("el" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [22296 22311]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [22270 22312])
+                ("list_meter_int64_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("size_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("el" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [22431 22446]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [22405 22447])
+                ("list_meter_uint8_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("size_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("el" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [22566 22581]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [22540 22582])
+                ("list_meter_uint16_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("size_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("el" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [22703 22718]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [22676 22719])
+                ("list_meter_uint32_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("size_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("el" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [22840 22855]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [22813 22856])
+                ("list_meter_uint64_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("size_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("el" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [22977 22992]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [22950 22993])
+                ("list_meter_float" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("size_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("el" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [23108 23123]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [23084 23124])
+                ("list_meter_double" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("size_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("el" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [23241 23256]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [23216 23257])
+                ("list_meter_string" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("size_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("el" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [23374 23389]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [23349 23390])
+                ("list_hashcomputer_int8_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("list_hash_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("el" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [23597 23612]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [23560 23613])
+                ("list_hashcomputer_int16_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("list_hash_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("el" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [23751 23766]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [23713 23767])
+                ("list_hashcomputer_int32_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("list_hash_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("el" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [23905 23920]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [23867 23921])
+                ("list_hashcomputer_int64_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("list_hash_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("el" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [24059 24074]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [24021 24075])
+                ("list_hashcomputer_uint8_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("list_hash_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("el" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [24213 24228]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [24175 24229])
+                ("list_hashcomputer_uint16_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("list_hash_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("el" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [24369 24384]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [24330 24385])
+                ("list_hashcomputer_uint32_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("list_hash_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("el" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [24525 24540]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [24486 24541])
+                ("list_hashcomputer_uint64_t" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("list_hash_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("el" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [24681 24696]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [24642 24697])
+                ("list_hashcomputer_float" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("list_hash_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("el" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [24831 24846]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [24795 24847])
+                ("list_hashcomputer_double" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("list_hash_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("el" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [24983 24998]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [24946 24999])
+                ("list_hashcomputer_string" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("list_hash_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("el" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [25135 25150]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [25098 25151]))              ) nil [60 25173]))          
+    :file "simclist.h"
+    :pointmax 25190
+    :fsize 25189
+    :lastmodtime '(21236 42557)
+    :unmatched-syntax '((TYPEDEF 3732 . 3739) (TYPEDEF 2787 . 2794) (TYPEDEF 1836 . 1843) (TYPEDEF 1514 . 1521) (TYPEDEF 1201 . 1208) (TYPEDEF 785 . 792))
+    :lexical-table 
+        '(("SIMCLIST_H")
+          )
+
+    )
+   )
+  :file "!home!jsmiller!Downloads!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )
