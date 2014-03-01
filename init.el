@@ -298,16 +298,13 @@
 
 (defun Template-LaTex ()
   (interactive)
-  (insert-file-contents "~/templates/latex_template.tex"))
+  (insert-file-contents "~/lab/templates/LaTeX/latex_template.tex"))
 
 
 (defun Template-Matplotlib ()
   (interactive)
-  (insert-file-contents "~/Public/Templates/matplotTEMPLATE.py"))
+  (insert-file-contents "~/lab/plotting/plot.py"))
 
-(defun Template-C ()
-  (interactive)
-  (insert-file-contents "~/Public/Templates/c.c"))
 
 
 (defun java-insert-header ()
