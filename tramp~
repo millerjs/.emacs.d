@@ -96,6 +96,7 @@
   ("perl-cwd-realpath" t)
   ("perl" "\\perl")
   ("~" "/home/jmiller")
+<<<<<<< HEAD
   ("file-exists" "test -e"))
  (["scpc" nil "ssh" nil nil]
   nil)
@@ -117,3 +118,6 @@
   ("perl-file-spec" t)
   ("perl-cwd-realpath" t)
   ("perl" "\\perl")))
+=======
+  ("file-exists" "test -e")))
+>>>>>>> fd57ecc7bdcb1ec31e5862a7cba3abe07211a460

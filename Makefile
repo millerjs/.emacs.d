@@ -1,6 +1,5 @@
 C = gcc
 
-
 all: parse-jump
 
 %.o: %.cpp 
@@ -10,5 +9,5 @@ parse-jump: parse-jump.o
 	$(C) $^ -o parse-jump
 
 clean:
-	rm *.o
+	rm *.o parse-jump
 

@@ -1,0 +1,176 @@
+;; Object plots/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "plots/"
+  :tables (list 
+   (semanticdb-table "plot.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("csv" include nil nil [1 11])
+            ("sys" include nil nil [12 22])
+            ("matplotlib" include nil nil [24 41])
+            ("matplotlib" code nil nil [42 63])
+            ("pylab" include nil nil [65 84])
+            ("numpy" include nil nil [85 104])
+            ("scipy" include nil nil [105 131])
+            ("xaxis" variable nil nil [133 170])
+            ("yaxis" variable nil nil [171 208])
+            ("title" variable nil nil [209 291])
+            ("plt" variable nil nil [294 375])
+            ("ax" variable nil nil [376 387])
+            ("ax" code nil nil [390 410])
+            ("ax" code nil nil [412 432])
+            ("ax" code nil nil [434 454])
+            ("ax" code nil nil [455 474])
+            ("run" variable nil nil [476 493])
+            ("print" code nil nil [494 503])
+            ("path" code nil nil [505 522])
+            ("output" code nil nil [523 542])
+            ("data" variable nil nil [544 553])
+            ("data" variable nil nil [705 757])
+            ("data" variable nil nil [759 777])
+            ("print" code nil nil [779 789])
+            ("x" variable nil nil [791 805])
+            ("y" variable nil nil [806 820])
+            ("size" code nil nil [822 850])
+            ("color" variable nil nil [851 869])
+            ("subplots_adjust" code nil nil [872 901])
+            ("sc" variable nil nil [902 1011])
+            ("colorbar" code nil nil [1013 1081])
+            ("ax" code nil nil [1196 1243])
+            ("ax" code nil nil [1244 1291])
+            ("plt" code nil nil [1293 1317])
+            ("handles, labels" code nil nil [1319 1367])
+            ("ax" code nil nil [1368 1381])
+            ("print" code nil nil [1383 1416])
+            ("savefig" code nil nil [1483 1519]))          
+    :file "plot.py"
+    :pointmax 1531
+    :fsize 1521
+    :lastmodtime '(21261 24185)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "plot4.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("csv" include nil nil [1 11])
+            ("sys" include nil nil [12 22])
+            ("matplotlib" include nil nil [24 41])
+            ("matplotlib" code nil nil [42 63])
+            ("pylab" include nil nil [65 84])
+            ("numpy" include nil nil [85 104])
+            ("scipy" include nil nil [105 131])
+            ("xaxis" variable nil nil [133 149])
+            ("yaxis" variable nil nil [150 192])
+            ("title" variable nil nil [193 246])
+            ("plt" variable nil nil [249 330])
+            ("ax" variable nil nil [331 342])
+            ("ax" code nil nil [344 364])
+            ("ax" code nil nil [367 387])
+            ("ax" code nil nil [389 409])
+            ("ax" code nil nil [410 429])
+            ("run" variable nil nil [480 497])
+            ("print" code nil nil [498 507])
+            ("path" code nil nil [509 526])
+            ("output" code nil nil [527 547])
+            ("data" variable nil nil [549 558])
+            ("data" variable nil nil [708 760])
+            ("for" code nil nil [772 1008])
+            ("lgd" variable nil nil [1035 1141])
+            ("ax" code nil nil [1143 1190])
+            ("ax" code nil nil [1191 1238])
+            ("plt" code nil nil [1240 1264])
+            ("handles, labels" code nil nil [1266 1314])
+            ("ax" code nil nil [1315 1328])
+            ("print" code nil nil [1330 1363])
+            ("savefig" code nil nil [1430 1466]))          
+    :file "plot4.py"
+    :pointmax 1468
+    :fsize 1468
+    :lastmodtime '(21261 29682)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "plot3.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("csv" include nil nil [1 11])
+            ("sys" include nil nil [12 22])
+            ("matplotlib" include nil nil [24 41])
+            ("matplotlib" code nil nil [42 63])
+            ("pylab" include nil nil [65 84])
+            ("numpy" include nil nil [85 104])
+            ("scipy" include nil nil [105 131])
+            ("xaxis" variable nil nil [133 149])
+            ("yaxis" variable nil nil [150 192])
+            ("title" variable nil nil [193 246])
+            ("plt" variable nil nil [249 330])
+            ("ax" variable nil nil [331 342])
+            ("ax" code nil nil [344 364])
+            ("ax" code nil nil [366 386])
+            ("ax" code nil nil [388 408])
+            ("ax" code nil nil [409 428])
+            ("run" variable nil nil [479 496])
+            ("print" code nil nil [497 506])
+            ("path" code nil nil [508 525])
+            ("output" code nil nil [526 546])
+            ("data" variable nil nil [548 557])
+            ("data" variable nil nil [707 759])
+            ("for" code nil nil [771 999])
+            ("lgd" variable nil nil [1026 1132])
+            ("ax" code nil nil [1134 1181])
+            ("ax" code nil nil [1182 1229])
+            ("plt" code nil nil [1231 1255])
+            ("handles, labels" code nil nil [1257 1305])
+            ("ax" code nil nil [1306 1319])
+            ("print" code nil nil [1321 1354])
+            ("savefig" code nil nil [1421 1457]))          
+    :file "plot3.py"
+    :pointmax 1462
+    :fsize 1459
+    :lastmodtime '(21261 29691)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "plot2.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("csv" include nil nil [1 11])
+            ("sys" include nil nil [12 22])
+            ("matplotlib" include nil nil [24 41])
+            ("matplotlib" code nil nil [42 63])
+            ("pylab" include nil nil [65 84])
+            ("numpy" include nil nil [85 104])
+            ("scipy" include nil nil [105 131])
+            ("xaxis" variable nil nil [133 149])
+            ("yaxis" variable nil nil [150 192])
+            ("title" variable nil nil [193 241])
+            ("plt" variable nil nil [244 325])
+            ("ax" variable nil nil [326 337])
+            ("ax" code nil nil [362 382])
+            ("ax" code nil nil [384 404])
+            ("ax" code nil nil [406 426])
+            ("ax" code nil nil [427 446])
+            ("run" variable nil nil [497 514])
+            ("print" code nil nil [515 524])
+            ("path" code nil nil [526 543])
+            ("output" code nil nil [544 564])
+            ("data" variable nil nil [566 575])
+            ("data" variable nil nil [725 777])
+            ("for" code nil nil [789 1017])
+            ("lgd" variable nil nil [1044 1150])
+            ("ax" code nil nil [1152 1199])
+            ("ax" code nil nil [1200 1247])
+            ("plt" code nil nil [1249 1273])
+            ("handles, labels" code nil nil [1275 1323])
+            ("ax" code nil nil [1324 1337])
+            ("print" code nil nil [1339 1372])
+            ("savefig" code nil nil [1439 1475]))          
+    :file "plot2.py"
+    :pointmax 1478
+    :fsize 1477
+    :lastmodtime '(21261 30039)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jsmiller!school!ml!jsmiller-cs254-win-14!hw3!plots!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

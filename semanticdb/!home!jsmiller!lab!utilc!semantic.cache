@@ -1,0 +1,55 @@
+;; Object utilc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "utilc/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("DEPS" variable (:default-value ("$(OBJS:.o=.d)")) nil [1 22])
+            ("CC" variable (:default-value ("gcc")) nil [22 31])
+            ("CFLAGS" variable (:default-value ("-g3" "-Wall" "-fpic" "-std=gnu99" "-MMD" "-MP" "-DDEBUG" "-D_DEBUG" "-O3" "-Werror")) nil [31 105])
+            ("LDLIBS" variable (:default-value ("-lm" "-lrt" "-pthread" "-D_POSIX_C_SOURCE=200112L" "-D_GNU_SOURCE")) nil [105 173])
+            ("BIN" variable (:default-value ("libutilc.a")) nil [188 205])
+            ("OBJS" variable (:default-value ("utilc.o")) nil [205 220])
+            ("all" function (:arguments ("$(BIN)")) nil [221 233])
+            ("$(BIN)" function (:arguments ("$(OBJS)")) nil [234 274])
+            ("%.d" function (:arguments ("%.c")) nil [275 284])
+            ("check-syntax" function nil nil [285 331])
+            ("clean" function nil nil [332 372]))          
+    :file "Makefile"
+    :pointmax 372
+    :fsize 371
+    :lastmodtime '(21265 49724)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "utilc.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("signal.h" include (:system-flag t) nil [650 669])
+            ("pthread.h" include (:system-flag t) nil [670 690])
+            ("utilc.h" include nil nil [692 710])
+            ("__timeout__" variable (:type "int") nil [712 742])
+            ("__catching_exit__" variable (:type "int") nil [743 773])
+            ("__catching_segfault__" variable (:type "int") nil [774 804])
+            ("uerr" variable (:type "int") nil [806 819])
+            ("print_trace" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [888 893]))                  
+                :type "void")
+                nil [870 1213])
+            ("sig_handler" function
+               (:arguments 
+                  ( ("signo" variable (:type "int") (reparse-symbol arg-sub-list) [1232 1242]))                  
+                :type "void")
+                nil [1215 1878]))          
+    :file "utilc.c"
+    :pointmax 1882
+    :fsize 1881
+    :lastmodtime '(21265 49498)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jsmiller!lab!utilc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

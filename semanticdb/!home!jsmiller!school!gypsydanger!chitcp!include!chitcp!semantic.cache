@@ -1,0 +1,381 @@
+;; Object chitcp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "chitcp/"
+  :tables (list 
+   (semanticdb-table "types.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("CHITCP_TYPES_H" variable (:constant-flag t) nil [1852 1866])
+            ("stdint.h" include (:system-flag t) nil [1868 1887])
+            ("netinet/in.h" include (:system-flag t) nil [1888 1911])
+            ("chitcp_retcode_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("CHITCP_OK" variable
+                             (:constant-flag t
+                              :default-value (2124 2125)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [2099 2125])
+                          ("CHITCP_ENOMEM" variable
+                             (:constant-flag t
+                              :default-value (2193 2195)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [2170 2195])
+                          ("CHITCP_ESOCKET" variable
+                             (:constant-flag t
+                              :default-value (2259 2261)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [2234 2261])
+                          ("CHITCP_ETHREAD" variable
+                             (:constant-flag t
+                              :default-value (2324 2326)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [2300 2326])
+                          ("CHITCP_ESYNC" variable
+                             (:constant-flag t
+                              :default-value (2385 2387)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [2363 2387])
+                          ("CHITCP_EINIT" variable
+                             (:constant-flag t
+                              :default-value (2487 2489)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [2465 2489])
+                          ("CHITCP_EWOULDBLOCK" variable
+                             (:constant-flag t
+                              :default-value (2562 2564)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [2540 2564])
+                          ("CHITCP_EINVAL" variable
+                             (:constant-flag t
+                              :default-value (2660 2662)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [2638 2662]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [2080 2714])
+            ("bool_t" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [2742 2761])
+            ("FALSE" variable (:constant-flag t) nil [2785 2790])
+            ("TRUE" variable (:constant-flag t) nil [2822 2826])
+            ("RET_ON_ERROR" variable (:constant-flag t) nil [2846 2858])
+            ("PROPAGATE_ON_ERROR" variable (:constant-flag t) nil [3074 3092])
+            ("PROPAGATE_ON_ERROR" variable (:constant-flag t) nil [3074 3092])
+            ("PROPAGATE_ON_ERROR" variable (:constant-flag t) nil [3074 3092])
+            ("EXIT_ON_ERROR" variable (:constant-flag t) nil [3348 3361])
+            ("EXIT_ON_ERROR" variable (:constant-flag t) nil [3348 3361])
+            ("EXIT_ON_ERROR" variable (:constant-flag t) nil [3348 3361])
+            ("WARN_ON_ERROR" variable (:constant-flag t) nil [3652 3665])
+            ("WARN_ON_ERROR" variable (:constant-flag t) nil [3652 3665])
+            ("WARN_ON_ERROR" variable (:constant-flag t) nil [3652 3665])
+            ("chisocket_t" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [3927 3951])
+            ("socket_t" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [3952 3973])
+            ("socket_type_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("SOCKET_ACTIVE" variable
+                             (:constant-flag t
+                              :default-value (4011 4012)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [3994 4012])
+                          ("SOCKET_PASSIVE" variable
+                             (:constant-flag t
+                              :default-value (4035 4036)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [4018 4036])
+                          ("SOCKET_UNINITIALIZED" variable
+                             (:constant-flag t
+                              :default-value (4065 4066)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [4042 4066]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [3975 4084])
+            ("tcp_state_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("CLOSED" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [4124 4131])
+                          ("LISTEN" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [4136 4143])
+                          ("SYN_RCVD" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [4148 4157])
+                          ("SYN_SENT" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [4162 4171])
+                          ("ESTABLISHED" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [4176 4188])
+                          ("FIN_WAIT_1" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [4193 4204])
+                          ("FIN_WAIT_2" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [4209 4220])
+                          ("CLOSE_WAIT" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [4225 4236])
+                          ("CLOSING" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [4241 4249])
+                          ("TIME_WAIT" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [4254 4264])
+                          ("LAST_ACK" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [4269 4278]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [4105 4293])
+            ("IS_VALID_TCP_STATE" variable (:constant-flag t) nil [4303 4321]))          
+    :file "types.h"
+    :pointmax 4368
+    :fsize 4367
+    :lastmodtime '(21260 56856)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("IS_VALID_TCP_STATE" (spp-arg-list ("x") 4321 . 4324) . ((semantic-list "((x) >= CLOSED && (x) <= LAST_ACK)" 4325 . 4359)))
+          ("WARN_ON_ERROR" (spp-arg-list ("f" "msg") 3665 . 3673) . ((semantic-list "{                                  \\
+        if ((f) != 0)                  \\
+        {                              \\
+            fprintf(stderr, \"%s: \" msg \"\\n\", __func__); \\
+        }                              \\
+    }" 3682 . 3905)))
+          ("PROPAGATE_ON_ERROR" (spp-arg-list ("f") 3092 . 3095) . ((semantic-list "{                               \\
+        int rc = (f);               \\
+        if (rc != 0)               \\
+        {                           \\
+            return rc;               \\
+        }                           \\
+    }" 3108 . 3337)))
+          ("EXIT_ON_ERROR" (spp-arg-list ("f" "msg") 3361 . 3369) . ((semantic-list "{                                  \\
+        if ((f) != 0)                  \\
+        {                              \\
+            fprintf(stderr, \"%s: \" msg \"\\n\", __func__); \\
+            exit(-1);                  \\
+        }                              \\
+    }" 3378 . 3642)))
+          ("TRUE" . ((number "1" 2827 . 2828)))
+          ("RET_ON_ERROR" (spp-arg-list ("f" "r") 2858 . 2864) . ((semantic-list "{                               \\
+        if ((f) != 0)               \\
+        {                           \\
+            return r;               \\
+        }                           \\
+    }" 2873 . 3064)))
+          ("CHITCP_TYPES_H")
+          ("FALSE" . ((number "0" 2791 . 2792)))
+          )
+
+    )
+   (semanticdb-table "buffer.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdint.h" include (:system-flag t) nil [4988 5007])
+            ("chitcp/types.h" include nil nil [5008 5033])
+            ("pthread.h" include (:system-flag t) nil [5034 5034])
+            ("BUFFER_H_" variable (:constant-flag t) nil [5061 5070])
+            ("BUFFER_NONBLOCKING" variable (:constant-flag t) nil [5080 5098])
+            ("BUFFER_BLOCKING" variable (:constant-flag t) nil [5111 5126])
+            ("circular_buffer_t" type
+               (:typedef ("circular_buffer" type (:type "struct") nil nil)
+                :superclasses "circular_buffer"
+                :type "typedef")
+                nil [5587 5839])
+            ("circular_buffer" type
+               (:members 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5625 5639])
+                    ("len" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5644 5657])
+                    ("seq_initial" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5663 5684])
+                    ("seq_start" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5689 5708])
+                    ("seq_end" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5713 5730])
+                    ("count" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5736 5751])
+                    ("start" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5757 5772])
+                    ("end" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5777 5790])
+                    ("lock" variable (:type ("pthread_mutex_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5796 5817]))                  
+                :type "struct")
+                nil [5587 5839])
+            ("circular_buffer_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type ("circular_buffer_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6158 6181])
+                    ("maxsize" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6182 6199]))                  
+                :type "int")
+                nil [6133 6200])
+            ("circular_buffer_set_seq_initial" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type ("circular_buffer_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6467 6490])
+                    ("seq_initial" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6491 6512]))                  
+                :type "int")
+                nil [6431 6513])
+            ("circular_buffer_read" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type ("circular_buffer_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7568 7591])
+                    ("dst" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7592 7605])
+                    ("len" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7606 7619])
+                    ("blocking" variable (:type ("bool_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7620 7636]))                  
+                :type "int")
+                nil [7543 7637])
+            ("circular_buffer_peek" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type ("circular_buffer_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7813 7836])
+                    ("dst" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7837 7850])
+                    ("len" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7851 7864])
+                    ("blocking" variable (:type ("bool_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7865 7881]))                  
+                :type "int")
+                nil [7788 7882])
+            ("circular_buffer_write" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type ("circular_buffer_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8838 8861])
+                    ("data" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8862 8876])
+                    ("len" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8877 8890])
+                    ("blocking" variable (:type ("bool_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8891 8907]))                  
+                :type "int")
+                nil [8812 8908])
+            ("circular_buffer_first" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type ("circular_buffer_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9088 9111]))                  
+                :type "int")
+                nil [9062 9112])
+            ("circular_buffer_next" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type ("circular_buffer_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9292 9315]))                  
+                :type "int")
+                nil [9267 9316])
+            ("circular_buffer_capacity" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type ("circular_buffer_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9503 9526]))                  
+                :type "int")
+                nil [9474 9527])
+            ("circular_buffer_count" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type ("circular_buffer_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9700 9723]))                  
+                :type "int")
+                nil [9674 9724])
+            ("circular_buffer_available" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type ("circular_buffer_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9921 9944]))                  
+                :type "int")
+                nil [9891 9945])
+            ("circular_buffer_close" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type ("circular_buffer_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10284 10307]))                  
+                :type "int")
+                nil [10258 10308])
+            ("circular_buffer_free" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type ("circular_buffer_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10493 10516]))                  
+                :type "int")
+                nil [10468 10517])
+            ("circular_buffer_dump" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type ("circular_buffer_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10712 10735]))                  
+                :type "int")
+                nil [10687 10736]))          
+    :file "buffer.h"
+    :pointmax 10767
+    :fsize 10760
+    :lastmodtime '(21260 56977)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("BUFFER_NONBLOCKING" . ((semantic-list "(0)" 5099 . 5102)))
+          ("BUFFER_BLOCKING" . ((semantic-list "(1)" 5127 . 5130)))
+          ("BUFFER_H_")
+          )
+
+    )
+   )
+  :file "!home!jsmiller!school!gypsydanger!chitcp!include!chitcp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

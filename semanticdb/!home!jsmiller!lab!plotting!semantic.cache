@@ -1,0 +1,78 @@
+;; Object plotting/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "plotting/"
+  :tables (list 
+   (semanticdb-table "plot.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("csv" include nil nil [1 11])
+            ("sys" include nil nil [12 22])
+            ("matplotlib" include nil nil [24 41])
+            ("matplotlib" code nil nil [42 63])
+            ("pylab" include nil nil [65 84])
+            ("numpy" include nil nil [85 104])
+            ("main" function nil nil [107 295])
+            ("save_plot" function (:arguments 
+              ( ("plt" variable nil (reparse-symbol function_parameters) [327 330])
+                ("ax" variable nil (reparse-symbol function_parameters) [332 334])
+                ("path" variable nil (reparse-symbol function_parameters) [336 340]))              ) nil [313 611])
+            ("new_plot" function (:arguments 
+              ( ("title" variable nil (reparse-symbol function_parameters) [626 631])
+                ("xaxis" variable nil (reparse-symbol function_parameters) [638 643])
+                ("yaxis" variable nil (reparse-symbol function_parameters) [650 655])
+                ("logx" variable nil (reparse-symbol function_parameters) [662 666])
+                ("logy" variable nil (reparse-symbol function_parameters) [674 678]))              ) nil [613 1175])
+            ("parse" function (:arguments 
+              ( ("path" variable nil (reparse-symbol function_parameters) [1209 1213])
+                ("sortCol" variable nil (reparse-symbol function_parameters) [1215 1222]))              ) nil [1199 1492])
+            ("if" code nil nil [1493 1531]))          
+    :file "plot.py"
+    :pointmax 1541
+    :fsize 1530
+    :lastmodtime '(21265 46639)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "vnstatPlot.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("csv" include nil nil [1 11])
+            ("sys" include nil nil [12 22])
+            ("pylab" include nil nil [23 42])
+            ("numpy" include nil nil [43 62])
+            ("scipy" include nil nil [63 82])
+            ("scipy" include nil nil [83 109])
+            ("resolution" variable nil nil [112 124])
+            ("vntoi" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [137 138])
+                ("label" variable nil (reparse-symbol function_parameters) [140 145]))              ) nil [127 291])
+            ("find_bit" function (:arguments 
+              ( ("row" variable nil (reparse-symbol function_parameters) [305 308]))              ) nil [292 426])
+            ("plt" variable nil nil [443 475])
+            ("ax" variable nil nil [476 487])
+            ("plotter" function (:arguments 
+              ( ("path" variable nil (reparse-symbol function_parameters) [501 505]))              ) nil [489 1792])
+            ("for" code nil nil [1807 1881])
+            ("insert" variable nil nil [1896 1917])
+            ("title" variable nil nil [1918 1932])
+            ("ax" code nil nil [1933 1952])
+            ("ax" code nil nil [2148 2227])
+            ("ax" code nil nil [2252 2299])
+            ("ax" code nil nil [2300 2347])
+            ("title" variable nil nil [2362 2376])
+            ("plt" code nil nil [2377 2403])
+            ("title" variable nil nil [2404 2437])
+            ("title" variable nil nil [2438 2469])
+            ("plt" code nil nil [2470 2495])
+            ("print" code nil nil [2496 2526])
+            ("show" code nil nil [2598 2604]))          
+    :file "vnstatPlot.py"
+    :pointmax 2630
+    :fsize 2629
+    :lastmodtime '(21265 18854)
+    :unmatched-syntax '((INDENT_BLOCK 609 . 1092) (NEWLINE 608 . 609) (COLON 607 . 608) (NAME 575 . 579) (NAME 580 . 584) (AS 597 . 599))
+    )
+   )
+  :file "!home!jsmiller!lab!plotting!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

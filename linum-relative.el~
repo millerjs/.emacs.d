@@ -53,8 +53,11 @@
 
 ;;;; Local vars
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> fd57ecc7bdcb1ec31e5862a7cba3abe07211a460
 (defvar linum-relative-last-pos 0
   "Store last position.")
 

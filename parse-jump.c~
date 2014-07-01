@@ -32,6 +32,7 @@ int main(int argc, char* argv[]){
 	    linepos += 26;
 	} else {
 	    first = 0;
+<<<<<<< HEAD
 	    colpos = (*p - offset)*5-5;
 
 	}
@@ -39,7 +40,15 @@ int main(int argc, char* argv[]){
 
 	p++;
     }
+=======
+            sscanf(p, "%d", &colpos);
+            break;
+	}
+	p++;
+    }
 
+>>>>>>> fd57ecc7bdcb1ec31e5862a7cba3abe07211a460
+    
     if (*type == '0')
 	printf("%d", linepos);
     else
