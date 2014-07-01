@@ -77,7 +77,7 @@
   "show vertical lines to guide indentation"
   :group 'emacs)
 
-(defcustom indent-guide-char "⦙d"
+(defcustom indent-guide-char "⦙"
   "character used as vertical line"
   :group 'indent-guide)
 
@@ -109,7 +109,7 @@
 
 (make-face 'indent-guide-face)
 (set-face-attribute 'indent-guide-face nil
-                    :foreground "darkred")
+                    :foreground "red")
 
 ;; * utilities
 
