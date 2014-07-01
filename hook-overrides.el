@@ -20,8 +20,8 @@
 
 
 (fset 'move-end-previous-word
-   "\C-[\C-b\C-[\C-b\C-[f")
-;;   "\C-[b\C-[b\C-[f")
+;;   "\C-[\C-b\C-[\C-b\C-[f")
+   "\C-[b\C-[b\C-[f")
 
 (define-key override-mode-map (kbd "C-M-f") 'move-beginning-next-word)
 (define-key override-mode-map (kbd "C-M-b") 'move-end-previous-word)
