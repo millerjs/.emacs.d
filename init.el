@@ -1,18 +1,36 @@
-
 (add-to-list 'load-path "~/.emacs.d/")
+
+ ;; (require 'load-directory)
+ ;; (load-directory "~/.emacs.d/")
 (load-file "~/.emacs.d/boxquote.el")
 (load-file "~/.emacs.d/title.el")
 (load-file "~/.emacs.d/latex_macros.el")
 (load-file "~/.emacs.d/rainbow-delimiters.el")
 (load-file "~/.emacs.d/external_scripts.el")
 (load-file "~/.emacs.d/jump-lines.el")
+(load-file "~/.emacs.d/iswitch.el")
+;; (load-file "~/.emacs.d/indent-guide.el")
+(add-to-list 'load-path "~/.emacs.d/rust-mode/")
+
+(require 'indent-guide)
 (require 'rainbow-delimiters)
 (require 'linum-relative)
 (require 'misc)
+(require 'rust-mode)
 
+;; ----------- [ Minor modes
+(indent-guide-global-mode)
+(which-function-mode)
+(column-number-mode)
+(show-paren-mode 1)
+;; (ido-mode 1)
+(show-paren-function)
+(global-linum-mode)
+
+;; Indent options
+;;(set-face-background 'indent-guide-face "dimgray")
 
 ;; ----------- [ Hooks
-(add-to-list 'load-path "~/LaTex/")
 (add-to-list 'auto-mode-alist '("\\.F90\\'" . f90-mode))
 (add-to-list 'auto-mode-alist '("\\.par\\'" . makefile-mode))
 (add-hook 'c-mode-hook (lambda () (hs-minor-mode 1)))
@@ -21,13 +39,6 @@
 (add-hook 'python-mode-hook (lambda () (hs-minor-mode 1)))
 
 
-;; ----------- [ Minor modes
-(which-function-mode)
-(column-number-mode)
-(show-paren-mode 1)
-(show-paren-function)
-(global-linum-mode)
-;; (global-rainbow-delimiters-mode)
 
 ;; ----------- [ Bindings
 
@@ -41,6 +52,7 @@
 (global-set-key (kbd "C-x s") 'save-buffer)
 (global-set-key (kbd "C-c s") 'ispell)
 (global-set-key (kbd "C-c f") 'add-environ)
+(global-set-key (kbd "C-x f") 'find-file)
 
 
 (global-set-key (kbd "C-x w") 'just-one-space) 
@@ -55,8 +67,6 @@
 (global-set-key (kbd "C-x n") 'next-non-emacs-buffer)
 (global-set-key (kbd "C-x p") 'previous-non-emacs-buffer)
 
-(global-set-key (kbd "C-M-n") 'jump-forward)
-(global-set-key (kbd "C-M-p") 'jump-backward)
 
 (global-set-key (kbd "C-M-f") 'forward-list)
 (global-set-key (kbd "C-M-b") 'backward-list)
@@ -195,7 +205,7 @@
  '(org-mobile-force-id-on-agenda-items nil)
  '(org-mobile-inbox-for-pull "~/Dropbox/from-mobile.org")
  '(org-mobile-index-file "~/text.org"))
-
+(setq org-blank-before-new-entry t)
 
 
 ;; ----------- [ Parenthasis matching
@@ -260,7 +270,7 @@
 
 (defun Template-LaTex ()
   (interactive)
-  (insert-file-contents "~/.latex_template.tex"))
+  (insert-file-contents "~/templates/latex_template.tex"))
 
 
 (defun Template-Matplotlib ()
@@ -388,5 +398,14 @@
 
 
 
+(global-set-key (kbd "C-M-n") 'jump-forward-column)
+(global-set-key (kbd "C-M-p") 'jump-backward-column)
+(global-set-key (kbd "C-c b") 'switch-to-buffer)
 
-  
+(load-file "~/.emacs.d/hook-overrides.el")
+
+
+(fset 'org-log
+   "\C-j\C-p**** \C-u\C-c!\C-m ")
+
+(global-set-key (kbd "C-c n") 'org-log)

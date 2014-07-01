@@ -56,7 +56,7 @@
 (add-hook 'minibuffer-setup-hook 'abbrev-mode)
 (global-set-key (kbd "C-c e") 'add-equation)
 (global-set-key (kbd "C-c d") 'insert-current-date)
-(global-set-key (kbd "C-c b") 'text-bf)
+;; (global-set-key (kbd "C-c b") 'text-bf)
 (global-set-key (kbd "C-c i") 'text-emph)
 (global-set-key (kbd "C-c v") 'add-verbatim)
 
