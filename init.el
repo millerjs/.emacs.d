@@ -17,7 +17,7 @@
 (require 'linum-relative)
 (require 'misc)
 (require 'rust-mode)
-
+(setq-default indent-tabs-mode nil)
 ;; ----------- [ Minor modes
 (indent-guide-global-mode)
 (which-function-mode)
@@ -109,15 +109,15 @@
      (define-key c++-mode-map (kbd "M-d") 'kill-word)))
 
 
-(global-set-key (kbd "<right>") 'ignore)
-(global-set-key (kbd "<up>") 'ignore)
-(global-set-key (kbd "<down>") 'ignore)
-(global-set-key (kbd "<left>") 'ignore)
+;; (global-set-key (kbd "<right>") 'ignore)
+;; (global-set-key (kbd "<up>") 'ignore)
+;; (global-set-key (kbd "<down>") 'ignore)
+;; (global-set-key (kbd "<left>") 'ignore)
 
-(global-set-key (kbd "C-<right>") 'ignore)
-(global-set-key (kbd "C-<up>") 'ignore)
-(global-set-key (kbd "C-<down>") 'ignore)
-(global-set-key (kbd "C-<left>") 'ignore)
+;; (global-set-key (kbd "C-<right>") 'ignore)
+;; (global-set-key (kbd "C-<up>") 'ignore)
+;; (global-set-key (kbd "C-<down>") 'ignore)
+;; (global-set-key (kbd "C-<left>") 'ignore)
 
 
 
