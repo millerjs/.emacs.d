@@ -415,4 +415,4 @@
    "\C-j\C-p**** \C-u\C-c!\C-m ")
 
 (global-set-key (kbd "C-c n") 'org-log)
-(toggle-truncate-lines)
+(set-default 'truncate-lines t)
