@@ -1,5 +1,6 @@
 
-
+;; Turn off line wrapping
+(set-default 'truncate-lines t)
 
 (defvar override-mode-map (make-keymap) "override-mode-map")
 
