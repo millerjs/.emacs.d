@@ -9,7 +9,7 @@ int main(int argc, char* argv[]){
     char state = (**(argv+1) == '1');
     do {
 	if (*p >= 'a' && *p <= 'z'){
-            rows += 25*(c++) + (!c)*(*p - 'a') + 1;
+            rows += 25*c + (!c++)*(*p - 'a') + 1;
 	} else if (state == 1) {
             printf("%d", atoi(p));
             exit(0);
