@@ -95,7 +95,7 @@
 (global-set-key (kbd "C-x >")       'hs-show-all)
 (global-set-key (kbd "C-x p")       'replace-string)
 (global-set-key (kbd "C-M-i")       'indent-guide-mode)
-(global-set-key (kbd "C-i")       'indent-guide-mode)
+(global-set-key (kbd "M-i")         'indent-guide-mode)
 
 
 (eval-after-load "cc-mode"
