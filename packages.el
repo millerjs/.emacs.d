@@ -17,6 +17,8 @@
 (require 'dropdown-list)
 (require 'smart-tab)
 (require 'smex)
+(require 's)
+(require 'dash)
 
 ;; ======== Loading ========
 

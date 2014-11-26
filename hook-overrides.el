@@ -1,4 +1,3 @@
-
 (eval-after-load "cc-mode" '(progn (define-key c++-mode-map (kbd "C-d") 'backward-kill-word)
                                    (define-key c++-mode-map (kbd "M-d") 'kill-word)))
 

@@ -1,4 +1,3 @@
-
 ;; Turn menu off
 (define-key global-map [menu-bar tools]   nil)
 (define-key global-map [menu-bar file]    nil)
@@ -12,6 +11,7 @@
   [menu-bar mymenu]
   (cons
    "     0    5    10   15   20   25   30   35   40   45   50   55   60   65   70   75   80   85   90   95  100  105  110  115  120  125  120  135  140  145  150  155  160"
+   jump-lines-menu-grid
    (make-sparse-keymap "hoot hoot"))
   'tools )
 
@@ -32,27 +32,20 @@
 
 )
 
-(defun parse-jump-cmd (type cmd)
-  (shell-command-to-string (concat  "~/.emacs.d/parse-jump " type " \"" cmd "\""))
-)
-
 (defun jump-forward-column (cmd)
   (interactive "s")
-  (next-line (string-to-number (parse-jump-cmd "0" cmd)))
-  (if (string= (parse-jump-cmd "1" cmd) "0") nil
-    (move-to-column (string-to-number (parse-jump-cmd "1" cmd))))
+  (setq lines-str (-first-item (s-match "\\([a-z]\\)*" cmd)))
+  (next-line
+   (+ (* (- (length lines-str) 1) 26) (- (aref lines-str 0) 96)))
+  (move-to-column
+   (string-to-number (-last-item (s-match "\\([a-z]\\)*\\([0-9]*\\)" cmd))))
 )
 
 (defun jump-backward-column (cmd)
   (interactive "s")
-  (previous-line (string-to-number (parse-jump-cmd "0" cmd)))
-  (if (string= (parse-jump-cmd "1" cmd) "0") nil
-    (move-to-column (string-to-number (parse-jump-cmd "1" cmd))))
-)
-
-(defun jump-forward-column (cmd)
-  (interactive "s")
-  (next-line (string-to-number (parse-jump-cmd "0" cmd)))
-  (if (string= (parse-jump-cmd "1" cmd) "0") nil
-    (move-to-column (string-to-number (parse-jump-cmd "1" cmd))))
+  (setq lines-str (-first-item (s-match "\\([a-z]\\)*" cmd)))
+  (previous-line
+   (+ (* (- (length lines-str) 1) 26) (- (aref lines-str 0) 96)))
+  (move-to-column
+   (string-to-number (-last-item (s-match "\\([a-z]\\)*\\([0-9]*\\)" cmd))))
 )
