@@ -1,4 +1,8 @@
 
+(eval-after-load "cc-mode" '(progn (define-key c++-mode-map (kbd "C-d") 'backward-kill-word)
+                                   (define-key c++-mode-map (kbd "M-d") 'kill-word)))
+
+
 ;; Turn off line wrapping
 (set-default 'truncate-lines t)
 
@@ -43,4 +47,3 @@
 
 
 (global-set-key (kbd "C-c j f") 'for-loop)
-
