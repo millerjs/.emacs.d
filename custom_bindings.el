@@ -59,6 +59,7 @@
 (global-set-key (kbd "C-x t")       'indent-region)
 (global-set-key (kbd "C-c f n")     'flycheck-next-error)
 (global-set-key (kbd "C-c f p")     'flycheck-previous-error)
+(global-set-key (kbd "<tab>")       'indent-or-expand)
 
 ;; Was included to force myself away from arrow keys
 ;; (global-set-key (kbd "<right>")   'ignore)

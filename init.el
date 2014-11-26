@@ -18,5 +18,3 @@
 ;; After everythin, load custom hook overrides
 (load-file (concat root-path "hook-overrides.el"))
 (load-file (concat root-path "custom_flycheck.el"))
-
-(whitespace-newline-mode 1)

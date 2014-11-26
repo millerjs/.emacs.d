@@ -8,10 +8,17 @@
        ;; all numbers are Unicode codepoint in decimal. try (insert-char 182 ) to see it
       '(
         (space-mark 32 [32] [46])
-        (newline-mark 10 [8676 10]) ; 10 newline ⇤
+        (newline-mark 10 [10096 10]) ; 10 newline ⇤
         (tab-mark 9 [9655 9] [92 9]) ; 9 TAB, 9655 WHITE RIGHT-POINTING TRIANGLE 「▷」
         ))
 (setq whitespace-style (quote (spaces tabs newline space-mark tab-mark newline-mark)))
+(require 'whitespace)
+(setq whitespace-style '(face empty tabs lines-tail trailing))
+(global-whitespace-mode t)
+;; (global-whitespace-newline-mode 1)
+
+;; ======== Indent Guide ========
+(setq indent-guide-char "❘")
 
 ;; ======== Alignment ========
 (defun align-repeat (start end regexp)

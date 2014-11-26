@@ -14,6 +14,26 @@
 (require 'paren)
 (require 'ido)
 (require 'ido-vertical-mode)
+(require 'dropdown-list)
+(require 'smart-tab)
+(require 'smex)
+
+;; ======== Loading ========
+
+;; smex
+(global-set-key [(meta x)] (lambda ()
+                             (interactive)
+                             (or (boundp 'smex-cache)
+                                 (smex-initialize))
+                             (global-set-key [(meta x)] 'smex)
+                             (smex)))
+
+(global-set-key [(shift meta x)] (lambda ()
+                                   (interactive)
+                                   (or (boundp 'smex-cache)
+                                       (smex-initialize))
+                                   (global-set-key [(shift meta x)] 'smex-major-mode-commands)
+                                   (smex-major-mode-commands)))
 
 ;; Minor Modes
 (indent-guide-global-mode)
