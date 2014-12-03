@@ -38,6 +38,7 @@
   t " ovrrd " 'override-mode-map)
 
 (override-mode 1)
+(smart-tab-mode)
 
 (defun my-minibuffer-setup-hook ()
   (override-mode 0))

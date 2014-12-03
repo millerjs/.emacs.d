@@ -14,6 +14,7 @@
 (load-file (concat root-path "custom_bindings.el"))
 (load-file (concat root-path "custom_colors.el"))
 (load-file (concat root-path "custom_magit.el"))
+(load-file (concat root-path "custom_org.el"))
 
 ;; After everythin, load custom hook overrides
 (load-file (concat root-path "hook-overrides.el"))

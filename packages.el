@@ -19,6 +19,7 @@
 (require 'smex)
 (require 's)
 (require 'dash)
+(require 'inline-crypt)
 
 ;; ======== Loading ========
 
@@ -44,6 +45,7 @@
 (global-linum-mode)
 (ido-mode 1)
 (ido-vertical-mode 1)
+(global-smart-tab-mode 1)
 
 ;;======== configure package management ========
 (require 'package)

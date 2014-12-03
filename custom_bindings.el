@@ -60,6 +60,10 @@
 (global-set-key (kbd "C-c f n")     'flycheck-next-error)
 (global-set-key (kbd "C-c f p")     'flycheck-previous-error)
 (global-set-key (kbd "<tab>")       'indent-or-expand)
+(define-key global-map "\C-c l"     'org-store-link)
+(define-key global-map "\C-c a"     'org-agenda)
+(global-set-key (kbd "C-c C-x a")   'org-archive-done-tasks)
+(global-set-key (kbd "C-c t")   'org-complete-and-archive)
 
 ;; Was included to force myself away from arrow keys
 ;; (global-set-key (kbd "<right>")   'ignore)

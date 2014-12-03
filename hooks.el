@@ -1,4 +1,3 @@
-
 ;; ======== Hooks ========
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-to-list 'auto-mode-alist '("\\.F90\\ '" . f90-mode))
