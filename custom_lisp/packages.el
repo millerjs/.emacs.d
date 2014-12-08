@@ -1,9 +1,9 @@
 ;;======== load package files ========
-(load-file "~/.emacs.d/boxquote.el")
-(load-file "~/.emacs.d/external_scripts.el")
-(load-file "~/.emacs.d/jump-lines.el")
-(load-file "~/.emacs.d/hide-region.el")
-(load-file "~/.emacs.d/go-mode.el")
+(load-file (concat root-path "boxquote.el"))
+(load-file (concat root-path "external_scripts.el"))
+(load-file (concat root-path "jump-lines.el"))
+(load-file (concat root-path "hide-region.el"))
+(load-file (concat root-path "go-mode.el"))
 
 (package-initialize)
 
