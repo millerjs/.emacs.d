@@ -40,7 +40,7 @@
                                    (smex-major-mode-commands)))
 
 ;; Minor Modes
-(indent-guide-global-mode)
+;; (indent-guide-global-mode)
 (column-number-mode)
 (show-paren-mode 1)
 (global-linum-mode)
