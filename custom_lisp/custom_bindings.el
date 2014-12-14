@@ -64,4 +64,4 @@
 (define-key global-map "\C-c a"     'org-agenda)
 (global-set-key (kbd "C-c C-x a")   'org-archive-done-tasks)
 (global-set-key (kbd "C-c t")       'org-complete-and-archive)
-(global-set-key "\C-c\C-d"          'insert-current-date-time)
+(global-set-key (kbd "C-c d")       'insert-current-date-time)
