@@ -4,6 +4,7 @@
 (setq default-tab-width 4)
 
 ;; ======== Whitespace ========
+(require 'whitespace)
 (setq whitespace-display-mappings
        ;; all numbers are Unicode codepoint in decimal. try (insert-char 182 ) to see it
       '(
@@ -18,25 +19,12 @@
 
 (custom-set-faces
  '(whitespace-space ((t (:bold t :foreground "gray75"))))
- '(whitespace-empty ((t (:foreground "firebrick" :background "black"))))
- '(whitespace-hspace ((t (:foreground "lightgray" :background "LemonChiffon3"))))
- '(whitespace-indentation ((t (:foreground "firebrick" :background "beige"))))
- '(whitespace-line ((t (:foreground "black" :background "red"))))
- '(whitespace-newline ((t (:foreground "orange" :background "blue"))))
- '(whitespace-space-after-tab ((t (:foreground "black" :background "red"))))
- '(whitespace-space-before-tab ((t (:foreground "black" :background "red"))))
  '(whitespace-tab ((t (:foreground "grey" :background "color-233"))))
  '(whitespace-trailing ((t (:foreground "red" :background "yellow"))))
-   )
+ )
 
 
 (setq whitespace-style '(face empty tabs tab-mark lines-tail trailing))
-;; (setq whitespace-style (quote (spaces tabs newline space-mark
-;;                                       tab-mark newline-mark)))
-;; (setq whitespace-style (quote (tab-mark)))
-
-(require 'whitespace)
-
 (global-whitespace-mode t)
 
 ;; ======== Go fmt ========
