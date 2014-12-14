@@ -9,7 +9,8 @@
       '(
         (space-mark 32 [32] [46])
         (newline-mark 10 [10096 10]) ; 10 newline ⇤
-        (tab-mark 9 [8230 9] [91 9]) ; 8677
+        ;; (tab-mark 9 [8230 9] [91 9]) ; 8677
+        ;; (tab-mark 9 [8230 9]) ; 8677
         ;; (tab-mark 9 [9655 9] [92 9]) ; 9 TAB, 9655 WHITE RIGHT-POINTING TRIANGLE 「▷」
 
         )
@@ -22,8 +23,8 @@
  '(whitespace-indentation ((t (:foreground "firebrick" :background "beige"))))
  '(whitespace-line ((t (:foreground "black" :background "red"))))
  '(whitespace-newline ((t (:foreground "orange" :background "blue"))))
- '(whitespace-space-after-tab ((t (:foreground "black" :background "green"))))
- '(whitespace-space-before-tab ((t (:foreground "black" :background "DarkOrange"))))
+ '(whitespace-space-after-tab ((t (:foreground "black" :background "red"))))
+ '(whitespace-space-before-tab ((t (:foreground "black" :background "red"))))
  '(whitespace-tab ((t (:foreground "grey" :background "color-233"))))
  '(whitespace-trailing ((t (:foreground "red" :background "yellow"))))
    )
@@ -32,7 +33,7 @@
 (setq whitespace-style '(face empty tabs tab-mark lines-tail trailing))
 ;; (setq whitespace-style (quote (spaces tabs newline space-mark
 ;;                                       tab-mark newline-mark)))
-(setq whitespace-style (quote (tab-mark)))
+;; (setq whitespace-style (quote (tab-mark)))
 
 (require 'whitespace)
 
