@@ -63,14 +63,5 @@
 (define-key global-map "\C-c l"     'org-store-link)
 (define-key global-map "\C-c a"     'org-agenda)
 (global-set-key (kbd "C-c C-x a")   'org-archive-done-tasks)
-(global-set-key (kbd "C-c t")   'org-complete-and-archive)
-
-;; Was included to force myself away from arrow keys
-;; (global-set-key (kbd "<right>")   'ignore)
-;; (global-set-key (kbd "<up>")      'ignore)
-;; (global-set-key (kbd "<down>")    'ignore)
-;; (global-set-key (kbd "<left>")    'ignore)
-;; (global-set-key (kbd "C-<right>") 'ignore)
-;; (global-set-key (kbd "C-<up>")    'ignore)
-;; (global-set-key (kbd "C-<down>")  'ignore)
-;; (global-set-key (kbd "C-<left>")  'ignore)
+(global-set-key (kbd "C-c t")       'org-complete-and-archive)
+(global-set-key "\C-c\C-d"          'insert-current-date-time)

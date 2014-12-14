@@ -4,6 +4,7 @@
 (load-file (concat root-path "jump-lines.el"))
 (load-file (concat root-path "hide-region.el"))
 (load-file (concat root-path "go-mode.el"))
+(load-file (concat root-path "custom_lisp.el"))
 
 (package-initialize)
 
