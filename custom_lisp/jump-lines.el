@@ -5,6 +5,8 @@
 (define-key global-map [menu-bar options] nil)
 (define-key global-map [menu-bar buffer]  nil)
 
+(menu-bar-mode 0)
+
 ;; Set new menu
 (define-key-after
   global-map

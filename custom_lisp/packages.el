@@ -5,6 +5,19 @@
 (load-file (concat root-path "hide-region.el"))
 (load-file (concat root-path "go-mode.el"))
 (load-file (concat root-path "custom_lisp.el"))
+(load-file (concat root-path "popup.el"))
+(load-file (concat root-path "auto-complete.el"))
+
+(setq yas/prompt-functions '(yas/dropdown-prompt
+                             yas/ido-prompt
+                             yas/completing-prompt))
+
+;;======== configure package management ========
+(require 'package)
+(defvar gnu '("gnu" . "http://elpa.gnu.org/packages/"))
+(defvar melpa '("melpa" . "http://melpa.org/packages/"))
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 (package-initialize)
 
@@ -21,9 +34,10 @@
 (require 's)
 (require 'dash)
 (require 'inline-crypt)
+(require 'popup)
+(require 'auto-complete)
 
 ;; ======== Loading ========
-
 ;; smex
 (global-set-key [(meta x)] (lambda ()
                              (interactive)
@@ -48,10 +62,6 @@
 (ido-vertical-mode 1)
 (global-smart-tab-mode 1)
 
-;;======== configure package management ========
-(require 'package)
-(defvar gnu '("gnu" . "http://elpa.gnu.org/packages/"))
-(defvar melpa '("melpa" . "http://melpa.org/packages/"))
 
 ;; Add third-party repos
 (add-to-list 'package-archives melpa t)

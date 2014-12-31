@@ -2,6 +2,7 @@
                                    (define-key c++-mode-map (kbd "M-d") 'kill-word)))
 
 
+
 ;; Turn off line wrapping
 (set-default 'truncate-lines t)
 
@@ -47,3 +48,5 @@
 
 
 (global-set-key (kbd "C-c j f") 'for-loop)
+(define-key global-map [menu-bar tools]   nil)
+(global-auto-complete-mode 1)
