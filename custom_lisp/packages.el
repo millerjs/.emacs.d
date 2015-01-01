@@ -64,10 +64,18 @@
       '((concat root-path "custom_lisp/dict/custom")))
 (ac-config-default)
 (setq ac-ignore-case 'smart)
-
 (setq ac-use-menu-map t)
 (define-key ac-menu-map "\C-n" 'ac-next)
 (define-key ac-menu-map "\C-p" 'ac-previous)
+(define-key ac-completing-map "\t" 'ac-complete)
+(define-key ac-completing-map "\C-j" 'ac-complete)
+(define-key ac-completing-map "\r" nil)
+(setq ac-auto-show-menu 0.1)
+(define-key ac-completing-map "\M-/" 'ac-stop)
+(define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
+(set-face-background 'ac-candidate-face "color-23")
+;; (set-face-underline 'ac-candidate-face "darkgray")
+(set-face-background 'ac-selection-face "steelblue")
 
 ;; Add third-party repos
 (add-to-list 'package-archives melpa t)

@@ -20,7 +20,7 @@
 (custom-set-faces
  '(whitespace-space ((t (:bold t :foreground "gray75"))))
  '(whitespace-tab ((t (:foreground "grey" :background "color-233"))))
- '(whitespace-trailing ((t (:foreground "red" :background "yellow"))))
+ '(whitespace-trailing ((t (:foreground "red" :background "color-234"))))
  )
 
 
