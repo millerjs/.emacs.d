@@ -6,11 +6,6 @@
 (load-file (concat root-path "go-mode.el"))
 (load-file (concat root-path "custom_lisp.el"))
 (load-file (concat root-path "popup.el"))
-(load-file (concat root-path "auto-complete.el"))
-
-(setq yas/prompt-functions '(yas/dropdown-prompt
-                             yas/ido-prompt
-                             yas/completing-prompt))
 
 ;;======== configure package management ========
 (require 'package)
@@ -60,8 +55,19 @@
 (global-linum-mode)
 (ido-mode 1)
 (ido-vertical-mode 1)
-(global-smart-tab-mode 1)
+(global-smart-tab-mode t)
 
+;; Autocompletion
+(add-to-list 'load-path (concat root-path "custom_lisp"))
+(require 'auto-complete-config)
+(setq ac-user-dictionary-files
+      '((concat root-path "custom_lisp/dict/custom")))
+(ac-config-default)
+(setq ac-ignore-case 'smart)
+
+(setq ac-use-menu-map t)
+(define-key ac-menu-map "\C-n" 'ac-next)
+(define-key ac-menu-map "\C-p" 'ac-previous)
 
 ;; Add third-party repos
 (add-to-list 'package-archives melpa t)

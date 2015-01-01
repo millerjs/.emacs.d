@@ -68,12 +68,12 @@
   :group 'completion
   :prefix "ac-")
 
-(defcustom ac-delay 0.0
+(defcustom ac-delay 0.1
   "Delay to completions will be available."
   :type 'float
   :group 'auto-complete)
 
-(defcustom ac-auto-show-menu 0.3
+(defcustom ac-auto-show-menu 0.8
   "Non-nil means completion menu will be automatically shown."
   :type '(choice (const :tag "Yes" t)
                  (const :tag "Never" nil)
@@ -432,8 +432,8 @@ If there is no common part, this will be nil.")
     (define-key map [return] 'ac-complete)
     (define-key map (kbd "M-TAB") 'auto-complete)
 
-    (define-key map "\C-n" 'ac-next)
-    (define-key map "\C-p" 'ac-previous)
+    (define-key map "\M-n" 'ac-next)
+    (define-key map "\M-p" 'ac-previous)
     (define-key map [down] 'ac-next)
     (define-key map [up] 'ac-previous)
 
@@ -821,7 +821,7 @@ You can not use it in source definition like (prefix . `NAME')."
                       :symbol t
                       :scroll-bar t
                       :margin-left 1
-
+                      :keymap ac-menu-map
                       )))
 
 (defun ac-menu-delete ()
