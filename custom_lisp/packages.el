@@ -31,6 +31,7 @@
 (require 'inline-crypt)
 (require 'popup)
 (require 'auto-complete)
+(require 'mouse)
 
 ;; ======== Loading ========
 ;; smex
@@ -56,6 +57,8 @@
 (ido-mode 1)
 (ido-vertical-mode 1)
 (global-smart-tab-mode t)
+(xterm-mouse-mode t)
+(defun track-mouse (e))
 
 ;; Autocompletion
 (add-to-list 'load-path (concat root-path "custom_lisp"))
@@ -65,8 +68,10 @@
 (ac-config-default)
 (setq ac-ignore-case 'smart)
 (setq ac-use-menu-map t)
-(define-key ac-menu-map "\C-n" 'ac-next)
-(define-key ac-menu-map "\C-p" 'ac-previous)
+(define-key ac-menu-map "\M-n" 'ac-next)
+(define-key ac-menu-map "\M-p" 'ac-previous)
+(define-key ac-menu-map "\C-n" 'next-line)
+(define-key ac-menu-map "\C-p" 'previous-line)
 (define-key ac-completing-map "\t" 'ac-complete)
 (define-key ac-completing-map "\C-j" 'ac-complete)
 (define-key ac-completing-map "\r" nil)

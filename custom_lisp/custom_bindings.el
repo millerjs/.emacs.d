@@ -1,8 +1,6 @@
-
 ;;======== custom bindings ========
 (global-set-key (kbd "<f2>")        'toggle-truncate-lines)
 (global-set-key (kbd "C-x 9")       'kmacro-insert-counter)
-;; (global-set-key (kbd "<C-tab>")     'dabbrev-expand)
 (global-set-key (kbd "C-^")         'yank-pop)
 (global-set-key (kbd "<backtab>")   'dabbrev-expand)
 (global-set-key (kbd "C-x m")       'comment-or-uncomment-region-or-line)
@@ -59,9 +57,10 @@
 (global-set-key (kbd "C-x t")       'indent-region)
 (global-set-key (kbd "C-c f n")     'flycheck-next-error)
 (global-set-key (kbd "C-c f p")     'flycheck-previous-error)
-;; (global-set-key (kbd "<tab>")       'indent-or-expand)
 (define-key global-map "\C-c l"     'org-store-link)
 (define-key global-map "\C-c a"     'org-agenda)
 (global-set-key (kbd "C-c C-x a")   'org-archive-done-tasks)
 (global-set-key (kbd "C-c t")       'org-complete-and-archive)
 (global-set-key (kbd "C-c d")       'insert-current-date-time)
+(global-set-key (kbd "<mouse-5>")   'scroll-up)
+(global-set-key (kbd "<mouse-4>")   'scroll-down)
