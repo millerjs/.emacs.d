@@ -57,8 +57,8 @@
 (ido-mode 1)
 (ido-vertical-mode 1)
 (global-smart-tab-mode t)
-(xterm-mouse-mode t)
 (defun track-mouse (e))
+;; (xterm-mouse-mode t)
 
 ;; Autocompletion
 (add-to-list 'load-path (concat root-path "custom_lisp"))
