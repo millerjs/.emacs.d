@@ -9,7 +9,6 @@
 (load-file (concat root-path "buffers.el"))
 (load-file (concat root-path "comments.el"))
 (load-file (concat root-path "formatting.el"))
-(load-file (concat root-path "custom_ido.el"))
 (load-file (concat root-path "custom_variables.el"))
 (load-file (concat root-path "custom_bindings.el"))
 (load-file (concat root-path "custom_colors.el"))

@@ -15,17 +15,12 @@
              '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 (package-initialize)
-
 (require 'indent-guide)
 (require 'linum-relative)
 (require 'misc)
 (require 'yaml-mode)
 (require 'paren)
-(require 'ido)
-(require 'ido-vertical-mode)
-(require 'dropdown-list)
 (require 'smart-tab)
-(require 'smex)
 (require 's)
 (require 'dash)
 (require 'inline-crypt)
@@ -33,29 +28,11 @@
 (require 'auto-complete)
 (require 'mouse)
 
-;; ======== Loading ========
-;; smex
-(global-set-key [(meta x)] (lambda ()
-                             (interactive)
-                             (or (boundp 'smex-cache)
-                                 (smex-initialize))
-                             (global-set-key [(meta x)] 'smex)
-                             (smex)))
-
-(global-set-key [(shift meta x)] (lambda ()
-                                   (interactive)
-                                   (or (boundp 'smex-cache)
-                                       (smex-initialize))
-                                   (global-set-key [(shift meta x)] 'smex-major-mode-commands)
-                                   (smex-major-mode-commands)))
-
 ;; Minor Modes
 ;; (indent-guide-global-mode)
 (column-number-mode)
 (show-paren-mode 1)
 (global-linum-mode)
-(ido-mode 1)
-(ido-vertical-mode 1)
 (global-smart-tab-mode t)
 (defun track-mouse (e))
 ;; (xterm-mouse-mode t)
