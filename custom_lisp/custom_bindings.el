@@ -64,3 +64,7 @@
 (global-set-key (kbd "C-c d")       'insert-current-date-time)
 (global-set-key (kbd "<mouse-5>")   'scroll-up)
 (global-set-key (kbd "<mouse-4>")   'scroll-down)
+(global-set-key (kbd "M-<right>")   'forward-word)
+(global-set-key (kbd "M-<left>")    'backward-word)
+(global-set-key (kbd "M-<up>")      'backward-paragraph)
+(global-set-key (kbd "M-<down>")    'forward-paragraph)
