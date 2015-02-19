@@ -27,6 +27,7 @@
 (require 'popup)
 (require 'auto-complete)
 (require 'mouse)
+(require 'autopair)
 
 ;; Minor Modes
 ;; (indent-guide-global-mode)
@@ -34,6 +35,7 @@
 (show-paren-mode 1)
 (global-linum-mode)
 (global-smart-tab-mode t)
+(autopair-global-mode t)
 (defun track-mouse (e))
 ;; (xterm-mouse-mode t)
 
