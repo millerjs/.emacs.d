@@ -68,6 +68,7 @@
    (+ (* (- (length lines-str) 1) 26) (- (aref lines-str 0) 96)))
   (move-to-column
    (string-to-number (-last-item (s-match "\\([a-z]\\)*\\([0-9]*\\)" cmd))))
+  (recenter)
 )
 
 (defun jump-backward-column (cmd)
@@ -77,4 +78,5 @@
    (+ (* (- (length lines-str) 1) 26) (- (aref lines-str 0) 96)))
   (move-to-column
    (string-to-number (-last-item (s-match "\\([a-z]\\)*\\([0-9]*\\)" cmd))))
+  (recenter)
 )

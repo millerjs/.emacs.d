@@ -23,7 +23,6 @@
  '(whitespace-trailing ((t (:foreground "red" :background "color-234"))))
  )
 
-
 (setq whitespace-style '(face empty tabs tab-mark lines-tail trailing))
 (global-whitespace-mode t)
 

@@ -28,6 +28,7 @@
 (require 'auto-complete)
 (require 'mouse)
 (require 'autopair)
+(require 'smooth-scrolling)
 
 ;; Minor Modes
 ;; (indent-guide-global-mode)
@@ -38,6 +39,15 @@
 (autopair-global-mode t)
 (defun track-mouse (e))
 ;; (xterm-mouse-mode t)
+
+(setq smooth-scroll-margin 15)
+(setq redisplay-dont-pause t
+      scroll-margin 1
+      scroll-step 1
+      scroll-conservatively 10000
+      scroll-preserve-screen-position 1)
+
+(setq linum-delay t)
 
 ;; Autocompletion
 (add-to-list 'load-path (concat root-path "custom_lisp"))
