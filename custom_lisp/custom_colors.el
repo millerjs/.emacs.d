@@ -17,6 +17,3 @@
 
 ;; ======== Region ========
 (set-face-background 'region "blue")
-
-;; ======== Indent guide ========
-(set-face-foreground 'indent-guide-face "red")

@@ -1,4 +1,4 @@
-;;======== load package files ========
+;;======== Loadpack package files ========
 (load-file (concat root-path "boxquote.el"))
 (load-file (concat root-path "external_scripts.el"))
 (load-file (concat root-path "jump-lines.el"))
@@ -9,7 +9,6 @@
 
 ;;======== configure package management ========
 (require 'package)
-(defvar gnu '("gnu" . "http://elpa.gnu.org/packages/"))
 (defvar melpa '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
@@ -40,7 +39,7 @@
 (defun track-mouse (e))
 ;; (xterm-mouse-mode t)
 
-(setq smooth-scroll-margin 15)
+(setq smooth-scroll-margin 0)
 (setq redisplay-dont-pause t
       scroll-margin 1
       scroll-step 1
