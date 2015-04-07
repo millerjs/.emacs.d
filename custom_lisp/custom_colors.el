@@ -11,6 +11,10 @@
 (set-face-foreground 'font-lock-constant-face "brightblue")
 (set-face-foreground 'font-lock-builtin-face "brightblue")
 
+;; ======== Window ========
+(set-face-background 'mode-line "color-233")
+(set-face-foreground 'mode-line "white")
+
 ;; ======== Region ========
 (set-face-background 'region "blue")
 
