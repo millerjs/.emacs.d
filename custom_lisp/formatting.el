@@ -34,6 +34,7 @@
 (set-face-foreground 'indent-guide-face "color-237")
 (setq indent-guide-recursive t)
 
+
 ;; ======== Alignment ========
 (defun align-repeat (start end regexp)
   "Repeat alignment with respect to

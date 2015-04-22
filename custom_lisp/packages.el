@@ -28,6 +28,9 @@
 (require 'mouse)
 (require 'autopair)
 (require 'smooth-scrolling)
+(require 'zone-matrix)
+
+(setq zone-programs [zone-pgm-paragraph-spaz])
 
 ;; Minor Modes
 ;; (indent-guide-global-mode)
