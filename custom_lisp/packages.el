@@ -29,18 +29,19 @@
 (require 'autopair)
 (require 'smooth-scrolling)
 (require 'zone-matrix)
+(require 'popwin)
 
 (setq zone-programs [zone-pgm-paragraph-spaz])
 
 ;; Minor Modes
-;; (indent-guide-global-mode)
 (column-number-mode)
 (show-paren-mode 1)
 (global-linum-mode)
 (global-smart-tab-mode t)
 (autopair-global-mode t)
 (defun track-mouse (e))
-;; (xterm-mouse-mode t)
+(xterm-mouse-mode t)
+;; (indent-guide-global-mode)
 
 (setq smooth-scroll-margin 0)
 (setq redisplay-dont-pause t
@@ -75,3 +76,6 @@
 
 ;; Add third-party repos
 (add-to-list 'package-archives melpa t)
+
+;; ======== Jedi mode ========
+(setq jedi:complete-on-dot 1)

@@ -68,3 +68,5 @@
 (global-set-key (kbd "M-<left>")    'backward-word)
 (global-set-key (kbd "M-<up>")      'backward-paragraph)
 (global-set-key (kbd "M-<down>")    'forward-paragraph)
+(global-set-key (kbd "C-x C-j")       'jedi:show-doc)
+(global-set-key (kbd "C-M-m")     'xterm-mouse-mode)
