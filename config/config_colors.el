@@ -17,3 +17,6 @@
 
 ;; ======== Region ========
 (set-face-background 'region "blue")
+
+;; ======== Smartparens ========
+(set-face-background 'sp-pair-overlay-face "black")

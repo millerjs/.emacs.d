@@ -1,11 +1,10 @@
 ;;======== Loadpack package files ========
-(load-file (concat root-path "boxquote.el"))
-(load-file (concat root-path "external_scripts.el"))
-(load-file (concat root-path "jump-lines.el"))
-(load-file (concat root-path "hide-region.el"))
-(load-file (concat root-path "go-mode.el"))
-(load-file (concat root-path "custom_lisp.el"))
-(load-file (concat root-path "popup.el"))
+(load-file (concat lisp-path "external_scripts.el"))
+(load-file (concat lisp-path "jump-lines.el"))
+(load-file (concat lisp-path "hide-region.el"))
+(load-file (concat lisp-path "go-mode.el"))
+(load-file (concat lisp-path "custom_lisp.el"))
+(load-file (concat lisp-path "popup.el"))
 
 ;;======== configure package management ========
 (require 'package)
@@ -16,6 +15,7 @@
 (package-initialize)
 (require 'indent-guide)
 (require 'linum-relative)
+(require 'smartparens)
 (require 'misc)
 (require 'yaml-mode)
 (require 'paren)
@@ -26,7 +26,6 @@
 (require 'popup)
 (require 'auto-complete)
 (require 'mouse)
-(require 'autopair)
 (require 'smooth-scrolling)
 (require 'zone-matrix)
 (require 'popwin)
@@ -35,12 +34,12 @@
 
 ;; Minor Modes
 (column-number-mode)
+(smartparens-global-mode 1)
 (show-paren-mode 1)
 (global-linum-mode)
 (global-smart-tab-mode t)
-(autopair-global-mode t)
 (defun track-mouse (e))
-(xterm-mouse-mode t)
+;; (xterm-mouse-mode t)
 ;; (indent-guide-global-mode)
 
 (setq smooth-scroll-margin 0)
