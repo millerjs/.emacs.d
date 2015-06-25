@@ -13,6 +13,7 @@
              '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 (package-initialize)
+(require 'dired-subtree)
 (require 'indent-guide)
 (require 'linum-relative)
 (require 'smartparens)

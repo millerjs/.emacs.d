@@ -70,3 +70,5 @@
 (global-set-key (kbd "M-<down>")    'forward-paragraph)
 (global-set-key (kbd "C-x C-j")     'jedi:show-doc)
 (global-set-key (kbd "C-M-m")       'xterm-mouse-mode)
+(define-key dired-mode-map "\C-i"   'dired-subtree-insert)
+(define-key dired-mode-map "\C-k"   'dired-subtree-remove)
