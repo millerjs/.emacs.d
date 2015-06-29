@@ -1,28 +1,3 @@
-;; (lexical-let ((beg -1)
-;;               (end -1)
-;;               (prev-mid -1))
-;; 
-;;   (defun backward-binary ()
-;;     (interactive)
-;;     (if (/= prev-mid (point))
-;;         (setq beg -1 end -1)
-;;       (setq end prev-mid))
-;;     (if (< beg 0) (setq beg (line-beginning-position)
-;;                         end (point)))
-;;     (setq prev-mid (/ (+ beg end) 2))
-;;     (goto-char prev-mid))
-;; 
-;;   (defun forward-binary ()
-;;     (interactive)
-;;     (if (/= prev-mid (point))
-;;         (setq beg -1 end -1)
-;;       (setq beg prev-mid))
-;;     (if (< end 0) (setq beg (point)
-;;                         end (line-end-position)))
-;;     (setq prev-mid (/ (+ beg end ) 2))
-;;     (goto-char prev-mid))
-;;   )
-
 (global-set-key [(meta j)] 'backward-binary)
 (global-set-key [(meta k)] 'forward-binary)
 
@@ -61,20 +36,48 @@
 
 )
 
+
+(defun length-of-line ()
+  "Returns the length of the line"
+  (setq start (what-cursor-position))
+  (setq start (string-to-number (replace-regexp-in-string ".+=" "" start)))
+  (move-end-of-line 1)
+  (setq end (what-cursor-position))
+  (setq end (replace-regexp-in-string ".+=" "" end))
+  (move-to-column start)
+  (string-to-number end)
+)
+
+
 (defun jump-forward-column (cmd)
+  "Jumps forward lines as noted by line numbering.  Moves to
+  column location n/5*l where l is the length of the line and n
+  is the number following the line offset (aa2 goes forward 27
+  lines and sets the cursor ~ 2/5ths into the new line)"
   (interactive "s")
   (setq lines-str (-first-item (s-match "\\([a-z]\\)*" cmd)))
   (next-line
    (+ (* (- (length lines-str) 1) 26) (- (aref lines-str 0) 96)))
   (move-to-column
-   (string-to-number (-last-item (s-match "\\([a-z]\\)*\\([0-9]*\\)" cmd))))
-)
+   (floor (/ (* (length-of-line)
+                (- (string-to-number
+                    (-last-item
+                     (s-match "\\([a-z]\\)*\\([0-9]*\\)" cmd)))
+                   .5)) 5))))
+
 
 (defun jump-backward-column (cmd)
+  "Jumps backward lines as noted by line numbering.  Moves to
+  column location n/5*l where l is the length of the line and n
+  is the number following the line offset (aa2 goes backward 27
+  lines and sets the cursor ~ 2/5ths into the new line)"
   (interactive "s")
   (setq lines-str (-first-item (s-match "\\([a-z]\\)*" cmd)))
   (previous-line
    (+ (* (- (length lines-str) 1) 26) (- (aref lines-str 0) 96)))
   (move-to-column
-   (string-to-number (-last-item (s-match "\\([a-z]\\)*\\([0-9]*\\)" cmd))))
-)
+   (floor (/ (* (length-of-line)
+                (- (string-to-number
+                    (-last-item
+                     (s-match "\\([a-z]\\)*\\([0-9]*\\)" cmd)))
+                   .5)) 5))))
