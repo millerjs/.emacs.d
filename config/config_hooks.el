@@ -4,6 +4,7 @@
 (add-to-list 'auto-mode-alist '("\\.par\\ '" . makefile-mode))
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-hook    'c-mode-hook      (lambda () (hs-minor-mode 1) (flycheck-mode)))
+(add-hook    'rust-mode-hook      (lambda () (hs-minor-mode 1) (flycheck-mode)))
 (add-hook    'c++-mode-hook    (lambda () (hs-minor-mode 1) (flycheck-mode)))
 (add-hook    'f90-mode-hook    (lambda () (hs-minor-mode 1)))
 (add-hook    'java-mode-hook   (lambda () (hs-minor-mode 1)))
