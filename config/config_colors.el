@@ -15,6 +15,8 @@
 ;; ======== Window ========
 (set-face-background 'mode-line "color-233")
 (set-face-foreground 'mode-line "white")
+(set-face-attribute 'vertical-border nil :foreground "gray")
+(set-face-attribute 'vertical-border nil :background "color-233")
 
 ;; ======== Region ========
 (set-face-background 'region "blue")
