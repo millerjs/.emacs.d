@@ -1,4 +1,4 @@
-;;======== Loadpack package files ========
+;;======== Load package files ========
 (load-file (concat lisp-path "external_scripts.el"))
 (load-file (concat lisp-path "jump-lines.el"))
 (load-file (concat lisp-path "hide-region.el"))
@@ -11,6 +11,10 @@
 (defvar melpa '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
+
+;; =======================================================================
+;; Required packages
+;; =======================================================================
 
 (package-initialize)
 (require 'dired-subtree)
@@ -30,18 +34,20 @@
 (require 'smooth-scrolling)
 (require 'zone-matrix)
 (require 'popwin)
+(require 'neotree)
 
 (setq zone-programs [zone-pgm-paragraph-spaz])
 
+;; =======================================================================
 ;; Minor Modes
+;; =======================================================================
+
 (column-number-mode)
 (smartparens-global-mode 1)
 (show-paren-mode 1)
 (global-linum-mode)
 (global-smart-tab-mode t)
 (defun track-mouse (e))
-;; (xterm-mouse-mode t)
-;; (indent-guide-global-mode)
 
 (setq smooth-scroll-margin 0)
 (setq redisplay-dont-pause t
@@ -52,7 +58,11 @@
 
 (setq linum-delay t)
 
-;; Autocompletion
+
+;; =======================================================================
+;; Auto complete
+;; =======================================================================
+
 (add-to-list 'load-path (concat root-path "custom_lisp"))
 (require 'auto-complete-config)
 (setq ac-user-dictionary-files
@@ -71,11 +81,14 @@
 (define-key ac-completing-map "\M-/" 'ac-stop)
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
 (set-face-background 'ac-candidate-face "color-23")
-;; (set-face-underline 'ac-candidate-face "darkgray")
 (set-face-background 'ac-selection-face "steelblue")
 
 ;; Add third-party repos
 (add-to-list 'package-archives melpa t)
 
-;; ======== Jedi mode ========
+;; =======================================================================
+;; Language specifics
+;; =======================================================================
+
+;; Python
 (setq jedi:complete-on-dot 1)

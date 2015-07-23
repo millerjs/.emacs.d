@@ -72,3 +72,4 @@
 (global-set-key (kbd "C-M-m")       'xterm-mouse-mode)
 (define-key dired-mode-map "\C-i"   'dired-subtree-insert)
 (define-key dired-mode-map "\C-k"   'dired-subtree-remove)
+(global-set-key [f5]                'neotree-toggle)
