@@ -5,9 +5,9 @@
 (eval-after-load 'flycheck
   '(progn
      (set-face-foreground 'flycheck-error    "brightwhite")
-     (set-face-foreground 'flycheck-warning  "blue")
-
      (set-face-background 'flycheck-error    "magenta")
+
+     (set-face-foreground 'flycheck-warning  "blue")
      (set-face-background 'flycheck-warning  "red")
      )
   )

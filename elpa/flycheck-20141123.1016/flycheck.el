@@ -6117,6 +6117,7 @@ This syntax checker needs Rust 0.10 or newer.
 
 See URL `http://www.rust-lang.org'."
   :command ("rustc"
+            "-Adead_code"
             (option "--crate-type" flycheck-rust-crate-type)
             (option-flag "--test" flycheck-rust-check-tests)
             (option-list "-L" flycheck-rust-library-path concat)
