@@ -17,6 +17,10 @@
         )
 )
 
+(defun my-indent-setup ()
+  (c-set-offset 'arglist-intro '+))
+    (add-hook 'c-mode-hook 'my-indent-setup)
+
 (custom-set-faces
  '(whitespace-space ((t (:bold t :foreground "gray75"))))
  '(whitespace-tab ((t (:foreground "grey" :background "color-233"))))

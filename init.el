@@ -1,4 +1,5 @@
 ;; Default path
+(setq server-use-tcp t)
 (setq root-path "~/.emacs.d/")
 (setq lisp-path   (concat root-path "custom_lisp/"))
 (setq config-path (concat root-path "config/"))

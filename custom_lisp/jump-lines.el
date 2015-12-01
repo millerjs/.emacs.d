@@ -19,6 +19,24 @@
    (make-sparse-keymap "hoot hoot"))
   'tools )
 
+(custom-set-variables
+ '(scroll-conservatively 1000)
+ '(scroll-margin 10)
+  )
+
+(defun window-partial ()
+  (max 1 (/ (1- (window-height (selected-window))) 4)))
+
+
+(defun scroll-up-partial ()
+  (interactive)
+  (scroll-up (window-half-partial)))
+
+
+(defun scroll-down-partial ()
+  (interactive)
+  (scroll-down (window-half-partial)))
+
 
 (defun move-middle-line  () (interactive)
    (forward-word 1)

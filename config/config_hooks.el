@@ -1,6 +1,7 @@
 ;; ======== Hooks ========
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-to-list 'auto-mode-alist '("\\.F90\\ '" . f90-mode))
+(add-to-list 'auto-mode-alist '("\\.xsh\\ '" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.par\\ '" . makefile-mode))
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-hook    'c-mode-hook      (lambda () (hs-minor-mode 1) (flycheck-mode)))
