@@ -10,34 +10,6 @@
 
 (menu-bar-mode 0)
 
-;; Set new menu
-(define-key-after
-  global-map
-  [menu-bar mymenu]
-  (cons
-   "     0    5    10   15   20   25   30   35   40   45   50   55   60   65   70   75   80   85   90   95  100  105  110  115  120  125  120  135  140  145  150  155  160"
-   (make-sparse-keymap "hoot hoot"))
-  'tools )
-
-(custom-set-variables
- '(scroll-conservatively 1000)
- '(scroll-margin 10)
-  )
-
-(defun window-partial ()
-  (max 1 (/ (1- (window-height (selected-window))) 4)))
-
-
-(defun scroll-up-partial ()
-  (interactive)
-  (scroll-up (window-half-partial)))
-
-
-(defun scroll-down-partial ()
-  (interactive)
-  (scroll-down (window-half-partial)))
-
-
 (defun move-middle-line  () (interactive)
    (forward-word 1)
    (backward-word 1)
@@ -67,35 +39,22 @@
 )
 
 
-(defun jump-forward-column (cmd)
-  "Jumps forward lines as noted by line numbering.  Moves to
-  column location n/5*l where l is the length of the line and n
-  is the number following the line offset (aa2 goes forward 27
-  lines and sets the cursor ~ 2/5ths into the new line)"
+
+(defun jump-forward (cmd)
+  "Jumps forward lines as noted by line numbering. a2 goes
+  forward 27 lines"
   (interactive "s")
-  (setq lines-str (-first-item (s-match "\\([a-z]\\)*" cmd)))
-  (next-line
-   (+ (* (- (length lines-str) 1) 26) (- (aref lines-str 0) 96)))
-  (move-to-column
-   (floor (/ (* (length-of-line)
-                (- (string-to-number
-                    (-last-item
-                     (s-match "\\([a-z]\\)*\\([0-9]*\\)" cmd)))
-                   .5)) 5))))
+  (setq parsed (s-match "\\([a-z0-9]\\)*" cmd))
+  (setq lines-n (- (aref (-first-item parsed) 0) 96))
+  (setq lines-mult (- (max (string-to-number (nth 1 parsed)) 1) 1))
+  (next-line (+ lines-n (* lines-mult 26))))
 
 
-(defun jump-backward-column (cmd)
-  "Jumps backward lines as noted by line numbering.  Moves to
-  column location n/5*l where l is the length of the line and n
-  is the number following the line offset (aa2 goes backward 27
-  lines and sets the cursor ~ 2/5ths into the new line)"
+(defun jump-backward (cmd)
+  "Jumps backward lines as noted by line numbering. a2 goes
+  backward 27 lines"
   (interactive "s")
-  (setq lines-str (-first-item (s-match "\\([a-z]\\)*" cmd)))
-  (previous-line
-   (+ (* (- (length lines-str) 1) 26) (- (aref lines-str 0) 96)))
-  (move-to-column
-   (floor (/ (* (length-of-line)
-                (- (string-to-number
-                    (-last-item
-                     (s-match "\\([a-z]\\)*\\([0-9]*\\)" cmd)))
-                   .5)) 5))))
+  (setq parsed (s-match "\\([a-z0-9]\\)*" cmd))
+  (setq lines-n (- (aref (-first-item parsed) 0) 96))
+  (setq lines-mult (- (max (string-to-number (nth 1 parsed)) 1) 1))
+  (previous-line (+ lines-n (* lines-mult 26))))

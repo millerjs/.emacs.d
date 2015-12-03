@@ -74,14 +74,14 @@
 ;;;; Functions
 (defun linum-relative (line-number)
   (let* ((diff1 (abs (- line-number linum-relative-last-pos)))
-	  (diff (if (minusp diff1)
-		       diff1
-		   (+ diff1 linum-relative-plusp-offset)))
-	   (current-p (= diff linum-relative-plusp-offset))
-	    (current-symbol (if (and linum-relative-current-symbol current-p)
-				     linum-relative-current-symbol
-			         (number-to-string diff)))
-	     (face (if current-p 'linum-relative-current-face 'linum)))
+      (diff (if (minusp diff1)
+               diff1
+           (+ diff1 linum-relative-plusp-offset)))
+       (current-p (= diff linum-relative-plusp-offset))
+        (current-symbol (if (and linum-relative-current-symbol current-p)
+                     linum-relative-current-symbol
+                     (number-to-string diff)))
+         (face (if current-p 'linum-relative-current-face 'linum)))
     (propertize (format linum-relative-format current-symbol) 'face face)))
 
 
@@ -96,22 +96,23 @@
 
 (defun linum-relative2 (line-number)
   (let* ((diff1 (abs (- line-number linum-relative-last-pos)))
-	  (diff (if (minusp diff1)
-		       diff1
-		   (+ diff1 linum-relative-plusp-offset)))
-	   (current-p (= diff linum-relative-plusp-offset))
-	    (current-symbol (if (and linum-relative-current-symbol current-p)
-				     linum-relative-current-symbol
-			         (number-to-string diff)))
-	     (face (if current-p 'linum-relative-current-face 'linum)))
- 
-    (propertize (format linum-relative-format 
-			(if (< (string-to-number current-symbol) 78) 
-			(substring "     a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  q  r  s  t  u  v  w  x  y  z aa bb cc dd ee ff gg hh ii jj kk ll mm nn oo pp qq rr ss tt uu vv ww xx yy zzaaabbbcccdddeeefffhhhgggiiijjjkkklllmmmnnnooopppqqqrrrssstttuuuvvvwwwxxxyyyzzz"
-				    
-				   (* 3 (string-to-number current-symbol))
-				   (+ (* 3 (string-to-number current-symbol)) 3)) "-" )) 
-		'face face)))
+      (diff (if (minusp diff1)
+               diff1
+           (+ diff1 linum-relative-plusp-offset)))
+       (current-p (= diff linum-relative-plusp-offset))
+        (current-symbol (if (and linum-relative-current-symbol current-p)
+                     linum-relative-current-symbol
+                     (number-to-string diff)))
+         (face (if current-p 'linum-relative-current-face 'linum)))
+
+
+    (propertize (format linum-relative-format
+            (if (< (string-to-number current-symbol) 131)
+            ;; (substring "     a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  q  r  s  t  u  v  w  x  y  z aa bb cc dd ee ff gg hh ii jj kk ll mm nn oo pp qq rr ss tt uu vv ww xx yy zzaaabbbcccdddeeefffhhhgggiiijjjkkklllmmmnnnooopppqqqrrrssstttuuuvvvwwwxxxyyyzzz"
+            (substring "  a b c d e f g h i j k l m n o p q r s t u v w x y z a2b2c2d2e2f2g2h2i2j2k2l2m2n2o2p2q2r2s2t2u2v2w2x2y2z2a3b3c3d3e3f3g3h3i3j3k3l3m3n3o3p3q3r3s3t3u3v3w3x3y3z3a4b4c4d4e4f4g4h4i4j4k4l4m4n4o4p4q4r4s4t4u4v4w4x4y4z4a4b4c4d4e4f4g4h4i4j4k4l4m4n4o4p4q4r4s4t4u4v4w4x4y4z4a5b5c5d5e5f5g5h5i5j5k5l5m5n5o5p5q5r5s5t5u5v5w5x5y5z5"
+                   (* 2 (string-to-number current-symbol))
+                   (+ (* 2 (string-to-number current-symbol)) 2)) "-" ))
+        'face face)))
 
 
 
@@ -126,4 +127,3 @@
 
 (provide 'linum-relative)
 ;;; linum-relative.el ends here.
-

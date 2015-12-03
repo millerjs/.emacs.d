@@ -12,8 +12,8 @@
 (define-key override-mode-map (kbd "C-d") 'backward-kill-word)
 
 ;; cutsom relative line jumping
-(define-key override-mode-map (kbd "C-M-n") 'jump-forward-column)
-(define-key override-mode-map (kbd "C-M-p") 'jump-backward-column)
+(define-key override-mode-map (kbd "C-M-n") 'jump-forward)
+(define-key override-mode-map (kbd "C-M-p") 'jump-backward)
 
 ;; view commands
 (define-key override-mode-map (kbd "C-c C-v") 'recenter-top-bottom)
@@ -28,8 +28,6 @@
 ;;   "\C-[\C-b\C-[\C-b\C-[f")
    "\C-[b\C-[b\C-[f")
 
-(define-key override-mode-map (kbd "C-M-f") 'move-beginning-next-word)
-(define-key override-mode-map (kbd "C-M-b") 'move-end-previous-word)
 (define-key override-mode-map (kbd "M-b") 'backward-word)
 (define-key override-mode-map (kbd "C-h") 'backward-delete-char)
 

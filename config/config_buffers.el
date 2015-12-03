@@ -20,3 +20,19 @@
          (not (eq (buffer-name) tmp-orig))
          (emacs-buffer-p (buffer-name)))
         (previous-non-emacs-buffer tmp-orig))))
+
+
+(defun window-partial ()
+  (max 1 (/ (1- (window-height (selected-window))) 4)))
+
+
+(defun scroll-up-partial ()
+  (interactive)
+  (scroll-up (window-partial)))
+
+
+(defun scroll-down-partial ()
+  (interactive)
+  (scroll-down (window-partial)))
+
+(setq recenter-positions '(0.25 0.5 0.3 0.67 top bottom))
