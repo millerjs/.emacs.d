@@ -36,7 +36,6 @@
 (require 'popwin)
 (require 'neotree)
 
-
 (setq zone-programs [zone-pgm-paragraph-spaz])
 
 ;; =======================================================================
@@ -58,6 +57,15 @@
       scroll-preserve-screen-position 1)
 
 (setq linum-delay t)
+
+;; =======================================================================
+;; Package configuration
+;; =======================================================================
+
+;; ======== kill-ring-search ========
+(autoload 'kill-ring-search "kill-ring-search"
+  "Search the kill ring in the minibuffer."
+  (interactive))
 
 
 ;; =======================================================================

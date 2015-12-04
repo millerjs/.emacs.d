@@ -6,3 +6,7 @@ tramp
 *.elc
 parse-jump
 smex-items
+server/*
+url/*
+.python-environments/*
+ac-comp*

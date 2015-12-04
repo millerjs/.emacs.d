@@ -1,11 +1,9 @@
 ;;======== custom bindings ========
 (global-set-key (kbd "<f2>")        'toggle-truncate-lines)
 (global-set-key (kbd "C-x 9")       'kmacro-insert-counter)
-(global-set-key (kbd "C-^")         'yank-pop)
 (global-set-key (kbd "<backtab>")   'dabbrev-expand)
 (global-set-key (kbd "C-x m")       'comment-or-uncomment-region-or-line)
-(global-set-key (kbd "C-x C-m")     'comment-or-uncomment-region-or-line)(
-global-set-key (kbd "C-x s")       'save-buffer)
+(global-set-key (kbd "C-x C-m")     'comment-or-uncomment-region-or-line)
 (global-set-key (kbd "C-c s")       'ispell)
 (global-set-key (kbd "C-x f")       'find-file)
 (global-set-key (kbd "C-x w")       'just-one-space)
@@ -72,3 +70,5 @@ global-set-key (kbd "C-x s")       'save-buffer)
 (global-set-key (kbd "C-l")         'recenter-top-bottom)
 (global-set-key (kbd "C-M-f")       'forward-list)
 (global-set-key (kbd "C-M-b")       'backward-list)
+(global-set-key (kbd "C-9")         'my-wrap-with-paren)
+(global-set-key (kbd "C-M-y")       'kill-ring-search)

@@ -35,4 +35,4 @@
   (interactive)
   (scroll-down (window-partial)))
 
-(setq recenter-positions '(0.25 0.5 0.3 0.67 top bottom))
+(setq recenter-positions '(0.25 0.5 .75 top bottom))

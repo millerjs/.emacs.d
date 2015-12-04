@@ -13,6 +13,7 @@
 (load-file (concat lisp-path "parens.el"))
 
 ;; config
+(load-file (concat config-path "config_editing.el"))
 (load-file (concat config-path "config_hooks.el"))
 (load-file (concat config-path "config_buffers.el"))
 (load-file (concat config-path "config_comments.el"))
