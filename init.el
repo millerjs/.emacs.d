@@ -7,24 +7,19 @@
 (add-to-list 'load-path config-path)
 
 ;; load packagss
+(load-file (concat config-path "variables.el"))
 (load-file (concat root-path "packages.el"))
 
 ;; load custom elisp
 (load-file (concat lisp-path "parens.el"))
 
 ;; config
-(load-file (concat config-path "config_editing.el"))
-(load-file (concat config-path "config_hooks.el"))
-(load-file (concat config-path "config_buffers.el"))
-(load-file (concat config-path "config_comments.el"))
-(load-file (concat config-path "config_formatting.el"))
-(load-file (concat config-path "config_variables.el"))
-(load-file (concat config-path "config_bindings.el"))
-(load-file (concat config-path "config_colors.el"))
-(load-file (concat config-path "config_magit.el"))
-(load-file (concat config-path "config_org.el"))
-(load-file (concat config-path "config_window.el"))
+(load-file (concat config-path "editing.el"))
+(load-file (concat config-path "navigation.el"))
+(load-file (concat config-path "bindings.el"))
+(load-file (concat config-path "appearance.el"))
+(load-file (concat config-path "packages.el"))
 
-;; After everythin, load custom hook overrides
-(load-file (concat config-path "config_hook-overrides.el"))
-(load-file (concat config-path "config_flycheck.el"))
+;; After everything, load custom hook overrides
+(load-file (concat config-path "hooks.el"))
+(load-file (concat config-path "load_last.el"))

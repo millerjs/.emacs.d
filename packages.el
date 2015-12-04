@@ -1,9 +1,6 @@
 ;;======== Load package files ========
-(load-file (concat lisp-path "external_scripts.el"))
 (load-file (concat lisp-path "jump-lines.el"))
-(load-file (concat lisp-path "hide-region.el"))
 (load-file (concat lisp-path "go-mode.el"))
-(load-file (concat lisp-path "custom_lisp.el"))
 (load-file (concat lisp-path "popup.el"))
 
 ;;======== configure package management ========
@@ -31,10 +28,9 @@
 (require 'popup)
 (require 'auto-complete)
 (require 'mouse)
-(require 'smooth-scrolling)
-(require 'zone-matrix)
 (require 'popwin)
 (require 'neotree)
+(require 'ace-jump-mode)
 
 (setq zone-programs [zone-pgm-paragraph-spaz])
 
@@ -49,7 +45,6 @@
 (global-smart-tab-mode t)
 (defun track-mouse (e))
 
-(setq smooth-scroll-margin 0)
 (setq redisplay-dont-pause t
       scroll-margin 1
       scroll-step 1
@@ -58,15 +53,32 @@
 
 (setq linum-delay t)
 
-;; =======================================================================
-;; Package configuration
-;; =======================================================================
-
 ;; ======== kill-ring-search ========
 (autoload 'kill-ring-search "kill-ring-search"
   "Search the kill ring in the minibuffer."
   (interactive))
 
+;; =======================================================================
+;; Package configuration
+;; =======================================================================
+
+;; ======== Parens matching ========
+(setq show-paren-delay 0)
+(set-face-background 'show-paren-match-face (face-background 'default))
+(set-face-foreground 'show-paren-match-face "blue")
+(set-face-attribute 'show-paren-match-face nil :weight 'extra-bold)
+
+(defadvice show-paren-function
+  (after show-matching-paren-offscreen activate)
+  "If the matching paren is offscreen, show the matching line in the
+        echo area. Has no effect if the character before point is not of
+        the syntax class ')'."
+  (interactive)
+  (let* ((cb (char-before (point)))
+     (matching-text (and cb
+                 (char-equal (char-syntax cb) ?\) )
+                 (blink-matching-open))))
+    (when matching-text (message matching-text))))
 
 ;; =======================================================================
 ;; Auto complete
@@ -74,8 +86,7 @@
 
 (add-to-list 'load-path (concat root-path "custom_lisp"))
 (require 'auto-complete-config)
-(setq ac-user-dictionary-files
-      '((concat root-path "custom_lisp/dict/custom")))
+(setq ac-user-dictionary-files '((concat root-path "custom_lisp/dict/custom")))
 (ac-config-default)
 (setq ac-ignore-case 'smart)
 (setq ac-use-menu-map t)
@@ -86,18 +97,22 @@
 (define-key ac-completing-map "\t" 'ac-complete)
 (define-key ac-completing-map "\C-j" 'ac-complete)
 (define-key ac-completing-map "\r" nil)
-(setq ac-auto-show-menu 0.1)
+(setq ac-auto-show-menu 0.001)
 (define-key ac-completing-map "\M-/" 'ac-stop)
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
-(set-face-background 'ac-candidate-face "color-23")
-(set-face-background 'ac-selection-face "steelblue")
+(set-face-background 'ac-candidate-face "color-234")
+(set-face-foreground 'ac-candidate-face "color-243")
+(set-face-background 'ac-selection-face "color-18")
 
-;; Add third-party repos
-(add-to-list 'package-archives melpa t)
+(set-face-background 'popup-tip-face "color-232")
+(set-face-foreground 'popup-tip-face "color-243")
 
 ;; =======================================================================
 ;; Language specifics
 ;; =======================================================================
 
-;; Python
+;; ======== Python ========
 (setq jedi:complete-on-dot 1)
+
+;; Add third-party repos
+(add-to-list 'package-archives melpa t)
