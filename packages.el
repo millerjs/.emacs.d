@@ -63,7 +63,7 @@
 ;; =======================================================================
 
 ;; ======== Parens matching ========
-(setq show-paren-delay 0)
+(setq show-paren-delay .1)
 (set-face-background 'show-paren-match-face (face-background 'default))
 (set-face-foreground 'show-paren-match-face "blue")
 (set-face-attribute 'show-paren-match-face nil :weight 'extra-bold)
@@ -97,7 +97,7 @@
 (define-key ac-completing-map "\t" 'ac-complete)
 (define-key ac-completing-map "\C-j" 'ac-complete)
 (define-key ac-completing-map "\r" nil)
-(setq ac-auto-show-menu 0.001)
+(setq ac-auto-show-menu 0.1)
 (define-key ac-completing-map "\M-/" 'ac-stop)
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
 (set-face-background 'ac-candidate-face "color-234")

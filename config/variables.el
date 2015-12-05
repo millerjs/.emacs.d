@@ -7,7 +7,8 @@
 (setq search-highlight           t)   ; Highlight search object
 (setq query-replace-highlight    t)   ; Highlight query object
 (setq mouse-sel-retain-highlight t)   ; Keep mouse high-lighting
-(setq recenter-positions         '(0.25 0.5 .75 top bottom))
+;; (setq recenter-positions         '(0.25 0.5 .75 top bottom))
+(setq recenter-positions         '(0.5 0.25 .75 top bottom))
 (setq direx:open-icon "▼ ")
 (setq direx:closed-icon "▶ ")
 (add-to-list 'completion-ignored-extensions ".pyc")

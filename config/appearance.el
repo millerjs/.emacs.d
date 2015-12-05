@@ -80,9 +80,9 @@
 (set-face-background 'ace-jump-face-background "black")
 
 ;; Flymake
-(custom-set-faces
- '(flymake-errline ((((class color)) (:underline "red"))))
- '(flymake-warnline ((((class color)) (:underline "yellow")))))
+;; (custom-set-faces
+;;  '(flymake-errline ((((class color)) (:underline "red"))))
+;;  '(flymake-warnline ((((class color)) (:underline "yellow")))))
 
 ;; Fonts
 (set-face-foreground 'font-lock-comment-face "magenta")

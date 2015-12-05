@@ -71,5 +71,6 @@
 (global-set-key (kbd "C-M-b")       'backward-list)
 (global-set-key (kbd "C-9")         'my-wrap-with-paren)
 (global-set-key (kbd "C-M-y")       'kill-ring-search)
-(global-set-key (kbd "M-o")         'ace-jump-mode)
 (global-set-key (kbd "C-c C-d")     'direx:jump-to-directory)
+(global-set-key (kbd "M-o")         'ace-jump-mode)
+(global-set-key (kbd "C-M-o")       'ace-jump-mode)
