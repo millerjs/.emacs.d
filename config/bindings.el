@@ -74,3 +74,4 @@
 (global-set-key (kbd "C-c C-d")     'direx:jump-to-directory)
 (global-set-key (kbd "M-o")         'ace-jump-mode)
 (global-set-key (kbd "C-M-o")       'ace-jump-mode)
+(global-set-key (kbd "C-M-l")       'goto-line)

@@ -5,6 +5,7 @@
 
 ;; ======== Whitespace ========
 (require 'whitespace)
+(set-default 'truncate-lines t)
 (setq whitespace-display-mappings
        ;; all numbers are Unicode codepoint in decimal. try (insert-char 182 ) to see it
       '(

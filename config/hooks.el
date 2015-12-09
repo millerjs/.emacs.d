@@ -17,9 +17,20 @@
 ;; ======== Hook overrides ========
 (defvar override-mode-map (make-keymap) "override-mode-map")
 
-(eval-after-load
-    "cc-mode" '(progn (define-key c++-mode-map (kbd "C-d") 'backward-kill-word)
-                      (define-key c++-mode-map (kbd "M-d") 'kill-word)))
+(eval-after-load "cc-mode"
+  '(progn
+     (define-key c++-mode-map (kbd "C-d") 'backward-kill-word)
+     (define-key c++-mode-map (kbd "M-d") 'kill-word)))
+
+
+(eval-after-load "python-mode"
+  '(progn
+     (global-set-key (kbd "M-.")         'jedi:goto-definition))
+
+
+(eval-after-load "rust-mode"
+  '(progn
+     (global-set-key (kbd "M-.")         'racer-find-definition))
 
 ;; Turn off line wrapping
 (set-default 'truncate-lines t)
