@@ -23,3 +23,6 @@
 ;; After everything, load custom hook overrides
 (load-file (concat config-path "hooks.el"))
 (load-file (concat config-path "load_last.el"))
+
+;; Load auth info
+(if (file-exists-p "~/.authinfo") (load-file "~/.authinfo"))

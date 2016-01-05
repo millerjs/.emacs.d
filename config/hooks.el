@@ -25,12 +25,12 @@
 
 (eval-after-load "python-mode"
   '(progn
-     (global-set-key (kbd "M-.")         'jedi:goto-definition))
+     (global-set-key (kbd "M-.")         'jedi:goto-definition)))
 
 
 (eval-after-load "rust-mode"
   '(progn
-     (global-set-key (kbd "M-.")         'racer-find-definition))
+     (global-set-key (kbd "M-.")         'racer-find-definition)))
 
 ;; Turn off line wrapping
 (set-default 'truncate-lines t)

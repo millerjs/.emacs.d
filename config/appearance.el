@@ -18,6 +18,12 @@
         )
 )
 
+(defun my-what-face (pos)
+  (interctive "d")
+  (let ((face (or (get-char-property (point) 'read-face-name)
+                  (get-char-property (point) 'face))))
+    (if face (message "Face %s" face) (message "No face at %d" pos))))
+
 (defun my-indent-setup ()
   (c-set-offset 'arglist-intro '+))
     (add-hook 'c-mode-hook 'my-indent-setup)
@@ -74,9 +80,12 @@
 ;; Colors
 ;; =======================================================================
 
+;; Rust
+(set-face-foreground 'font-lock-doc-face "magenta")
+
 ;; Ace jump
-(set-face-foreground 'ace-jump-face-foreground "brightyellow")
-(set-face-background 'ace-jump-face-foreground "black")
+(set-face-foreground 'ace-jump-face-foreground "brightwhite")
+(set-face-background 'ace-jump-face-foreground "color-18")
 (set-face-foreground 'ace-jump-face-background "color-238")
 (set-face-background 'ace-jump-face-background "black")
 
