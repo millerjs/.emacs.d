@@ -31,6 +31,7 @@
 (require 'popwin)
 (require 'neotree)
 (require 'ace-jump-mode)
+(require 'osx-clipboard)
 
 (setq zone-programs [zone-pgm-paragraph-spaz])
 
