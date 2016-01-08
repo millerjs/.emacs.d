@@ -1,7 +1,18 @@
-;; ======== Checkers ========
-(setq python-check-command "flake8")
+;;; load_last.el --- Load these things last because they require something else. -*-lexical-binding: t-*-
 
-;; ======== Colors ========
+;; Version: 0.0.0
+;; Author: Joshua Miller <jsmiller@uchicago.edu>
+
+;;; Commentary: TODO: refactor to use requires
+;;
+
+;;; Code:
+
+
+;; ======================================================================
+;; Flycheck
+
+(setq python-check-command "flake8")
 (eval-after-load 'flycheck
   '(progn
      ;; (custom-set-faces

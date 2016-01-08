@@ -1,161 +1,141 @@
-;; ======== Tabs ========
+;;; appearance.el --- Change the way emacs looks -*-lexical-binding: t-*-
+
+;; Version: 0.0.0
+;; Author: Joshua Miller <jsmiller@uchicago.edu>
+
+;;; Commentary:
+;;
+
+;;; Code:
+
+
+;; =======================================================================
+;; Parens
+
+(defadvice jsm-show-long-parens (after show-matching-paren-offscreen activate)
+  "If the matching paren is offscreen, show the matching line in
+        the echo area. Has no effect if the character before
+        point is not of the syntax class ')'."
+  (interactive)
+  (let* ((cb (char-before (point)))
+         (matching-text
+          (and cb (char-equal (char-syntax cb) ?\) )
+               (blink-matching-open))))
+    (when matching-text (message matching-text))))
+
+(setq show-paren-delay .1)
+(set-face-background 'show-paren-match-face (face-background 'default))
+(set-face-foreground 'show-paren-match-face "blue")
+(set-face-attribute  'show-paren-match-face nil :weight 'extra-bold)
+
+
+;; =======================================================================
+;; Tabs
+
+(defun jsm-indent-setup ()
+  (c-set-offset 'arglist-intro '+))
+
+(set-default 'truncate-lines t)
+
 (setq-default indent-tabs-mode nil)
 (setq tab-width 4)
 (setq default-tab-width 4)
-
-;; ======== Whitespace ========
-(require 'whitespace)
-(set-default 'truncate-lines t)
 (setq whitespace-display-mappings
-       ;; all numbers are Unicode codepoint in decimal. try (insert-char 182 ) to see it
-      '(
-        (space-mark 32 [32] [46])
-        (newline-mark 10 [10096 10]) ; 10 newline ⇤
-        ;; (tab-mark 9 [8230 9] [91 9]) ; 8677
-        ;; (tab-mark 9 [8230 9]) ; 8677
-        ;; (tab-mark 9 [9655 9] [92 9]) ; 9 TAB, 9655 WHITE RIGHT-POINTING TRIANGLE 「▷」
-
-        )
-)
-
-(defun my-what-face (pos)
-  (interctive "d")
-  (let ((face (or (get-char-property (point) 'read-face-name)
-                  (get-char-property (point) 'face))))
-    (if face (message "Face %s" face) (message "No face at %d" pos))))
-
-(defun my-indent-setup ()
-  (c-set-offset 'arglist-intro '+))
-    (add-hook 'c-mode-hook 'my-indent-setup)
+      '((space-mark 32 [32] [46])
+        (newline-mark 10 [10096 10])))
 
 (custom-set-faces
- '(whitespace-space ((t (:bold t :foreground "gray75"))))
- '(whitespace-tab ((t (:foreground "grey" :background "color-233"))))
- '(whitespace-trailing ((t (:foreground "red" :background "color-234"))))
- '(whitespace-empty ((t (:foreground "black" :background "black"))))
- )
+ '(whitespace-space    ((t ( :foreground "gray75" :bold t))))
+ '(whitespace-tab      ((t ( :foreground "grey"   :background "color-233"))))
+ '(whitespace-trailing ((t ( :foreground "red"    :background "color-234"))))
+ '(whitespace-empty    ((t ( :foreground "black"  :background "black")))))
 
 (setq whitespace-style '(face empty tabs tab-mark lines-trailing))
-(global-whitespace-mode t)
 
-;; ======== Go fmt ========
-(add-hook 'before-save-hook #'gofmt-before-save)
 
-;; ======== Indent Guide ========
-(setq indent-guide-char "❘")
+;; =======================================================================
+;; Alignment/Indent
+
+(set-default 'truncate-lines t)
 (set-face-foreground 'indent-guide-face "color-237")
+
+(setq indent-guide-char "❘")
 (setq indent-guide-recursive t)
-
-
-;; ======== Alignment ========
-(defun align-repeat (start end regexp)
-  "Repeat alignment with respect to
-     the given regular expression."
-  (interactive "r\nsAlign regexp: ")
-  (align-regexp start end
-                (concat "\\(\\s-*\\)" regexp) 1 1 t))
-
-(setq default-frame-alist (append (list
-                                   '(width  . 81)  ; Width set to 81 characters
-                                   '(height . 40)) ; Height set to 60 lines
-                                  default-frame-alist))
-
-;; ======== Headers ========
-(global-set-key (kbd "C-x C-h") 'make-header) ; [Ctrl]-[x] [Ctrl]-[h]
-(global-set-key (kbd "C-x h") 'make-header) ; [Ctrl]-[x] [Ctrl]-[h]
-
-(defun make-header ()
-  (interactive)
-  (goto-char (line-beginning-position))
-  (insert "========")
-  (just-one-space)
-  (goto-char (line-end-position))
-  (just-one-space)
-  (insert "========")
-  (defvar end (line-end-position))
-  (comment-or-uncomment-region-or-line))
+(setq default-frame-alist
+      (append (list '(width  . 81)  ; Width set to 81 characters
+                    '(height . 40)) ; Height set to 60 lines
+              default-frame-alist))
 
 
 ;; =======================================================================
 ;; Colors
-;; =======================================================================
 
-;; Rust
-(set-face-foreground 'font-lock-doc-face "magenta")
+
+;; Auto complete
+(set-face-background 'ac-candidate-face               "color-234")
+(set-face-background 'ac-selection-face               "color-18")
+(set-face-background 'popup-tip-face                  "color-232")
+(set-face-foreground 'ac-candidate-face               "color-243")
+(set-face-foreground 'popup-tip-face                  "color-243")
+
+;; Rust docstrings
+(set-face-foreground 'font-lock-doc-face              "magenta")
 
 ;; Ace jump
-(set-face-foreground 'ace-jump-face-foreground "brightwhite")
-(set-face-background 'ace-jump-face-foreground "color-18")
-(set-face-foreground 'ace-jump-face-background "color-238")
-(set-face-background 'ace-jump-face-background "black")
-
-;; Flymake
-;; (custom-set-faces
-;;  '(flymake-errline ((((class color)) (:underline "red"))))
-;;  '(flymake-warnline ((((class color)) (:underline "yellow")))))
+(set-face-background 'ace-jump-face-background        "black")
+(set-face-background 'ace-jump-face-foreground        "color-18")
+(set-face-foreground 'ace-jump-face-background        "color-238")
+(set-face-foreground 'ace-jump-face-foreground        "brightwhite")
 
 ;; Fonts
-(set-face-foreground 'font-lock-comment-face "magenta")
-(set-face-foreground 'font-lock-string-face "green")
-(set-face-foreground 'font-lock-variable-name-face "green")
-(set-face-foreground 'font-lock-keyword-face "brightgreen")
-(set-face-foreground 'font-lock-constant-face "brightblue")
-(set-face-foreground 'font-lock-builtin-face "brightblue")
-(set-face-foreground 'neo-file-link-face "color-244")
+(set-face-foreground 'font-lock-builtin-face          "brightblue")
+(set-face-foreground 'font-lock-comment-face          "magenta")
+(set-face-foreground 'font-lock-constant-face         "brightblue")
+(set-face-foreground 'font-lock-keyword-face          "brightgreen")
+(set-face-foreground 'font-lock-string-face           "green")
+(set-face-foreground 'font-lock-variable-name-face    "green")
+(set-face-foreground 'neo-file-link-face              "color-244")
 
 ;; Window
-(set-face-background 'mode-line "color-233")
-(set-face-foreground 'mode-line "white")
-(set-face-attribute 'vertical-border nil :foreground "gray")
-(set-face-attribute 'vertical-border nil :background "color-233")
+(set-face-attribute 'vertical-border nil :background  "color-233")
+(set-face-attribute 'vertical-border nil :foreground  "gray")
+(set-face-background 'mode-line                       "color-233")
+(set-face-foreground 'mode-line                       "white")
 
 ;; Region
-(set-face-background 'region "blue")
+(set-face-background 'region                          "color-18")
 
 ;; Smartparens
-(set-face-background 'sp-pair-overlay-face "black")
+(set-face-background 'sp-pair-overlay-face            "black")
 
 ;; Magit
 (eval-after-load 'magit
   '(progn
-     (set-face-foreground 'magit-diff-add "green")
-     (set-face-foreground 'magit-diff-del "red")
+     (set-face-foreground 'magit-diff-add             "green")
+     (set-face-foreground 'magit-diff-del             "red")
      (when (not window-system)
-       (set-face-background 'magit-item-highlight "blue")
-       (set-face-foreground 'magit-item-highlight "green")
-       (set-face-foreground 'magit-diff-file-header "black")
-       )
-     )
-  )
-
-(add-to-list 'auto-mode-alist '("COMMIT_EDITMSG$" . diff-mode))
-(eval-after-load 'diff-mode
-  '(progn
-     (set-face-foreground 'diff-added "black")
-     (set-face-foreground 'diff-removed "black")
-     (set-face-background 'diff-added "black")
-     (set-face-background 'diff-removed "black")))
+       (set-face-background 'magit-item-highlight     "blue")
+       (set-face-foreground 'magit-item-highlight     "green")
+       (set-face-foreground 'magit-diff-file-header   "black"))))
 
 
 ;; =======================================================================
 ;; GUI Overrides
-;; =======================================================================
 
 (when (display-graphic-p)
-  (setq ring-bell-function 'ignore)
-  (setq popup-menu-face "gray")
-  (setq popup-menu-selection-face "gray12")
-  (set-background-color "gray7")
-  (set-foreground-color "white")
-  (add-to-list 'default-frame-alist '(font .  "Source Code Pro"))
-  (set-face-attribute 'default t :font "Source Code Pro")
-  (setq mac-command-modifier 'meta)
+  (add-to-list 'default-frame-alist '(font .          "Source Code Pro"))
+  (set-background-color                               "gray7")
   (set-face-attribute 'default (selected-frame) :height 105)
-  (set-face-foreground 'font-lock-keyword-face  "OliveDrab1")
-  (set-face-foreground 'popup-face  "white") (setq)
+  (set-face-attribute 'default (selected-frame) :height 105))
+  (set-face-attribute 'default t :font                "Source Code Pro")
   (set-face-attribute 'font-lock-keyword-face nil :weight 'bold)
-  (set-face-foreground 'font-lock-constant-face "blue1")
-  (set-face-foreground 'font-lock-builtin-face "blue2")
+  (set-face-foreground 'font-lock-builtin-face        "blue2")
+  (set-face-foreground 'font-lock-constant-face       "blue1")
+  (set-face-foreground 'font-lock-keyword-face        "OliveDrab1")
+  (set-face-foreground 'popup-face                    "white") (setq)
+  (set-foreground-color                               "white")
+  (setq mac-command-modifier 'meta)
+  (setq popup-menu-face                               "gray")
+  (setq popup-menu-selection-face                     "gray12")
+  (setq ring-bell-function 'ignore)
   (tool-bar-mode -1)
-  (set-face-attribute 'default (selected-frame) :height 105)
-)

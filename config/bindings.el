@@ -1,77 +1,96 @@
-;;======== custom bindings ========
+;;; appearance.el --- Lots of custom key bindings -*-lexical-binding: t-*-
+
+;; Version: 0.0.0
+;; Author: Joshua Miller <jsmiller@uchicago.edu>
+
+;;; Commentary:
+;;
+
+;;; Code:
+
+
+;; =======================================================================
+;; View
+
 (global-set-key (kbd "<f2>")        'toggle-truncate-lines)
-(global-set-key (kbd "C-x 9")       'kmacro-insert-counter)
-(global-set-key (kbd "<backtab>")   'dabbrev-expand)
-(global-set-key (kbd "C-x m")       'comment-or-uncomment-region-or-line)
-(global-set-key (kbd "C-x C-m")     'comment-or-uncomment-region-or-line)
-(global-set-key (kbd "C-c s")       'ispell)
-(global-set-key (kbd "C-x f")       'find-file)
-(global-set-key (kbd "C-x w")       'just-one-space)
-(global-set-key (kbd "C-x g")       'replace-string)
-(global-set-key (kbd "C-c a")       'org-agenda)
-(global-set-key (kbd "C-S-c")       'clipboard-kill-ring-save)
-(global-set-key (kbd "C-S-v")       'clipboard-yank)
-(global-set-key (kbd "C-x <right>") 'next-non-emacs-buffer)
-(global-set-key (kbd "C-x <left>")  'previous-non-emacs-buffer)
-(global-set-key (kbd "C-x n")       'next-non-emacs-buffer)
-(global-set-key (kbd "C-x p")       'previous-non-emacs-buffer)
 (global-set-key (kbd "C-c l")       'linum-mode)
-(global-set-key (kbd "C-x l")       'next-non-emacs-buffer)
-(global-set-key (kbd "C-x j")       'previous-non-emacs-buffer)
-(global-set-key (kbd "C-c w")       'count-words-region)
-(global-set-key (kbd "C-x C-v")     'org-mobile-push)
-(global-set-key (kbd "M-n")         'forward-paragraph)
-(global-set-key (kbd "M-p")         'backward-paragraph)
-(global-set-key (kbd "C-d")         'backward-kill-word)
-(global-set-key (kbd "C-c m")       'move-middle-line)
-(global-set-key (kbd "C-c C-m")     'move-middle-line)
-(global-set-key (kbd "C-M-l")       'move-middle-line)
-(global-set-key (kbd "C-M-n")       'jump-forward)
-(global-set-key (kbd "C-M-p")       'jump-backward)
-(global-set-key (kbd "C-c b")       'switch-to-buffer)
-(global-set-key (kbd "<C-f6>")      'shrink-window-horizontally)
-(global-set-key (kbd "<C-f8>")      'enlarge-window-horizontally)
-(global-set-key (kbd "<f7>")        'ispell-word)
-(global-set-key (kbd "C-S-<f7>")    'flyspell-mode)
-(global-set-key (kbd "C-M-<f7>")    'flyspell-buffer)
-(global-set-key (kbd "C-<f7>")      'flyspell-check-previous-highlighted-word)
-(global-set-key (kbd "C-c C-a")     'recenter-top-bottom)
-(global-set-key (kbd "C-c C-v")     'recenter-top-bottom)
-(global-set-key (kbd "C-c C-r")     'compile)
 (global-set-key (kbd "C-x ,")       'hs-hide-block)
 (global-set-key (kbd "C-x .")       'hs-show-block)
 (global-set-key (kbd "C-x <")       'hs-hide-level)
 (global-set-key (kbd "C-x >")       'hs-show-all)
+
+;; =======================================================================
+;; Editing
+
+(global-set-key (kbd "C-x 9")       'kmacro-insert-counter)
+(global-set-key (kbd "C-x m")       'jsm-comment-or-uncomment-region-or-line)
+(global-set-key (kbd "C-x C-m")     'jsm-comment-or-uncomment-region-or-line)
+(global-set-key (kbd "C-d")         'backward-kill-word)
 (global-set-key (kbd "C-x p")       'replace-string)
-(global-set-key (kbd "M-t")         'indent-guide-mode)
-(global-set-key (kbd "M-z")         'repeat)
-(global-set-key (kbd "C-x C-a")     'align-repeat)
+(global-set-key (kbd "C-9")         'jsm-parens-wrap)
+
+;; =======================================================================
+;; Whitespace
+
 (global-set-key (kbd "C-x t")       'indent-region)
-(global-set-key (kbd "C-c f n")     'flycheck-next-error)
-(global-set-key (kbd "C-c f p")     'flycheck-previous-error)
-(define-key global-map "\C-c l"     'org-store-link)
-(define-key global-map "\C-c a"     'org-agenda)
-(global-set-key (kbd "C-c C-x a")   'org-archive-done-tasks)
-(global-set-key (kbd "C-c t")       'org-complete-and-archive)
+(global-set-key (kbd "C-x w")       'just-one-space)
+(global-set-key (kbd "C-x C-a")     'jsm-align-repeat)
+
+;; =======================================================================
+;; Navigation
+
+(global-set-key (kbd "M-o")         'ace-jump-mode)
+(global-set-key (kbd "M-p")         'backward-paragraph)
+(global-set-key (kbd "M-n")         'forward-paragraph)
+(global-set-key (kbd "C-M-l")       'goto-line)
+(global-set-key (kbd "C-M-n")       'jump-forward)
+(global-set-key (kbd "C-M-p")       'jump-backward)
+(global-set-key (kbd "C-M-m")       'move-middle-line)
+(global-set-key (kbd "C-x <right>") 'next-non-emacs-buffer)
+(global-set-key (kbd "C-x l")       'next-non-emacs-buffer)
+(global-set-key (kbd "C-x <left>")  'previous-non-emacs-buffer)
+(global-set-key (kbd "C-x j")       'previous-non-emacs-buffer)
 (global-set-key (kbd "C-v")         'scroll-up-partial)
 (global-set-key (kbd "M-v")         'scroll-down-partial)
 (global-set-key (kbd "<mouse-5>")   'scroll-up)
 (global-set-key (kbd "<mouse-4>")   'scroll-down)
-(global-set-key (kbd "M-<right>")   'forward-word)
-(global-set-key (kbd "M-<left>")    'backward-word)
-(global-set-key (kbd "M-<up>")      'backward-paragraph)
-(global-set-key (kbd "M-<down>")    'forward-paragraph)
-(global-set-key (kbd "C-x C-j")     'jedi:show-doc)
-(global-set-key (kbd "C-M-m")       'xterm-mouse-mode)
-(define-key dired-mode-map "\C-i"   'dired-subtree-insert)
-(define-key dired-mode-map "\C-k"   'dired-subtree-remove)
-(global-set-key [f5]                'neotree-toggle)
-(global-set-key (kbd "C-l")         'recenter-top-bottom)
-(global-set-key (kbd "C-M-f")       'forward-list)
-(global-set-key (kbd "C-M-b")       'backward-list)
-(global-set-key (kbd "C-9")         'my-wrap-with-paren)
+
+;; =======================================================================
+;; Util
+
+(global-set-key (kbd "C-c t")       'org-complete-and-archive)
+(global-set-key (kbd "M-z")         'repeat)
+(global-set-key (kbd "C-c s")       'ispell)
+(global-set-key (kbd "<f7>")        'ispell-word)
+(global-set-key (kbd "M-t")         'indent-guide-mode)
+(global-set-key (kbd "C-c C-n")     'flycheck-next-error)
 (global-set-key (kbd "C-M-y")       'kill-ring-search)
-(global-set-key (kbd "C-c C-d")     'direx:jump-to-directory)
-(global-set-key (kbd "M-o")         'ace-jump-mode)
-(global-set-key (kbd "C-M-o")       'ace-jump-mode)
-(global-set-key (kbd "C-M-l")       'goto-line)
+
+;; =======================================================================
+;; Decoration
+
+(global-set-key (kbd "C-x h")       'jsm-insert-divider)
+
+;; =======================================================================
+;; Binding overrides
+
+(define-key override-mode-map (kbd "C-d")      'backward-kill-word)
+(define-key override-mode-map (kbd "C-M-n")    'jump-forward)
+(define-key override-mode-map (kbd "C-M-p")    'jump-backward)
+(define-key override-mode-map (kbd "C-c C-v")  'recenter-top-bottom)
+(define-key override-mode-map (kbd "M-b")      'backward-word)
+(define-key override-mode-map (kbd "C-h")      'backward-delete-char)
+
+
+;; =======================================================================
+;; Auto complete
+
+(define-key ac-completing-map  "\r"      nil)
+(define-key ac-menu-map        "\M-n"    'ac-next)
+(define-key ac-menu-map        "\M-p"    'ac-previous)
+(define-key ac-menu-map        "\C-n"    'next-line)
+(define-key ac-menu-map        "\C-p"    'previous-line)
+(define-key ac-completing-map  "\t"      'ac-complete)
+(define-key ac-completing-map  "\C-j"    'ac-complete)
+(define-key ac-completing-map  "\M-/"    'ac-stop)
+(define-key ac-mode-map (kbd   "M-TAB")  'auto-complete)

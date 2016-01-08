@@ -1,14 +1,13 @@
-(global-set-key [(meta j)] 'backward-binary)
-(global-set-key [(meta k)] 'forward-binary)
+;;; jump-lines.el --- Jump lines by custom line-no. -*-lexical-binding: t-*-
 
-;; Turn menu off
-(define-key global-map [menu-bar tools]   nil)
-(define-key global-map [menu-bar file]    nil)
-(define-key global-map [menu-bar edit]    nil)
-(define-key global-map [menu-bar options] nil)
-(define-key global-map [menu-bar buffer]  nil)
+;; Version: 0.0.0
+;; Author: Joshua Miller <jsmiller@uchicago.edu>
 
-(menu-bar-mode 0)
+;;; Commentary:
+;;
+
+;;; Code:
+
 
 (defun move-middle-line  () (interactive)
    (forward-word 1)
