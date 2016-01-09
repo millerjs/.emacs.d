@@ -15,7 +15,7 @@
 ;; Set load paths
 (setq root-path "~/.emacs.d/")
 (setq lisp-path   (concat root-path "custom_lisp/"))
-(setq config-path (concat root-path "config/"))
+(setq config-path (concat root-path "jsm/"))
 (add-to-list 'load-path lisp-path)
 (add-to-list 'load-path config-path)
 

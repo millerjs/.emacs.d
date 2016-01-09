@@ -61,4 +61,4 @@
 (osx-clipboard-mode         t)
 (show-paren-mode            t)
 (smartparens-global-mode    t)
-(menu-bar-mode              -1)
+(menu-bar-mode              0)
