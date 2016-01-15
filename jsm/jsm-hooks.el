@@ -31,9 +31,7 @@
 ;; =======================================================================
 ;; Hook overrides
 
-(defvar override-mode-map
-  "Custom override map."
-  (make-keymap) "override-mode-map")
+(defvar override-mode-map (make-keymap) "override-mode-map")
 
 (define-minor-mode override-mode
   "A minor mode so that my key settings override annoying major modes."
@@ -43,7 +41,6 @@
 (smart-tab-mode)
 
 (defun my-minibuffer-setup-hook ()
-  "Define custom minibuffer setup hook."
   (override-mode 0))
 
 (add-hook 'minibuffer-setup-hook 'my-minibuffer-setup-hook)
