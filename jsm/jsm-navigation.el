@@ -115,3 +115,7 @@
   "Scroll partially down the current buffer"
   (interactive)
   (scroll-down (window-partial)))
+
+
+(provide 'jsm-navigation)
+;;; jsm-navigation.el ends here

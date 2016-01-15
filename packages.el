@@ -46,6 +46,7 @@
 (require 'smartparens)
 (require 'whitespace)
 (require 'yaml-mode)
+(require 'google-this)
 
 
 ;; =======================================================================

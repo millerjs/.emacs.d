@@ -24,3 +24,7 @@
 (setq direx:closed-icon                      "▶  ")
 (add-to-list 'completion-ignored-extensions  ".pyc")
 (add-to-list 'completion-ignored-extensions  ".o")
+
+
+(provide 'jsm-variables)
+;;; jsm-variables.el ends here

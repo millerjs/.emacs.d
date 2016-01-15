@@ -22,7 +22,8 @@
      (set-face-foreground 'flycheck-error  "color-160")
      (set-face-background 'flycheck-error  "color-232")
      (set-face-foreground 'flycheck-warning  "color-162")
-     (set-face-background 'flycheck-warning  "color-232")
+     (set-face-background 'flycheck-warning  "color-232")))
 
-     )
-  )
+
+(provide 'jsm-load_last)
+;;; jsm-load_last.el ends here

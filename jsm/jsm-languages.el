@@ -50,6 +50,7 @@
 ;; Python
 
 (setq jedi:complete-on-dot 1)
+(eval-after-load "python-mode" '(flycheck-mode))
 (eval-after-load "python-mode"
   '(progn (global-set-key (kbd "M-.") 'jedi:goto-definition)))
 
@@ -66,3 +67,7 @@
   (org-todo) (org-archive-subtree-default))
 
 (setq org-log-done t)
+
+
+(provide 'jsm-languages)
+;;; jsm-languages.el ends here

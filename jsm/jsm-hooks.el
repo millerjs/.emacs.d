@@ -15,6 +15,7 @@
 (add-hook    'before-save-hook 'delete-trailing-whitespace)
 (add-hook    'python-mode-hook 'jedi:setup)
 (add-hook    'c-mode-hook      'jsm-indent-setup)
+(add-hook    'after-init-hook  #'global-flycheck-mode)
 
 (add-hook    'c-mode-hook      (lambda () (flycheck-mode)))
 (add-hook    'rust-mode-hook   (lambda () (flycheck-mode)))
@@ -27,11 +28,12 @@
 (add-to-list 'auto-mode-alist '("\\.par\\ '" . makefile-mode))
 (add-to-list 'auto-mode-alist '("\\.yml$"    . yaml-mode))
 
-
 ;; =======================================================================
 ;; Hook overrides
 
-(defvar override-mode-map (make-keymap) "override-mode-map")
+(defvar override-mode-map
+  "Custom override map."
+  (make-keymap) "override-mode-map")
 
 (define-minor-mode override-mode
   "A minor mode so that my key settings override annoying major modes."
@@ -41,6 +43,11 @@
 (smart-tab-mode)
 
 (defun my-minibuffer-setup-hook ()
+  "Define custom minibuffer setup hook."
   (override-mode 0))
 
 (add-hook 'minibuffer-setup-hook 'my-minibuffer-setup-hook)
+
+
+(provide 'jsm-hooks)
+;;; jsm-hooks.el ends here

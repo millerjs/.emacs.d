@@ -79,7 +79,7 @@
 (set-face-foreground 'popup-tip-face                  "color-243")
 
 ;; Rust docstrings
-(set-face-foreground 'font-lock-doc-face              "magenta")
+(set-face-foreground 'font-lock-doc-face              "color-30")
 
 ;; Ace jump
 (set-face-background 'ace-jump-face-background        "black")
@@ -139,3 +139,6 @@
   (setq popup-menu-selection-face                     "gray12")
   (setq ring-bell-function 'ignore)
   (tool-bar-mode -1)
+
+(provide 'jsm-appearance)
+;;; jsm-appearance.el ends here

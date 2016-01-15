@@ -65,6 +65,7 @@
 (global-set-key (kbd "M-t")         'indent-guide-mode)
 (global-set-key (kbd "C-c C-n")     'flycheck-next-error)
 (global-set-key (kbd "C-M-y")       'kill-ring-search)
+(global-set-key (kbd "C-x g")       'google-this-mode-submap)
 
 ;; =======================================================================
 ;; Decoration
@@ -94,3 +95,6 @@
 (define-key ac-completing-map  "\C-j"    'ac-complete)
 (define-key ac-completing-map  "\M-/"    'ac-stop)
 (define-key ac-mode-map (kbd   "M-TAB")  'auto-complete)
+
+(provide 'jsm-bindings)
+;;; jsm-bindings.el ends here
