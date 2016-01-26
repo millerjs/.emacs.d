@@ -40,6 +40,7 @@
 ;; Navigation
 
 (global-set-key (kbd "M-o")         'ace-jump-mode)
+(global-set-key (kbd "C-M-o")       'ace-jump-mode)
 (global-set-key (kbd "M-p")         'backward-paragraph)
 (global-set-key (kbd "M-n")         'forward-paragraph)
 (global-set-key (kbd "C-M-l")       'goto-line)
@@ -52,8 +53,8 @@
 (global-set-key (kbd "C-x j")       'previous-non-emacs-buffer)
 (global-set-key (kbd "C-v")         'scroll-up-partial)
 (global-set-key (kbd "M-v")         'scroll-down-partial)
-(global-set-key (kbd "<mouse-5>")   'scroll-up)
-(global-set-key (kbd "<mouse-4>")   'scroll-down)
+(global-set-key (kbd "<mouse-5>")   'scroll-up-partial)
+(global-set-key (kbd "<mouse-4>")   'scroll-down-partial)
 
 ;; =======================================================================
 ;; Util
@@ -64,8 +65,13 @@
 (global-set-key (kbd "<f7>")        'ispell-word)
 (global-set-key (kbd "M-t")         'indent-guide-mode)
 (global-set-key (kbd "C-c C-n")     'flycheck-next-error)
+(global-set-key (kbd "C-c C-l")     'flycheck-list-errors)
 (global-set-key (kbd "C-M-y")       'kill-ring-search)
 (global-set-key (kbd "C-x g")       'google-this-mode-submap)
+
+(define-key yas-keymap (kbd "`")    'yas-next-field)
+(define-key yas-minor-mode-map (kbd "<backtab>") 'yas-expand)
+
 
 ;; =======================================================================
 ;; Decoration
@@ -81,6 +87,7 @@
 (define-key override-mode-map (kbd "C-c C-v")  'recenter-top-bottom)
 (define-key override-mode-map (kbd "M-b")      'backward-word)
 (define-key override-mode-map (kbd "C-h")      'backward-delete-char)
+(define-key override-mode-map (kbd "C-c C-l")  'flycheck-list-errors)
 
 
 ;; =======================================================================

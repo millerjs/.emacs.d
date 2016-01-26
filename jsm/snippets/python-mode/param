@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: param
+# key: dp
+# binding: direct-keybinding
+# --
+:param ${1:type} ${2:name}: ${3:
+
+    }${4:description}

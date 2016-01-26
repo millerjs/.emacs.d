@@ -9,6 +9,23 @@
 ;;; Code:
 
 
+;; ======================================================================
+;; Flycheck
+
+(eval-after-load 'flycheck
+  '(progn
+     ;; (custom-set-faces
+     ;;  '(flycheck-error ((((class color)) (:underline "white"))))
+     ;;  '(flycheck-warning ((((class color)) (:underline "white")))))
+
+     (set-face-bold       'flycheck-error    0)
+     (set-face-foreground 'flycheck-error    "red")
+     (set-face-background 'flycheck-error    nil)
+     (set-face-foreground 'flycheck-warning  "orange")
+     (set-face-background 'flycheck-warning  nil)))
+
+
+
 ;; =======================================================================
 ;; Parens
 
@@ -35,8 +52,6 @@
 (defun jsm-indent-setup ()
   (c-set-offset 'arglist-intro '+))
 
-(set-default 'truncate-lines t)
-
 (setq-default indent-tabs-mode nil)
 (setq tab-width 4)
 (setq default-tab-width 4)
@@ -56,7 +71,7 @@
 ;; =======================================================================
 ;; Alignment/Indent
 
-(set-default 'truncate-lines t)
+(set-default 'truncate-lines 0)
 (set-face-foreground 'indent-guide-face "color-237")
 
 (setq indent-guide-char "❘")
@@ -78,8 +93,13 @@
 (set-face-foreground 'ac-candidate-face               "color-243")
 (set-face-foreground 'popup-tip-face                  "color-243")
 
-;; Rust docstrings
-(set-face-foreground 'font-lock-doc-face              "color-30")
+
+;; Rust faces
+(set-face-foreground 'font-lock-doc-face              "color-65")
+(set-face-foreground 'font-lock-preprocessor-face     "brightblue")
+(set-face-italic     'font-lock-preprocessor-face     t)
+(set-face-italic     'font-lock-doc-face              t)
+
 
 ;; Ace jump
 (set-face-background 'ace-jump-face-background        "black")
@@ -95,6 +115,7 @@
 (set-face-foreground 'font-lock-string-face           "green")
 (set-face-foreground 'font-lock-variable-name-face    "green")
 (set-face-foreground 'neo-file-link-face              "color-244")
+(set-face-italic     'font-lock-comment-face          t)
 
 ;; Window
 (set-face-attribute 'vertical-border nil :background  "color-233")
@@ -127,18 +148,19 @@
   (set-background-color                               "gray7")
   (set-face-attribute 'default (selected-frame) :height 105)
   (set-face-attribute 'default (selected-frame) :height 105))
-  (set-face-attribute 'default t :font                "Source Code Pro")
-  (set-face-attribute 'font-lock-keyword-face nil :weight 'bold)
-  (set-face-foreground 'font-lock-builtin-face        "blue2")
-  (set-face-foreground 'font-lock-constant-face       "blue1")
-  (set-face-foreground 'font-lock-keyword-face        "OliveDrab1")
-  (set-face-foreground 'popup-face                    "white") (setq)
-  (set-foreground-color                               "white")
-  (setq mac-command-modifier 'meta)
-  (setq popup-menu-face                               "gray")
-  (setq popup-menu-selection-face                     "gray12")
-  (setq ring-bell-function 'ignore)
-  (tool-bar-mode -1)
+
+(set-face-attribute 'default t :font                "Source Code Pro")
+(set-face-attribute 'font-lock-keyword-face nil :weight 'bold)
+(set-face-foreground 'font-lock-builtin-face        "blue2")
+(set-face-foreground 'font-lock-constant-face       "blue1")
+(set-face-foreground 'font-lock-keyword-face        "OliveDrab1")
+(set-face-foreground 'popup-face                    "white") (setq)
+(set-foreground-color                               "white")
+(setq mac-command-modifier 'meta)
+(setq popup-menu-face                               "gray")
+(setq popup-menu-selection-face                     "gray12")
+(setq ring-bell-function 'ignore)
+(tool-bar-mode -1)
 
 (provide 'jsm-appearance)
 ;;; jsm-appearance.el ends here

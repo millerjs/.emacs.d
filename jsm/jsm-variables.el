@@ -26,5 +26,31 @@
 (add-to-list 'completion-ignored-extensions  ".o")
 
 
+;; ======================================================================
+;; Flycheck
+
+(setq flycheck-check-syntax-automatically
+      '(mode-enabled save idle-change new-line))
+
+
+;; ======================================================================
+;; Autocomplete
+
+;; Popup menu
+(setq ac-menu-height       20)
+(setq ac-auto-start        1)
+(setq ac-show-menu-immediately-on-auto-complete t)
+
+;; Popup menu delay
+(setq jsm-ac-delay         0.2)
+(setq ac-auto-show-menu    jsm-ac-delay)
+(setq ac-delay             jsm-ac-delay)
+(setq ac-quick-help-delay  (+ jsm-ac-delay 0.1))
+(setq ac-persist-help      t)
+(setq ac-quick-help-height 10)
+(setq ac-menu-height       10)
+(setq ac-quick-help-prefer-pos-tip t)
+
+
 (provide 'jsm-variables)
 ;;; jsm-variables.el ends here

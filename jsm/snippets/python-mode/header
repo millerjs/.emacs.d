@@ -1,0 +1,12 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: header
+# key: head
+# binding: direct-keybinding
+# --
+# -*- coding: utf-8 -*-
+"""
+${1:module}
+----------------------------------
+
+${2:description}
+"""

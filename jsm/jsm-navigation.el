@@ -117,5 +117,21 @@
   (scroll-down (window-partial)))
 
 
+;; ======================================================================
+;; Mouse
+
+(xterm-mouse-mode)
+
+
+;; ======================================================================
+;; YASnippet
+
+(require 'yasnippet)
+(define-key yas-keymap (kbd "TAB") 'yas-next-field)
+(define-key yas-keymap (kbd "<tab>") 'yas-next-field)
+
+
+;; ======================================================================
+
 (provide 'jsm-navigation)
 ;;; jsm-navigation.el ends here

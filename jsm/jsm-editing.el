@@ -8,6 +8,13 @@
 
 ;;; Code:
 
+;; ======================================================================
+;; YASnippet
+
+(add-to-list 'yas-snippet-dirs (concat root-path "/yasnippet-snippets"))
+(add-to-list 'yas-snippet-dirs (concat root-path "/jsm/snippets"))
+(yas-reload-all)
+
 
 ;; ======================================================================
 ;; Whitespace

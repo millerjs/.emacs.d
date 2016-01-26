@@ -33,7 +33,6 @@
 (load-file (concat config-path  "bindings.el"))
 (load-file (concat config-path  "appearance.el"))
 (load-file (concat config-path  "languages.el"))
-(load-file (concat config-path  "load_last.el"))
 
 ;; Load auth info
 (if (file-exists-p "~/.authinfo") (load-file "~/.authinfo"))

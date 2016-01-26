@@ -21,10 +21,13 @@
 
 (package-initialize)
 
-
 ;; =======================================================================
 ;; Requires
 
+(require 'yasnippet)
+(require 'jedi)
+(require 'flycheck)
+(require 'flycheck-pos-tip)
 (require 'ace-jump-mode)
 (require 'auto-complete)
 (require 'auto-complete-config)
@@ -54,12 +57,14 @@
 
 (ac-config-default)
 
+(yas-global-mode            t)
 (column-number-mode         t)
 (global-auto-complete-mode  t)
 (global-linum-mode          t)
-(global-smart-tab-mode      t)
 (global-whitespace-mode     t)
 (osx-clipboard-mode         t)
 (show-paren-mode            t)
 (smartparens-global-mode    t)
+
 (menu-bar-mode              0)
+(global-smart-tab-mode      0)
