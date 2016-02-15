@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: sign
+# key: sign
+# binding: direct-keybinding
+# --
+- jsm (`(shell-command-to-string "echo -n $(date +%Y-%m-%d)")`)
