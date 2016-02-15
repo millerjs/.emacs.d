@@ -52,5 +52,10 @@
 (setq ac-quick-help-prefer-pos-tip t)
 
 
+;; ======================================================================
+;; yasnippet
+
+(setq yas-buffer-local-condition t)
+
 (provide 'jsm-variables)
 ;;; jsm-variables.el ends here

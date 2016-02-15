@@ -106,11 +106,6 @@ The rest of the line must be blank."
 
 (add-hook
  'python-mode-hook
- (lambda ()
-   (setq yas-buffer-local-condition t)))
-
-(add-hook
- 'python-mode-hook
  '(lambda ()
     ;; Setup flycheck
     (flycheck-mode)

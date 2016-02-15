@@ -17,7 +17,7 @@
 (add-hook    'before-save-hook 'delete-trailing-whitespace)
 (add-hook    'after-save-hook 'flycheck-buffer)
 (add-hook    'after-init-hook  #'global-flycheck-mode)
-(with-eval-after-load 'flycheck (flycheck-pos-tip-mode))
+;; (with-eval-after-load 'flycheck (flycheck-pos-tip-mode))
 
 
 ;; =======================================================================

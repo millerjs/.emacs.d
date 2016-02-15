@@ -28,6 +28,7 @@
 (global-set-key (kbd "C-d")         'backward-kill-word)
 (global-set-key (kbd "C-x p")       'replace-string)
 (global-set-key (kbd "C-9")         'jsm-parens-wrap)
+(global-set-key (kbd "C-c s")       'sort-lines)
 
 ;; =======================================================================
 ;; Whitespace
@@ -68,6 +69,7 @@
 (global-set-key (kbd "C-c C-l")     'flycheck-list-errors)
 (global-set-key (kbd "C-M-y")       'kill-ring-search)
 (global-set-key (kbd "C-x g")       'google-this-mode-submap)
+(global-set-key (kbd "C-c d")       'dash-at-point)
 
 (define-key yas-keymap (kbd "`")    'yas-next-field)
 (define-key yas-minor-mode-map (kbd "<backtab>") 'yas-expand)
