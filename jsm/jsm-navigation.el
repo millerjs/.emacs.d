@@ -84,24 +84,6 @@
 )
 
 
-;; (defun jump-forward (cmd)
-;;   "Jumps forward lines as noted by line numbering. a2 goes forward 27 lines"
-;;   (interactive "s")
-;;   (setq parsed (s-match "\\([a-z0-9]\\)*" cmd))
-;;   (setq lines-n (- (aref (-first-item parsed) 0) 96))
-;;   (setq lines-mult (- (max (string-to-number (nth 1 parsed)) 1) 1))
-;;   (next-line (+ lines-n (* lines-mult 26))))
-
-
-;; (defun jump-backward (cmd)
-;;   "Jumps backward lines as noted by line numbering. a2 goes backward 27 lines"
-;;   (interactive "s")
-;;   (setq parsed (s-match "\\([a-z0-9]\\)*" cmd))
-;;   (setq lines-n (- (aref (-first-item parsed) 0) 96))
-;;   (setq lines-mult (- (max (string-to-number (nth 1 parsed)) 1) 1))
-;;   (previous-line (+ lines-n (* lines-mult 26))))
-
-
 (defun window-partial ()
   "Get partial size of window for partial scrolls"
   (max 1 (/ (1- (window-height (selected-window))) 4)))

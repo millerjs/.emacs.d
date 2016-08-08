@@ -22,8 +22,8 @@
 
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
-(setq racer-cmd "/Users/jsmiller/.multirust/toolchains/stable/cargo/bin/racer")
-(setq racer-rust-src-path "/Users/jsmiller/src/rust/src")
+(setq racer-cmd "~/.multirust/toolchains/stable/cargo/bin/racer")
+(setq racer-rust-src-path "~/src/rust/src")
 
 ;; borrowed from
 ;; https://github.com/chrisbarrett/spacemacs-layers/blob/master/cb-yasnippet/funcs.el
