@@ -22,8 +22,8 @@
 
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
-(setq racer-cmd "/Users/jmiller/.multirust/toolchains/nightly/cargo/bin/racer")
-(setq racer-rust-src-path "/Users/jmiller/jsm/rust/rust/src")
+(setq racer-cmd "/Users/jsmiller/.multirust/toolchains/stable/cargo/bin/racer")
+(setq racer-rust-src-path "/Users/jsmiller/src/rust/src")
 
 ;; borrowed from
 ;; https://github.com/chrisbarrett/spacemacs-layers/blob/master/cb-yasnippet/funcs.el
@@ -53,15 +53,13 @@ The rest of the line must be blank."
 (add-hook
  'rust-mode-hook
  '(lambda ()
+    ;; (rustfmt-enable-on-save)
 
     ;; Setup autocompletion
     (racer-mode)
     (ac-racer-setup)
     (setq ac-delay             0.1)
     (setq ac-quick-help-delay  0.11)
-
-    ;; Disable smart-tab, it interferes with yasnippet+ac-racer
-    (smart-tab 0)
 
     ;; Defintiion lookup
     (local-set-key (kbd "M-.") 'racer-find-definition)
@@ -77,7 +75,7 @@ The rest of the line must be blank."
     (racer-turn-on-eldoc)
 
     ;; Use flycheck-rust in rust-mode
-    ;; (flycheck-rust-setup)
+    (flycheck-rust-setup)
 
     ;; Use company-racer in rust mode
     (set (make-local-variable 'company-backends) '(company-racer))
@@ -104,12 +102,16 @@ The rest of the line must be blank."
 ;; =======================================================================
 ;; Python
 
+;; To expand region around paragraphs
+(add-hook 'python-mode-hook 'er/jsm-python-mode-expansions)
+
 (add-hook
  'python-mode-hook
  '(lambda ()
     ;; Setup flycheck
     (flycheck-mode)
-    (setq python-check-command "flake8")
+
+    (flycheck-select-checker python-pylint)
 
     ;; Setup jedi
     (jedi:setup)
@@ -117,7 +119,7 @@ The rest of the line must be blank."
     (setq jedi:complete-on-dot 1)
 
     ;; Python specific bindings
-    (local-set-key (kbd "M-.") 'jedi:goto-definition)))
+    (define-key python-mode-map (kbd "M-.") 'jedi:goto-definition)))
 
 
 ;; =======================================================================

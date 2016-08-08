@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: chore
+# key: chore
+# binding: direct-keybinding
+# --
+chore(${1:scope}): ${2:summary}${3:
+
+- ${4:details}}

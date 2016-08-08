@@ -22,6 +22,10 @@
 ;; =======================================================================
 ;; Inter-buffer navigation
 
+(defun close-all-buffers ()
+  (interactive)
+    (mapc 'kill-buffer (buffer-list)))
+
 (defun emacs-buffer-p (name)
   (string-match-p "\\*.*\\*" name))
 
@@ -51,21 +55,21 @@
 ;; ======================================================================
 ;; Intra-buffer navigation
 
-(defun move-middle-line  () (interactive)
-   (forward-word 1)
-   (backward-word 1)
+(defun move-middle-line  ()
+  "Move to middle of current line."
+  (interactive)
+  (move-beginning-of-line 1)
+  (forward-midpoint))
 
-   (setq l (what-cursor-position))
-   (setq l (replace-regexp-in-string ".+=" "" l))
-   (setq m (string-to-number l))
+(defun backward-midpoint ( )
+  "Move backward to midpoint between current position and beginning of line."
+  (interactive)
+  (backward-char (/ (- (point) (line-beginning-position)) 2)))
 
-   (move-end-of-line 1)
-   (setq l (what-cursor-position))
-   (setq l (replace-regexp-in-string ".+=" "" l))
-   (setq n (/ (string-to-number l) 2))
-   (move-to-column (+ n m))
-
-)
+(defun forward-midpoint ( )
+  "Move forward to midpoint between current position and end of line."
+  (interactive)
+  (forward-char (/ (- (line-end-position) (point)) 2)))
 
 
 (defun length-of-line ()
@@ -80,24 +84,22 @@
 )
 
 
-(defun jump-forward (cmd)
-  "Jumps forward lines as noted by line numbering. a2 goes
-  forward 27 lines"
-  (interactive "s")
-  (setq parsed (s-match "\\([a-z0-9]\\)*" cmd))
-  (setq lines-n (- (aref (-first-item parsed) 0) 96))
-  (setq lines-mult (- (max (string-to-number (nth 1 parsed)) 1) 1))
-  (next-line (+ lines-n (* lines-mult 26))))
+;; (defun jump-forward (cmd)
+;;   "Jumps forward lines as noted by line numbering. a2 goes forward 27 lines"
+;;   (interactive "s")
+;;   (setq parsed (s-match "\\([a-z0-9]\\)*" cmd))
+;;   (setq lines-n (- (aref (-first-item parsed) 0) 96))
+;;   (setq lines-mult (- (max (string-to-number (nth 1 parsed)) 1) 1))
+;;   (next-line (+ lines-n (* lines-mult 26))))
 
 
-(defun jump-backward (cmd)
-  "Jumps backward lines as noted by line numbering. a2 goes
-  backward 27 lines"
-  (interactive "s")
-  (setq parsed (s-match "\\([a-z0-9]\\)*" cmd))
-  (setq lines-n (- (aref (-first-item parsed) 0) 96))
-  (setq lines-mult (- (max (string-to-number (nth 1 parsed)) 1) 1))
-  (previous-line (+ lines-n (* lines-mult 26))))
+;; (defun jump-backward (cmd)
+;;   "Jumps backward lines as noted by line numbering. a2 goes backward 27 lines"
+;;   (interactive "s")
+;;   (setq parsed (s-match "\\([a-z0-9]\\)*" cmd))
+;;   (setq lines-n (- (aref (-first-item parsed) 0) 96))
+;;   (setq lines-mult (- (max (string-to-number (nth 1 parsed)) 1) 1))
+;;   (previous-line (+ lines-n (* lines-mult 26))))
 
 
 (defun window-partial ()

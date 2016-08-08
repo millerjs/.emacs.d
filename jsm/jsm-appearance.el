@@ -85,7 +85,6 @@
 ;; =======================================================================
 ;; Colors
 
-
 ;; Auto complete
 (set-face-background 'ac-candidate-face               "color-234")
 (set-face-background 'ac-selection-face               "color-18")
@@ -99,13 +98,6 @@
 (set-face-foreground 'font-lock-preprocessor-face     "brightblue")
 (set-face-italic     'font-lock-preprocessor-face     t)
 (set-face-italic     'font-lock-doc-face              t)
-
-
-;; Ace jump
-(set-face-background 'ace-jump-face-background        "black")
-(set-face-background 'ace-jump-face-foreground        "color-18")
-(set-face-foreground 'ace-jump-face-background        "color-238")
-(set-face-foreground 'ace-jump-face-foreground        "brightwhite")
 
 ;; Fonts
 (set-face-foreground 'font-lock-builtin-face          "brightblue")
@@ -129,15 +121,16 @@
 ;; Smartparens
 (set-face-background 'sp-pair-overlay-face            "black")
 
+
 ;; Magit
-(eval-after-load 'magit
-  '(progn
-     (set-face-foreground 'magit-diff-add             "green")
-     (set-face-foreground 'magit-diff-del             "red")
-     (when (not window-system)
-       (set-face-background 'magit-item-highlight     "blue")
-       (set-face-foreground 'magit-item-highlight     "green")
-       (set-face-foreground 'magit-diff-file-header   "black"))))
+(custom-set-faces
+ '(magit-diff-added             ((((type tty)) ( :foreground "color-22"))))
+ '(magit-diff-added-highlight   ((((type tty)) ( :foreground "green"      :background "color-234"))))
+ '(magit-diff-context-highlight ((((type tty)) ( :foreground "default"    :background "color-234"))))
+ '(magit-diff-file-heading      ((((type tty)) (                          :background "color-234"))))
+ '(magit-diff-removed           ((((type tty)) ( :foreground "red"))))
+ '(magit-diff-removed-highlight ((((type tty)) ( :foreground "IndianRed"))))
+ '(magit-section-highlight      ((((type tty)) ( :foreground "brightwhite" :background "color-234")))))
 
 
 ;; =======================================================================
@@ -149,14 +142,13 @@
   (set-face-attribute 'default (selected-frame) :height 105)
   (set-face-attribute 'default (selected-frame) :height 105))
 
-(set-face-attribute 'default t :font                "Source Code Pro")
 (set-face-attribute 'font-lock-keyword-face nil :weight 'bold)
 (set-face-foreground 'font-lock-builtin-face        "blue2")
 (set-face-foreground 'font-lock-constant-face       "blue1")
 (set-face-foreground 'font-lock-keyword-face        "OliveDrab1")
-(set-face-foreground 'popup-face                    "white") (setq)
+(set-face-foreground 'popup-face                    "color-235") (setq)
 (set-foreground-color                               "white")
-(setq mac-command-modifier 'meta)
+(setq mac-command-modifier                          'meta)
 (setq popup-menu-face                               "gray")
 (setq popup-menu-selection-face                     "gray12")
 (setq ring-bell-function 'ignore)

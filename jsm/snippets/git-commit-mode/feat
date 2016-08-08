@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: feat
+# key: feat
+# binding: direct-keybinding
+# --
+feat(${1:scope}): ${2:summary}${3:
+
+- ${4:details}}

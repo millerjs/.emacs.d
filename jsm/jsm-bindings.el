@@ -8,12 +8,15 @@
 
 ;;; Code:
 
+;; ======================================================================
+;; Selection
+
+(global-set-key (kbd "M-SPC")       'er/expand-region)
 
 ;; =======================================================================
 ;; View
 
 (global-set-key (kbd "<f2>")        'toggle-truncate-lines)
-(global-set-key (kbd "C-c l")       'linum-mode)
 (global-set-key (kbd "C-x ,")       'hs-hide-block)
 (global-set-key (kbd "C-x .")       'hs-show-block)
 (global-set-key (kbd "C-x <")       'hs-hide-level)
@@ -22,36 +25,43 @@
 ;; =======================================================================
 ;; Editing
 
-(global-set-key (kbd "C-x 9")       'kmacro-insert-counter)
 (global-set-key (kbd "C-x m")       'jsm-comment-or-uncomment-region-or-line)
 (global-set-key (kbd "C-x C-m")     'jsm-comment-or-uncomment-region-or-line)
-(global-set-key (kbd "C-d")         'backward-kill-word)
 (global-set-key (kbd "C-x p")       'replace-string)
-(global-set-key (kbd "C-9")         'jsm-parens-wrap)
-(global-set-key (kbd "C-c s")       'sort-lines)
+(global-set-key (kbd "C-c C-s")     'sort-lines)
+
+;; Transpose stuff with M-t (https://github.com/magnars/.emacs.d/)
+(global-unset-key (kbd "M-t")) ;; which used to be transpose-words
+(global-set-key (kbd "M-t l") 'transpose-lines)
+(global-set-key (kbd "M-t w") 'transpose-words)
+(global-set-key (kbd "M-t s") 'transpose-sexps)
+(global-set-key (kbd "M-t p") 'transpose-params)
 
 ;; =======================================================================
 ;; Whitespace
 
+(global-set-key (kbd "C-x C-a")     'jsm-align-repeat)
 (global-set-key (kbd "C-x t")       'indent-region)
 (global-set-key (kbd "C-x w")       'just-one-space)
-(global-set-key (kbd "C-x C-a")     'jsm-align-repeat)
+
+(global-set-key (kbd "M-j") (lambda () (interactive) (join-line -1)))
+
 
 ;; =======================================================================
 ;; Navigation
 
-(global-set-key (kbd "M-o")         'ace-jump-mode)
-(global-set-key (kbd "C-M-o")       'ace-jump-mode)
-(global-set-key (kbd "M-p")         'backward-paragraph)
 (global-set-key (kbd "M-n")         'forward-paragraph)
+(global-set-key (kbd "M-p")         'backward-paragraph)
+(global-set-key (kbd "C-M-f")       'forward-midpoint)
+(global-set-key (kbd "C-M-b")       'backward-midpoint)
 (global-set-key (kbd "C-M-l")       'goto-line)
-(global-set-key (kbd "C-M-n")       'jump-forward)
-(global-set-key (kbd "C-M-p")       'jump-backward)
-(global-set-key (kbd "C-M-m")       'move-middle-line)
-(global-set-key (kbd "C-x <right>") 'next-non-emacs-buffer)
+(global-set-key (kbd "C-M-n")       'relative-jump-forward)
+(global-set-key (kbd "C-M-p")       'relative-jump-backward)
+(global-set-key (kbd "M-m")         'move-middle-line)
 (global-set-key (kbd "C-x l")       'next-non-emacs-buffer)
-(global-set-key (kbd "C-x <left>")  'previous-non-emacs-buffer)
 (global-set-key (kbd "C-x j")       'previous-non-emacs-buffer)
+(global-set-key (kbd "C-x <right>") 'next-non-emacs-buffer)
+(global-set-key (kbd "C-x <left>")  'previous-non-emacs-buffer)
 (global-set-key (kbd "C-v")         'scroll-up-partial)
 (global-set-key (kbd "M-v")         'scroll-down-partial)
 (global-set-key (kbd "<mouse-5>")   'scroll-up-partial)
@@ -60,19 +70,30 @@
 ;; =======================================================================
 ;; Util
 
+;; Org
 (global-set-key (kbd "C-c t")       'org-complete-and-archive)
-(global-set-key (kbd "M-z")         'repeat)
+
+;; Spelling
 (global-set-key (kbd "C-c s")       'ispell)
 (global-set-key (kbd "<f7>")        'ispell-word)
-(global-set-key (kbd "M-t")         'indent-guide-mode)
+
+;; Flycheck
 (global-set-key (kbd "C-c C-n")     'flycheck-next-error)
 (global-set-key (kbd "C-c C-l")     'flycheck-list-errors)
 (global-set-key (kbd "C-M-y")       'kill-ring-search)
-(global-set-key (kbd "C-x g")       'google-this-mode-submap)
-(global-set-key (kbd "C-c d")       'dash-at-point)
 
+;; Documentation
+(global-set-key (kbd "C-c w")       'webjump)
+
+;; Yas
 (define-key yas-keymap (kbd "`")    'yas-next-field)
 (define-key yas-minor-mode-map (kbd "<backtab>") 'yas-expand)
+
+;; ======================================================================
+;; Minor Modes
+
+(global-set-key (kbd "C-c m t")       'indent-guide-mode)
+(global-set-key (kbd "C-c m l")       'linum-mode)
 
 
 ;; =======================================================================
@@ -84,9 +105,8 @@
 ;; Binding overrides
 
 (define-key override-mode-map (kbd "C-d")      'backward-kill-word)
-(define-key override-mode-map (kbd "C-M-n")    'jump-forward)
-(define-key override-mode-map (kbd "C-M-p")    'jump-backward)
-(define-key override-mode-map (kbd "C-c C-v")  'recenter-top-bottom)
+(define-key override-mode-map (kbd "C-M-n")    'relative-jump-forward)
+(define-key override-mode-map (kbd "C-M-p")    'relative-jump-backward)
 (define-key override-mode-map (kbd "M-b")      'backward-word)
 (define-key override-mode-map (kbd "C-h")      'backward-delete-char)
 (define-key override-mode-map (kbd "C-c C-l")  'flycheck-list-errors)

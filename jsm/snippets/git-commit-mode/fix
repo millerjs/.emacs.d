@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: fix
+# key: fix
+# binding: direct-keybinding
+# --
+fix(${1:scope}): ${2:summary}${3:
+
+- ${4:details}}

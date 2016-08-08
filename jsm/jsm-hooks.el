@@ -17,7 +17,7 @@
 (add-hook    'before-save-hook 'delete-trailing-whitespace)
 (add-hook    'after-save-hook 'flycheck-buffer)
 (add-hook    'after-init-hook  #'global-flycheck-mode)
-;; (with-eval-after-load 'flycheck (flycheck-pos-tip-mode))
+(setq require-final-newline t)
 
 
 ;; =======================================================================
@@ -36,7 +36,6 @@
   (override-mode 0))
 
 (add-hook 'minibuffer-setup-hook 'my-minibuffer-setup-hook)
-
 
 (provide 'jsm-hooks)
 ;;; jsm-hooks.el ends here

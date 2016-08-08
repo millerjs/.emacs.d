@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: closes
+# key: cl
+# binding: direct-keybinding
+# --
+Closes ${1:no.}

@@ -28,10 +28,8 @@
 (require 'jedi)
 (require 'flycheck)
 (require 'flycheck-pos-tip)
-(require 'ace-jump-mode)
 (require 'auto-complete)
 (require 'auto-complete-config)
-(require 'dash)
 (require 'dired-subtree)
 (require 'indent-guide)
 (require 'inline-crypt)
@@ -49,8 +47,7 @@
 (require 'smartparens)
 (require 'whitespace)
 (require 'yaml-mode)
-(require 'google-this)
-
+(require 'relative-jump)
 
 ;; =======================================================================
 ;; Minor Modes
@@ -68,3 +65,12 @@
 
 (menu-bar-mode              0)
 (global-smart-tab-mode      0)
+
+
+(require 'virtualenvwrapper)
+(venv-initialize-interactive-shells) ;; if you want interactive shell support
+(venv-initialize-eshell) ;; if you want eshell support
+
+(load-file (concat config-path  "languages.el"))
+
+(setq venv-location "/Users/jmiller/.venvs")
