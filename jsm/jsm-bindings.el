@@ -29,6 +29,7 @@
 (global-set-key (kbd "C-x C-m")     'jsm-comment-or-uncomment-region-or-line)
 (global-set-key (kbd "C-x p")       'replace-string)
 (global-set-key (kbd "C-c C-s")     'sort-lines)
+(global-set-key (kbd "M--")         'string-inflection-cycle)
 
 ;; Transpose stuff with M-t (https://github.com/magnars/.emacs.d/)
 (global-unset-key (kbd "M-t")) ;; which used to be transpose-words

@@ -48,7 +48,7 @@
 (require 'whitespace)
 (require 'yaml-mode)
 (require 'relative-jump)
-(require 'jsm-languages)
+(require 'string-inflection)
 
 ;; =======================================================================
 ;; Minor Modes

@@ -49,6 +49,7 @@ The rest of the line must be blank."
   (s-matches? (rx bol (* space) (* word) (* space) eol)
               (buffer-substring (line-beginning-position) (line-end-position))))
 
+(add-hook 'rust-mode-hook   (lambda () (flycheck-mode)))
 
 (add-hook
  'rust-mode-hook
@@ -94,6 +95,10 @@ The rest of the line must be blank."
 ;; =======================================================================
 ;; C/C++
 
+(add-hook 'c++-mode-hook    (lambda () (flycheck-mode)))
+(add-hook 'c-mode-hook      'jsm-indent-setup)
+(add-hook 'c-mode-hook      (lambda () (flycheck-mode)))
+
 (eval-after-load "c++-mode"
   '(progn
      (define-key c++-mode-map (kbd "C-d") 'backward-kill-word)
@@ -104,22 +109,10 @@ The rest of the line must be blank."
 
 ;; To expand region around paragraphs
 (add-hook 'python-mode-hook 'er/jsm-python-mode-expansions)
-
-(add-hook
- 'python-mode-hook
- '(lambda ()
-    ;; Setup flycheck
-    (flycheck-mode)
-
-    (flycheck-select-checker python-pylint)
-
-    ;; Setup jedi
-    (jedi:setup)
-    (jedi-mode)
-    (setq jedi:complete-on-dot 1)
-
-    ;; Python specific bindings
-    (define-key python-mode-map (kbd "M-.") 'jedi:goto-definition)))
+(add-hook 'python-mode-hook '(lambda () (flycheck-select-checker python-pylint)))
+(add-hook 'python-mode-hook '(lambda () (jedi:setup)))
+(add-hook 'python-mode-hook '(lambda () (jedi-mode)))
+(add-hook 'python-mode-hook '(lambda () (setq jedi:complete-on-dot 1)))
 
 
 ;; =======================================================================
@@ -138,14 +131,6 @@ The rest of the line must be blank."
 
 ;; ======================================================================
 ;; Other
-
-(add-hook    'c-mode-hook      (lambda () (flycheck-mode)))
-(add-hook    'rust-mode-hook   (lambda () (flycheck-mode)))
-(add-hook    'c++-mode-hook    (lambda () (flycheck-mode)))
-(add-hook    'python-mode-hook (lambda () (flycheck-mode)))
-(add-hook    'python-mode-hook (lambda () (jedi-mode)))
-
-(add-hook    'c-mode-hook      'jsm-indent-setup)
 
 (add-to-list 'auto-mode-alist '("\\.F90\\ '" . f90-mode))
 (add-to-list 'auto-mode-alist '("\\.xsh\\ '" . python-mode))
