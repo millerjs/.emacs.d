@@ -1,3 +1,6 @@
 [submodule "site-lisp/dash.el"]
 	path = site-lisp/dash.el
 	url = https://github.com/magnars/dash.el.git
+[submodule "site-lisp/relative-jump.el"]
+	path = site-lisp/relative-jump.el
+	url = https://github.com/millerjs/relative-jump.el.git
