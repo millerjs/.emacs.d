@@ -1,6 +1,0 @@
-# -*- mode: snippet; require-final-newline: nil -*-
-# name: param
-# key: dr
-# binding: direct-keybinding
-# --
-:returns: ${1:description}

@@ -1,5 +1,0 @@
-# key: p
-# name: println!
-# condition: (yas/bol?)
-# --
-println!("$1"${1:$(jsm-yas-rust-fmt-println-args yas/text)});

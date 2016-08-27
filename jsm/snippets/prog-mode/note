@@ -1,6 +1,0 @@
-# -*- mode: snippet; require-final-newline: nil -*-
-# name: note
-# key: note
-# binding: direct-keybinding
-# --
-NOTE(jsm|`(shell-command-to-string "echo -n $(date +%Y-%m-%d)")`): ${0}

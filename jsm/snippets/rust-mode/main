@@ -1,8 +1,0 @@
-# -*- mode: snippet; require-final-newline: nil -*-
-# name: main
-# key: main
-# binding: direct-keybinding
-# --
-fn main() {
-       $0
-}
