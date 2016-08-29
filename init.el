@@ -85,6 +85,7 @@
 
 (require 's)
 (require 'jsm-appearance)
+(require 'jsm-misc)
 (require 'jsm-bindings)
 (require 'jsm-editing)
 (require 'jsm-navigation)
