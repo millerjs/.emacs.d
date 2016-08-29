@@ -3,4 +3,4 @@
       `(("." . ,(expand-file-name
                  (concat user-emacs-directory "backups")))))
 
-(provide 'misc-settings)
+(provide 'jsm-misc)
