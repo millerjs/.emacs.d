@@ -8,6 +8,8 @@
 
 ;;; Code:
 
+(package-initialize)
+
 (setq inhibit-startup-message t)
 
 ;; Set path to dependencies
@@ -53,8 +55,8 @@
      yaml-mode
      expand-region
      linum-relative
-     rust-mode
-     )))
+     xclip
+     rust-mode)))
 
 (condition-case nil
     (init--install-packages)
@@ -75,6 +77,7 @@
 (global-whitespace-mode     t)
 (osx-clipboard-mode         t)
 (show-paren-mode            t)
+(xclip-mode                 t)
 (smartparens-global-mode    t)
 
 (menu-bar-mode              0)
