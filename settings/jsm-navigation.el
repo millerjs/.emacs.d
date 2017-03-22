@@ -8,6 +8,28 @@
 
 ;;; Code:
 
+(defun jsm-is-projectile-project ()
+  "Retrieves the root directory of a project if available.
+The current directory is assumed to be the project's root otherwise."
+  (let ((dir default-directory))
+    (or (cl-some
+         (lambda (func)
+           (let* ((cache-key (format "%s-%s" func dir))
+                  (cache-value (gethash cache-key projectile-project-root-cache)))
+             (if (and cache-value (file-exists-p cache-value))
+                 cache-value
+               (let ((value (funcall func (file-truename dir))))
+                 (puthash cache-key value projectile-project-root-cache)
+                 value))))
+         projectile-project-root-files-functions)
+        nil)))
+
+(defun jsm-find-file ()
+  "Find file using projectile if in project."
+  (interactive)
+  (if (jsm-is-projectile-project)
+      (call-interactively 'projectile-find-file)
+    (call-interactively 'find-file)))
 
 ;; =======================================================================
 ;; Navigation related options

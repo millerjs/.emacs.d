@@ -112,7 +112,7 @@
 
 ;; Window
 (set-face-attribute 'vertical-border nil :background  "color-233")
-(set-face-attribute 'vertical-border nil :foreground  "gray")
+(set-face-attribute 'vertical-border nil :foreground  "050505gray")
 (set-face-background 'mode-line                       "color-233")
 (set-face-foreground 'mode-line                       "white")
 
@@ -137,11 +137,13 @@
 ;; =======================================================================
 ;; GUI Overrides
 
+(scroll-bar-mode -1)
 (when (display-graphic-p)
   (add-to-list 'default-frame-alist '(font .          "Source Code Pro"))
-  (set-background-color                               "gray7")
+  (set-background-color                               "gray2")
   (set-face-attribute 'default (selected-frame) :height 105)
-  (set-face-attribute 'default (selected-frame) :height 105))
+  (set-face-attribute 'default (selected-frame) :height 105)
+  )
 
 (set-face-attribute 'font-lock-keyword-face nil :weight 'bold)
 (set-face-foreground 'font-lock-builtin-face        "blue2")
@@ -149,7 +151,7 @@
 (set-face-foreground 'font-lock-keyword-face        "OliveDrab1")
 (set-face-foreground 'popup-face                    "color-235") (setq)
 (set-foreground-color                               "white")
-(setq mac-command-modifier                          'meta)
+;; (setq mac-command-modifier                          'meta)
 (setq popup-menu-face                               "gray")
 (setq popup-menu-selection-face                     "gray12")
 (setq ring-bell-function 'ignore)

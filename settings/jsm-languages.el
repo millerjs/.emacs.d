@@ -9,6 +9,12 @@
 ;;; Code:
 
 
+;; ======================================================================
+;; LaTeX
+
+(add-to-list 'auto-mode-alist '("\\.rs\\'" . flyspell-mode))
+
+
 ;; =======================================================================
 ;; Go
 (add-hook
@@ -22,8 +28,8 @@
 
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
-(setq racer-cmd "~/.multirust/toolchains/nightly/cargo/bin/racer")
-(setq racer-rust-src-path "~/jsm/rust/rust/src")
+(setq racer-cmd "racer")
+(setq racer-rust-src-path "~/src/rust/src")
 
 ;; borrowed from
 ;; https://github.com/chrisbarrett/spacemacs-layers/blob/master/cb-yasnippet/funcs.el

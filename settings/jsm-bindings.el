@@ -9,6 +9,7 @@
 ;;; Code:
 
 (require 'jsm-hooks)
+(require 'jsm-navigation)
 
 
 ;; ======================================================================
@@ -53,6 +54,8 @@
 ;; =======================================================================
 ;; Navigation
 
+(global-set-key (kbd "C-x f")       'jsm-find-file)
+(global-set-key (kbd "C-c p g")     'projectile-grep)
 (global-set-key (kbd "M-n")         'forward-paragraph)
 (global-set-key (kbd "M-p")         'backward-paragraph)
 (global-set-key (kbd "C-M-f")       'forward-midpoint)

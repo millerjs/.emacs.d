@@ -48,6 +48,7 @@
      osx-clipboard
      paren
      popwin
+     projectile
      s
      smart-tab
      smartparens
@@ -77,6 +78,7 @@
 (global-whitespace-mode     t)
 (osx-clipboard-mode         t)
 (show-paren-mode            t)
+(projectile-mode            t)
 (xclip-mode                 t)
 (smartparens-global-mode    t)
 
@@ -95,3 +97,27 @@
 (require 'jsm-languages)
 (require 'jsm-variables)
 (require 'relative-jump)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (projectile robe rainbow-mode coffee-mode helm-gtags rtags cmake-ide pretty-symbols markdown-mode+ markdown-mode ac-racer racer yasnippet yaml-mode xclip smartparens smart-tab s rust-mode popwin osx-clipboard magit linum-relative kill-ring-search jedi inline-crypt indent-guide flycheck-pos-tip expand-region))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(magit-diff-added ((((type tty)) (:foreground "color-22"))))
+ '(magit-diff-added-highlight ((((type tty)) (:foreground "green" :background "color-234"))))
+ '(magit-diff-context-highlight ((((type tty)) (:foreground "default" :background "color-234"))))
+ '(magit-diff-file-heading ((((type tty)) (:background "color-234"))))
+ '(magit-diff-removed ((((type tty)) (:foreground "red"))))
+ '(magit-diff-removed-highlight ((((type tty)) (:foreground "IndianRed"))))
+ '(magit-section-highlight ((((type tty)) (:foreground "brightwhite" :background "color-234"))))
+ '(whitespace-empty ((t (:foreground "black" :background "black"))))
+ '(whitespace-space ((t (:foreground "gray75" :bold t))))
+ '(whitespace-tab ((t (:foreground "grey" :background "color-233"))))
+ '(whitespace-trailing ((t (:foreground "red" :background "color-234")))))
