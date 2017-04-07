@@ -92,7 +92,7 @@
 (global-set-key (kbd "M-=")         'enlarge-window-horizontally)
 (global-set-key (kbd "M-_")         'shrink-window)
 (global-set-key (kbd "M-+")         'enlarge-window)
-(global-set-key (kbd "C-c d")       'toggle-window-dedicated)
+(global-set-key (kbd "C-c d")       'purpose-toggle-window-purpose-dedicated)
 
 
 ;; =======================================================================

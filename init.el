@@ -114,7 +114,10 @@
 (require 'jsm-variables)
 (require 'relative-jump)
 (require 'neotree)
+(require 'window-purpose)
 
+;; =======================================================================
+;; Minor Modes
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -123,7 +126,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (restclient flx-ido flx grizzl flymake-haml flymake-less flymake-sass scss-mode ido-vertical-mode ido-ubiquitous haml-mode projectile-ripgrep rg ripgrep ein neotree projectile robe rainbow-mode coffee-mode helm-gtags rtags cmake-ide pretty-symbols markdown-mode+ markdown-mode ac-racer racer yasnippet yaml-mode xclip smartparens smart-tab s rust-mode popwin osx-clipboard magit linum-relative kill-ring-search jedi inline-crypt indent-guide flycheck-pos-tip expand-region))))
+    (window-purpose restclient flx-ido flx grizzl flymake-haml flymake-less flymake-sass scss-mode ido-vertical-mode ido-ubiquitous haml-mode projectile-ripgrep rg ripgrep ein neotree projectile robe rainbow-mode coffee-mode helm-gtags rtags cmake-ide pretty-symbols markdown-mode+ markdown-mode ac-racer racer yasnippet yaml-mode xclip smartparens smart-tab s rust-mode popwin osx-clipboard magit linum-relative kill-ring-search jedi inline-crypt indent-guide flycheck-pos-tip expand-region))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -132,12 +135,15 @@
  '(col-highlight ((t (:background "color-233"))))
  '(hl-line ((t (:background "color-233"))))
  '(lazy-highlight ((t (:background "black" :foreground "white" :underline t))))
- '(magit-diff-added ((((type tty)) (:foreground "green"))))
+ '(magit-diff-added ((((type tty)) (:foreground "green" :background "color-233"))))
  '(magit-diff-added-highlight ((((type tty)) (:foreground "green" :background "color-234"))))
  '(magit-diff-context-highlight ((((type tty)) (:foreground "default" :background "color-234"))))
  '(magit-diff-file-heading ((((type tty)) (:background "color-234"))))
+ '(magit-diff-file-heading-selection ((((type tty)) (:background "color-232"))))
+ '(magit-diff-hunk-heading ((((type tty)) (:background "color-235"))))
+ '(magit-diff-hunk-heading-highlight ((((type tty)) (:background "color-232"))))
  '(magit-diff-removed ((((type tty)) (:foreground "red"))))
- '(magit-diff-removed-highlight ((((type tty)) (:foreground "IndianRed"))))
+ '(magit-diff-removed-highlight ((((type tty)) (:foreground "IndianRed" :background "color-233"))))
  '(magit-section-highlight ((((type tty)) (:foreground "brightwhite" :background "color-234"))))
  '(neo-dir-link-face ((t (:foreground "color-21"))))
  '(neo-file-link-face ((t (:foreground "color-245"))))
