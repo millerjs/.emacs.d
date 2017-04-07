@@ -152,7 +152,7 @@ The rest of the line must be blank."
 
 ;; =======================================================================
 ;; Org
-p
+
 (defun org-archive-done-tasks ()
   (interactive)
   (org-map-entries 'org-archive-subtree "/DONE" 'file))
