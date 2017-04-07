@@ -11,7 +11,6 @@
 (require 'jsm-hooks)
 (require 'jsm-navigation)
 
-
 ;; ======================================================================
 ;; Selection
 
@@ -25,6 +24,15 @@
 (global-set-key (kbd "C-x .")       'hs-show-block)
 (global-set-key (kbd "C-x <")       'hs-hide-level)
 (global-set-key (kbd "C-x >")       'hs-show-all)
+
+;; =======================================================================
+;; Magit
+
+(global-set-key (kbd "C-c m d")   'magit-diff-dwim)
+(global-set-key (kbd "C-c m b")   'magit-blame)
+(global-set-key (kbd "C-c m l")   'magit-log-all)
+(global-set-key (kbd "C-c m f")   'magit-fetch-all)
+(global-set-key (kbd "C-c m s")   'magit-status)
 
 ;; =======================================================================
 ;; Editing
@@ -55,7 +63,9 @@
 ;; Navigation
 
 (global-set-key (kbd "C-x f")       'jsm-find-file)
-(global-set-key (kbd "C-c p g")     'projectile-grep)
+(global-set-key (kbd "C-x g")       'projectile-ripgrep)
+(global-set-key (kbd "C-c g")       'magit-status)
+(global-set-key (kbd "C-c n")       'neotree-toggle)
 (global-set-key (kbd "M-n")         'forward-paragraph)
 (global-set-key (kbd "M-p")         'backward-paragraph)
 (global-set-key (kbd "C-M-f")       'forward-midpoint)
@@ -66,12 +76,24 @@
 (global-set-key (kbd "M-m")         'move-middle-line)
 (global-set-key (kbd "C-x l")       'next-non-emacs-buffer)
 (global-set-key (kbd "C-x j")       'previous-non-emacs-buffer)
-(global-set-key (kbd "C-x <right>") 'next-non-emacs-buffer)
-(global-set-key (kbd "C-x <left>")  'previous-non-emacs-buffer)
 (global-set-key (kbd "C-v")         'scroll-up-partial)
 (global-set-key (kbd "M-v")         'scroll-down-partial)
 (global-set-key (kbd "<mouse-5>")   'scroll-up-partial)
 (global-set-key (kbd "<mouse-4>")   'scroll-down-partial)
+
+;; ======================================================================
+;; Window Management
+
+(global-set-key (kbd "C-x <up>")    'windmove-up)
+(global-set-key (kbd "C-x <down>")  'windmove-down)
+(global-set-key (kbd "C-x <right>") 'windmove-right)
+(global-set-key (kbd "C-x <left>")  'windmove-left)
+(global-set-key (kbd "M--")         'shrink-window-horizontally)
+(global-set-key (kbd "M-=")         'enlarge-window-horizontally)
+(global-set-key (kbd "M-_")         'shrink-window)
+(global-set-key (kbd "M-+")         'enlarge-window)
+(global-set-key (kbd "C-c d")       'toggle-window-dedicated)
+
 
 ;; =======================================================================
 ;; Util
@@ -94,6 +116,14 @@
 ;; Yas
 (define-key yas-keymap (kbd "`")    'yas-next-field)
 (define-key yas-minor-mode-map (kbd "<backtab>") 'yas-expand)
+
+;; ido
+(defun ido-define-keys ()
+  (define-key ido-completion-map (kbd "C-n") 'ido-next-match)
+  (define-key ido-completion-map (kbd "C-p") 'ido-prev-match)
+  (define-key ido-completion-map (kbd "M-n") 'ido-next-match)
+  (define-key ido-completion-map (kbd "M-p") 'ido-prev-match))
+(add-hook 'ido-setup-hook 'ido-define-keys)
 
 ;; ======================================================================
 ;; Minor Modes

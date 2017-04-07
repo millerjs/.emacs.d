@@ -9,12 +9,6 @@
 ;;; Code:
 
 
-;; ======================================================================
-;; LaTeX
-
-(add-to-list 'auto-mode-alist '("\\.rs\\'" . flyspell-mode))
-
-
 ;; =======================================================================
 ;; Go
 (add-hook
@@ -22,11 +16,47 @@
  '(lambda ()
     (add-hook 'before-save-hook #'gofmt-before-save)))
 
+;; ======================================================================
+;; Ruby
+
+
+ ;; ruby-mode has keybinding [C-c C-s] for `inf-ruby'.
+  ;; auto start robe `robe-start' after start `inf-ruby'.
+  (defun my-robe-start ()
+    (interactive)
+    (unless robe-running
+      (robe-start)))
+
+  (defadvice inf-ruby-console-auto (after inf-ruby-console-auto activate)
+    "Run `robe-start' after `inf-ruby-console-auto' started."
+    (my-robe-start))
+
+  (with-eval-after-load 'projectile-rails
+    (define-key projectile-rails-mode-map
+      [remap inf-ruby] 'inf-ruby-console-auto))
+
+  (defadvice inf-ruby (after inf-ruby activate)
+    "Run `robe-start' after `inf-ruby' started."
+    (my-robe-start))
+
+  ;; (define-key enh-ruby-mode-map (kbd "C-c C-s") 'inf-ruby)
+
+  ;; auto start robe process for completing
+  (defun my-robe-auto-start ()
+    (unless robe-running
+      (call-interactively 'inf-ruby)))
+
+(add-hook 'enh-ruby-mode-hook #'my-robe-auto-start)
+
+;; (add-hook 'ruby-mode-hook (lambda () (robe-mode) (robe-start)))
+;; (add-hook 'robe-mode-hook 'ac-robe-setup)
 
 ;; =======================================================================
 ;; Rust
 
+;; (require 'rust-mode)
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
+(add-to-list 'auto-mode-alist '("\\.rs\\'" . flyspell-mode))
 
 (setq racer-cmd "racer")
 (setq racer-rust-src-path "~/src/rust/src")
@@ -64,8 +94,8 @@ The rest of the line must be blank."
     ;; Setup autocompletion
     (racer-mode)
     (ac-racer-setup)
-    (setq ac-delay             0.1)
-    (setq ac-quick-help-delay  0.11)
+    (setq ac-delay             1.0)
+    (setq ac-quick-help-delay  1.0)
 
     ;; Defintiion lookup
     (local-set-key (kbd "M-.") 'racer-find-definition)
@@ -122,7 +152,7 @@ The rest of the line must be blank."
 
 ;; =======================================================================
 ;; Org
-
+p
 (defun org-archive-done-tasks ()
   (interactive)
   (org-map-entries 'org-archive-subtree "/DONE" 'file))

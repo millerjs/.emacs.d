@@ -24,7 +24,7 @@
 (setq direx:closed-icon                      "▶  ")
 (add-to-list 'completion-ignored-extensions  ".pyc")
 (add-to-list 'completion-ignored-extensions  ".o")
-
+(setq even-window-heights nil)
 
 ;; ======================================================================
 ;; Flycheck

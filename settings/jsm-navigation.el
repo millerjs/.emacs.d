@@ -8,6 +8,9 @@
 
 ;;; Code:
 
+;; ======================================================================
+;; Project Management
+
 (defun jsm-is-projectile-project ()
   "Retrieves the root directory of a project if available.
 The current directory is assumed to be the project's root otherwise."
@@ -30,6 +33,12 @@ The current directory is assumed to be the project's root otherwise."
   (if (jsm-is-projectile-project)
       (call-interactively 'projectile-find-file)
     (call-interactively 'find-file)))
+
+(require 'neotree)
+(setq projectile-switch-project-action 'neotree-projectile-action)
+(setq projectile-globally-ignored-file-suffixes '(".log"))
+(setq neo-smart-open t)
+
 
 ;; =======================================================================
 ;; Navigation related options

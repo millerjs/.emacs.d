@@ -76,16 +76,32 @@
 (set-default 'truncate-lines 0)
 (set-face-foreground 'indent-guide-face "color-237")
 
-(setq indent-guide-char "❘")
+(setq indent-guide-char "│")
 (setq indent-guide-recursive t)
 (setq default-frame-alist
-      (append (list '(width  . 81)  ; Width set to 81 characters
-                    '(height . 40)) ; Height set to 60 lines
-              default-frame-alist))
+      (append (list '(width  . 81) '(height . 40)) default-frame-alist))
 
 
 ;; =======================================================================
 ;; Colors
+
+(defun what-face (pos)
+  (interactive "d")
+  (let ((face (or (get-char-property (point) 'read-face-name)
+                  (get-char-property (point) 'face))))
+    (if face (message "Face: %s" face) (message "No face at %d" pos))))
+
+;; ido
+(setq ido-enable-flex-matching t)
+(setq ido-use-faces nil)
+
+(custom-set-faces
+ '(col-highlight ((t (:background "color-233"))))
+ '(hl-line ((t (:background "color-233"))))
+ '(lazy-highlight ((t (:background "black" :foreground "white" :underline t))))
+ '(neo-dir-link-face ((t (:foreground "color-21"))))
+ '(neo-file-link-face ((t (:foreground "color-245")))))
+
 
 ;; Auto complete
 (set-face-background 'ac-candidate-face               "color-234")
@@ -115,6 +131,8 @@
 (set-face-attribute 'vertical-border nil :foreground  "050505gray")
 (set-face-background 'mode-line                       "color-233")
 (set-face-foreground 'mode-line                       "white")
+(setq split-height-threshold 1200)
+(setq split-width-threshold  2000)
 
 ;; Region
 (set-face-background 'region                          "color-18")
@@ -122,22 +140,41 @@
 ;; Smartparens
 (set-face-background 'sp-pair-overlay-face            "black")
 
-
 ;; Magit
 (custom-set-faces
- '(magit-diff-added             ((((type tty)) ( :foreground "color-22"))))
- '(magit-diff-added-highlight   ((((type tty)) ( :foreground "green"      :background "color-234"))))
- '(magit-diff-context-highlight ((((type tty)) ( :foreground "default"    :background "color-234"))))
- '(magit-diff-file-heading      ((((type tty)) (                          :background "color-234"))))
- '(magit-diff-removed           ((((type tty)) ( :foreground "red"))))
- '(magit-diff-removed-highlight ((((type tty)) ( :foreground "IndianRed"))))
- '(magit-section-highlight      ((((type tty)) ( :foreground "brightwhite" :background "color-234")))))
+ '(magit-diff-hunk-heading-highlight ((((type tty)) (                          :background "color-235" ))))
+ '(magit-diff-hunk-heading           ((((type tty)) (                          :background "color-234" ))))
+ '(magit-diff-added                  ((((type tty)) ( :foreground "green"      :background "color-232" ))))
+ '(magit-diff-added-highlight        ((((type tty)) ( :foreground "green"      :background "color-232" ))))
+ '(magit-diff-context-highlight      ((((type tty)) ( :foreground "default"    :background "color-232" ))))
+ '(magit-diff-file-heading           ((((type tty)) (                          :background "color-232" ))))
+ '(magit-diff-removed                ((((type tty)) ( :foreground "red"                                ))))
+ '(magit-diff-removed-highlight      ((((type tty)) ( :foreground "IndianRed"  :background "color-232" ))))
+ '(magit-section-highlight           ((((type tty)) ( :foreground "default"    :background "color-232" )))))
 
+(custom-set-variables)
+
+;; ======================================================================
+;; Geometry
+
+(setq neo-window-width 50)
+
+;; Toggle window dedication
+
+(defun toggle-window-dedicated ()
+  "Toggle whether the current active window is dedicated or not."
+  (interactive)
+  (message
+   (if (let (window (get-buffer-window (current-buffer)))
+         (set-window-dedicated-p window
+                                 (not (window-dedicated-p window))))
+       "Window '%s' is dedicated"
+     "Window '%s' is normal")
+   (current-buffer)))
 
 ;; =======================================================================
 ;; GUI Overrides
 
-(scroll-bar-mode -1)
 (when (display-graphic-p)
   (add-to-list 'default-frame-alist '(font .          "Source Code Pro"))
   (set-background-color                               "gray2")
@@ -151,7 +188,6 @@
 (set-face-foreground 'font-lock-keyword-face        "OliveDrab1")
 (set-face-foreground 'popup-face                    "color-235") (setq)
 (set-foreground-color                               "white")
-;; (setq mac-command-modifier                          'meta)
 (setq popup-menu-face                               "gray")
 (setq popup-menu-selection-face                     "gray12")
 (setq ring-bell-function 'ignore)
