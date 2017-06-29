@@ -9,6 +9,14 @@
 ;;; Code:
 
 ;; ======================================================================
+;; Insertions
+
+(defun insert-date ()
+  "Insert the current date."
+  (interactive)
+  (insert (shell-command-to-string "echo -n $(date +%Y-%m-%d)")))
+
+;; ======================================================================
 ;; Selection
 
 (require 'expand-region)

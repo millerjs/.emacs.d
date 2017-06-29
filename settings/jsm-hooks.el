@@ -35,7 +35,7 @@
   (override-mode 0))
 
 (add-hook 'minibuffer-setup-hook 'my-minibuffer-setup-hook)
-
+(add-hook 'magit-status-mode-hook 'magit-filenotify-mode)
 
 (provide 'jsm-hooks)
 ;;; jsm-hooks.el ends here

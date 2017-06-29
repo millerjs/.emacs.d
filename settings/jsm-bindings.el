@@ -33,14 +33,22 @@
 (global-set-key (kbd "C-c m l")   'magit-log-all)
 (global-set-key (kbd "C-c m f")   'magit-fetch-all)
 (global-set-key (kbd "C-c m s")   'magit-status)
+(global-set-key (kbd "<f8>")      'magit-section-cycle-diffs)
+(global-set-key (kbd "C-c m f")   'jsm-magit-copy-filename)
+
+;; ======================================================================
+;; Modes
+
+(global-set-key (kbd "C-c m e") 'evil-mode)
 
 ;; =======================================================================
 ;; Editing
 
-(global-set-key (kbd "C-x m")       'jsm-comment-or-uncomment-region-or-line)
-(global-set-key (kbd "C-x C-m")     'jsm-comment-or-uncomment-region-or-line)
-(global-set-key (kbd "C-x p")       'replace-string)
-(global-set-key (kbd "C-c C-s")     'sort-lines)
+(global-set-key (kbd "C-x m")     'jsm-comment-or-uncomment-region-or-line)
+(global-set-key (kbd "C-x C-m")   'jsm-comment-or-uncomment-region-or-line)
+(global-set-key (kbd "C-x p")     'replace-string)
+(global-set-key (kbd "C-c C-s")   'sort-lines)
+(global-set-key (kbd "C-c i d")   'insert-date)
 
 ;; Transpose stuff with M-t (https://github.com/magnars/.emacs.d/)
 (global-unset-key (kbd "M-t")) ;; which used to be transpose-words
@@ -48,6 +56,10 @@
 (global-set-key (kbd "M-t w") 'transpose-words)
 (global-set-key (kbd "M-t s") 'transpose-sexps)
 (global-set-key (kbd "M-t p") 'transpose-params)
+
+(global-set-key (kbd "M-<up>")   'move-line-up)
+(global-set-key (kbd "M-<down>") 'move-line-down)
+
 
 ;; =======================================================================
 ;; Whitespace
@@ -64,6 +76,7 @@
 
 (global-set-key (kbd "C-x f")       'jsm-find-file)
 (global-set-key (kbd "C-x g")       'projectile-ripgrep)
+(global-set-key (kbd "C-x d")       'jsm-ruby-def-grep-goto)
 (global-set-key (kbd "C-c g")       'magit-status)
 (global-set-key (kbd "C-c n")       'neotree-toggle)
 (global-set-key (kbd "M-n")         'forward-paragraph)
@@ -110,8 +123,8 @@
 (global-set-key (kbd "C-c C-l")     'flycheck-list-errors)
 (global-set-key (kbd "C-M-y")       'kill-ring-search)
 
-;; Documentation
-(global-set-key (kbd "C-c w")       'webjump)
+;; Purpose
+(global-set-key (kbd "C-c w")       'purpose-load-window-layout)
 
 ;; Yas
 (define-key yas-keymap (kbd "`")    'yas-next-field)
@@ -159,7 +172,7 @@
 (define-key ac-completing-map  "\t"      'ac-complete)
 (define-key ac-completing-map  "\C-j"    'ac-complete)
 (define-key ac-completing-map  "\M-/"    'ac-stop)
-(define-key ac-mode-map (kbd   "M-TAB")  'auto-complete)
+(define-key ac-mode-map (kbd   "M-TAB")  'magit-section-cycle-diffs)
 
 (provide 'jsm-bindings)
 ;;; jsm-bindings.el ends here

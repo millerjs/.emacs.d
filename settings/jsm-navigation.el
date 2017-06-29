@@ -8,6 +8,7 @@
 
 ;;; Code:
 
+
 ;; ======================================================================
 ;; Project Management
 
@@ -50,6 +51,13 @@ The current directory is assumed to be the project's root otherwise."
       scroll-preserve-screen-position 1)
 
 
+;; ======================================================================
+;; Searching
+
+(fset 'jsm-ruby-def-grep-goto "\C-[xprojectile-ripgrep\C-m\C-a(def (self\\.)|class )\C-m\C-xo\C-[:(sleep-for 0.2)\C-mn\C-m")
+(fset 'jsm-lookup-coffee "\C-xg:\C-m\C-[:(sleep-for .\C-?0.2)\C-mn\C-xon\C-m\C-l")
+
+
 ;; =======================================================================
 ;; Inter-buffer navigation
 
@@ -58,7 +66,7 @@ The current directory is assumed to be the project's root otherwise."
     (mapc 'kill-buffer (buffer-list)))
 
 (defun emacs-buffer-p (name)
-  (string-match-p "\\*.*\\*" name))
+  (string-match-p "\\*.*" name))
 
 
 (defun next-non-emacs-buffer (&optional original)
@@ -121,7 +129,8 @@ The current directory is assumed to be the project's root otherwise."
   (setq parsed (s-match "\\([a-z0-9]\\)*" cmd))
   (setq lines-n (- (aref (-first-item parsed) 0) 96))
   (setq lines-mult (- (max (string-to-number (nth 1 parsed)) 1) 1))
-  (next-line (+ lines-n (* lines-mult 26))))
+  (next-line (+ lines-n (* lines-mult 26)))
+  (move-middle-line))
 
 
 (defun jump-backward (cmd)
@@ -130,7 +139,8 @@ The current directory is assumed to be the project's root otherwise."
   (setq parsed (s-match "\\([a-z0-9]\\)*" cmd))
   (setq lines-n (- (aref (-first-item parsed) 0) 96))
   (setq lines-mult (- (max (string-to-number (nth 1 parsed)) 1) 1))
-  (previous-line (+ lines-n (* lines-mult 26))))
+  (previous-line (+ lines-n (* lines-mult 26)))
+  (move-middle-line))
 
 
 (defun window-partial ()

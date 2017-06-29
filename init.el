@@ -38,6 +38,7 @@
      coffee-mode
      clean-buffers
      expand-region
+     evil
      flycheck
      flycheck-pos-tip
      flx
@@ -46,20 +47,22 @@
      inline-crypt
      jedi
      haml-mode
+     htmlize
      ido
      ido-vertical-mode
      kill-ring-search
      linum-relative
      linum-relative
      magit
+     magit-filenotify
      markdown-mode
      neotree
      org
      osx-clipboard
+     ox-reveal
      paren
      popwin
      projectile
-     robe
      rust-mode
      s
      smart-tab
@@ -99,6 +102,7 @@
 (menu-bar-mode              0)
 (global-smart-tab-mode      0)
 
+(setq server-use-tcp 0)
 
 ;; =======================================================================
 ;; Require eagerly
@@ -124,9 +128,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(coffee-indent-like-python-mode t)
+ '(coffee-tab-width 2)
  '(package-selected-packages
    (quote
-    (window-purpose restclient flx-ido flx grizzl flymake-haml flymake-less flymake-sass scss-mode ido-vertical-mode ido-ubiquitous haml-mode projectile-ripgrep rg ripgrep ein neotree projectile robe rainbow-mode coffee-mode helm-gtags rtags cmake-ide pretty-symbols markdown-mode+ markdown-mode ac-racer racer yasnippet yaml-mode xclip smartparens smart-tab s rust-mode popwin osx-clipboard magit linum-relative kill-ring-search jedi inline-crypt indent-guide flycheck-pos-tip expand-region))))
+    (haskell-mode htmlize org ox-reveal epresent itail evil sass-mode toml-mode toml magit-filenotify control-mode robe window-purpose restclient flx-ido flx grizzl flymake-haml flymake-less flymake-sass scss-mode ido-vertical-mode ido-ubiquitous haml-mode projectile-ripgrep rg ripgrep ein neotree projectile rainbow-mode coffee-mode helm-gtags rtags cmake-ide pretty-symbols markdown-mode+ markdown-mode ac-racer racer yasnippet yaml-mode xclip smartparens smart-tab s rust-mode popwin osx-clipboard magit linum-relative kill-ring-search jedi inline-crypt indent-guide flycheck-pos-tip expand-region))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -135,18 +141,21 @@
  '(col-highlight ((t (:background "color-233"))))
  '(hl-line ((t (:background "color-233"))))
  '(lazy-highlight ((t (:background "black" :foreground "white" :underline t))))
- '(magit-diff-added ((((type tty)) (:foreground "green" :background "color-233"))))
- '(magit-diff-added-highlight ((((type tty)) (:foreground "green" :background "color-234"))))
- '(magit-diff-context-highlight ((((type tty)) (:foreground "default" :background "color-234"))))
- '(magit-diff-file-heading ((((type tty)) (:background "color-234"))))
+ '(magit-diff-added ((((type tty)) (:foreground "green" :background "color-232"))))
+ '(magit-diff-added-highlight ((((type tty)) (:foreground "green" :background "color-232"))))
+ '(magit-diff-context-highlight ((((type tty)) (:foreground "default" :background "color-232"))))
+ '(magit-diff-file-heading ((((type tty)) (:background "color-232"))))
  '(magit-diff-file-heading-selection ((((type tty)) (:background "color-232"))))
- '(magit-diff-hunk-heading ((((type tty)) (:background "color-235"))))
- '(magit-diff-hunk-heading-highlight ((((type tty)) (:background "color-232"))))
+ '(magit-diff-hunk-heading ((((type tty)) (:background "color-234"))))
+ '(magit-diff-hunk-heading-highlight ((((type tty)) (:background "color-235"))))
  '(magit-diff-removed ((((type tty)) (:foreground "red"))))
- '(magit-diff-removed-highlight ((((type tty)) (:foreground "IndianRed" :background "color-233"))))
- '(magit-section-highlight ((((type tty)) (:foreground "brightwhite" :background "color-234"))))
+ '(magit-diff-removed-highlight ((((type tty)) (:foreground "IndianRed" :background "color-232"))))
+ '(magit-section-highlight ((((type tty)) (:foreground "default" :background "color-232"))))
  '(neo-dir-link-face ((t (:foreground "color-21"))))
  '(neo-file-link-face ((t (:foreground "color-245"))))
+ '(org-block-begin-line ((t (:foreground "color-245" :background "black" :bold nil))))
+ '(org-document-info ((t (:foreground "magenta" :bold nil))))
+ '(org-document-title ((t (:foreground "magenta" :bold nil))))
  '(whitespace-empty ((t (:foreground "black" :background "black"))))
  '(whitespace-space ((t (:foreground "gray75" :bold t))))
  '(whitespace-tab ((t (:foreground "grey" :background "color-233"))))

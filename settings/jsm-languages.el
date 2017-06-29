@@ -17,8 +17,16 @@
     (add-hook 'before-save-hook #'gofmt-before-save)))
 
 ;; ======================================================================
-;; Ruby
+;; CoffeeScript
 
+(add-hook 'coffee-mode-hook
+          (lambda ()
+            (setq indent-tabs-mode nil)
+            (setq-default tab-width 4)
+            (setq indent-line-function 'insert-tab)))
+
+;; ======================================================================
+;; Ruby
 
  ;; ruby-mode has keybinding [C-c C-s] for `inf-ruby'.
   ;; auto start robe `robe-start' after start `inf-ruby'.
@@ -48,15 +56,14 @@
 
 (add-hook 'enh-ruby-mode-hook #'my-robe-auto-start)
 
-;; (add-hook 'ruby-mode-hook (lambda () (robe-mode) (robe-start)))
-;; (add-hook 'robe-mode-hook 'ac-robe-setup)
+(add-hook 'ruby-mode-hook (lambda () (robe-mode) (robe-start)))
+(add-hook 'robe-mode-hook 'ac-robe-setup)
 
 ;; =======================================================================
 ;; Rust
 
 ;; (require 'rust-mode)
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
-(add-to-list 'auto-mode-alist '("\\.rs\\'" . flyspell-mode))
 
 (setq racer-cmd "racer")
 (setq racer-rust-src-path "~/src/rust/src")
@@ -85,6 +92,8 @@ The rest of the line must be blank."
   (s-matches? (rx bol (* space) (* word) (* space) eol)
               (buffer-substring (line-beginning-position) (line-end-position))))
 
+(setq ac-delay             0.5)
+(setq ac-quick-help-delay  0.5)
 
 (add-hook
  'rust-mode-hook
@@ -94,8 +103,8 @@ The rest of the line must be blank."
     ;; Setup autocompletion
     (racer-mode)
     (ac-racer-setup)
-    (setq ac-delay             1.0)
-    (setq ac-quick-help-delay  1.0)
+    (setq ac-delay             0.5)
+    (setq ac-quick-help-delay  0.5)
 
     ;; Defintiion lookup
     (local-set-key (kbd "M-.") 'racer-find-definition)
@@ -178,6 +187,7 @@ The rest of the line must be blank."
 (add-to-list 'auto-mode-alist '("\\.xsh\\ '" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.par\\ '" . makefile-mode))
 (add-to-list 'auto-mode-alist '("\\.yml$"    . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.scss$"   . css-mode))
 
 (provide 'jsm-languages)
 ;;; jsm-languages.el ends here

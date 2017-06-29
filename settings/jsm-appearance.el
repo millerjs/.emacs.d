@@ -12,6 +12,27 @@
 (require 'indent-guide)
 
 ;; ======================================================================
+;; Org Mode
+
+(custom-set-faces
+ '(org-block-begin-line  ((t ( :foreground "color-245" :background "black" :bold nil))))
+ '(org-document-info     ((t ( :foreground "magenta" :bold nil))))
+ '(org-document-title     ((t ( :foreground "magenta" :bold nil))))
+ )
+
+
+(defun jsm-presentation-start ()
+  (add-hook 'window-configuration-change-hook
+          (lambda () (set-window-margins (car (get-buffer-window-list (current-buffer) nil t)) 2 2))))
+
+(defun jsm-presentation-stop ()
+  (set-window-margins nil 0))
+
+
+(setq org-src-fontify-natively t)
+
+
+;; ======================================================================
 ;; Flycheck
 
 (eval-after-load 'flycheck

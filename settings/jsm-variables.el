@@ -36,7 +36,7 @@
 ;; ======================================================================
 ;; Purpose
 
-(require 'purpose-window)
+(require 'window-purpose)
 (purpose-x-magit-single-on)
 (add-to-list 'purpose-user-mode-purposes '(ripgrep-search-mode . ripgrep))
 ;; (add-to-list 'purpose-user-mode-purposes '(inferior-python-mode . py-repl))
@@ -57,7 +57,7 @@
 (setq ac-show-menu-immediately-on-auto-complete t)
 
 ;; Popup menu delay
-(setq jsm-ac-delay         0.2)
+(setq jsm-ac-delay         1.5)
 (setq ac-auto-show-menu    jsm-ac-delay)
 (setq ac-delay             jsm-ac-delay)
 (setq ac-quick-help-delay  (+ jsm-ac-delay 0.1))
