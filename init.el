@@ -57,9 +57,7 @@
      magit-filenotify
      markdown-mode
      neotree
-     org
      osx-clipboard
-     ox-reveal
      paren
      popwin
      projectile
@@ -68,7 +66,6 @@
      smart-tab
      smartparens
      whitespace
-     xclip
      yaml-mode
      yasnippet)))
 
@@ -95,7 +92,7 @@
 (osx-clipboard-mode            t)
 (show-paren-mode               t)
 (projectile-mode               t)
-(xclip-mode                    t)
+;; (xclip-mode                    t)
 (smartparens-global-mode       t)
 (xterm-mouse-mode              t)
 
@@ -118,7 +115,6 @@
 (require 'jsm-variables)
 (require 'relative-jump)
 (require 'neotree)
-(require 'window-purpose)
 
 ;; =======================================================================
 ;; Minor Modes
@@ -132,7 +128,7 @@
  '(coffee-tab-width 2)
  '(package-selected-packages
    (quote
-    (haskell-mode htmlize org ox-reveal epresent itail evil sass-mode toml-mode toml magit-filenotify control-mode robe window-purpose restclient flx-ido flx grizzl flymake-haml flymake-less flymake-sass scss-mode ido-vertical-mode ido-ubiquitous haml-mode projectile-ripgrep rg ripgrep ein neotree projectile rainbow-mode coffee-mode helm-gtags rtags cmake-ide pretty-symbols markdown-mode+ markdown-mode ac-racer racer yasnippet yaml-mode xclip smartparens smart-tab s rust-mode popwin osx-clipboard magit linum-relative kill-ring-search jedi inline-crypt indent-guide flycheck-pos-tip expand-region))))
+    (haskell-mode htmlize epresent itail evil sass-mode toml-mode toml magit-filenotify control-mode robe restclient flx-ido flx grizzl flymake-haml flymake-less flymake-sass scss-mode ido-vertical-mode ido-ubiquitous haml-mode projectile-ripgrep rg ripgrep ein neotree projectile rainbow-mode coffee-mode helm-gtags rtags cmake-ide pretty-symbols markdown-mode+ markdown-mode ac-racer racer yasnippet yaml-mode smartparens smart-tab s rust-mode popwin osx-clipboard magit linum-relative kill-ring-search jedi inline-crypt indent-guide flycheck-pos-tip expand-region))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -153,9 +149,9 @@
  '(magit-section-highlight ((((type tty)) (:foreground "default" :background "color-232"))))
  '(neo-dir-link-face ((t (:foreground "color-21"))))
  '(neo-file-link-face ((t (:foreground "color-245"))))
- '(org-block-begin-line ((t (:foreground "color-245" :background "black" :bold nil))))
- '(org-document-info ((t (:foreground "magenta" :bold nil))))
- '(org-document-title ((t (:foreground "magenta" :bold nil))))
+;; '(org-block-begin-line ((t (:foreground "color-245" :background "black" :bold nil))))
+;; '(org-document-info ((t (:foreground "magenta" :bold nil))))
+;; '(org-document-title ((t (:foreground "magenta" :bold nil))))
  '(whitespace-empty ((t (:foreground "black" :background "black"))))
  '(whitespace-space ((t (:foreground "gray75" :bold t))))
  '(whitespace-tab ((t (:foreground "grey" :background "color-233"))))
