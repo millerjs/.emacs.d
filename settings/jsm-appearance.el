@@ -33,6 +33,18 @@
 
 
 ;; ======================================================================
+;; MMM Mode
+
+(eval-after-load 'mmm-mode
+  '(progn
+     (set-face-background 'mmm-special-submode-face "color-250")
+     (set-face-italic  'mmm-default-submode-face t)
+     (set-face-background 'mmm-default-submode-face "color-233")))
+
+
+;; mmm-default-submode-face
+
+;; ======================================================================
 ;; Flycheck
 
 (eval-after-load 'flycheck
@@ -45,6 +57,7 @@
      (set-face-foreground 'flycheck-error    "red")
      (set-face-background 'flycheck-error    nil)
      (set-face-foreground 'flycheck-warning  "orange")
+     (set-face-foreground 'flycheck-info     "orange")
      (set-face-background 'flycheck-warning  nil)))
 
 
@@ -146,6 +159,9 @@
 (set-face-foreground 'font-lock-string-face           "green")
 (set-face-foreground 'font-lock-variable-name-face    "green")
 (set-face-italic     'font-lock-comment-face          t)
+(set-face-foreground 'font-lock-type-face             "ForestGreen")
+(set-face-foreground 'font-lock-function-name-face    "Blue1")
+(set-face-foreground 'minibuffer-prompt               "medium blue")
 
 ;; Window
 (set-face-attribute 'vertical-border nil :background  "color-233")

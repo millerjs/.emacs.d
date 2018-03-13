@@ -25,6 +25,7 @@
   (when (file-directory-p project)
     (add-to-list 'load-path project)))
 
+
 ;; ======================================================================
 ;; Packages
 
@@ -35,6 +36,7 @@
 (defun init--install-packages ()
   (packages-install
    '(auto-complete
+     browse-at-remote
      coffee-mode
      clean-buffers
      expand-region
@@ -70,7 +72,8 @@
      whitespace
      xclip
      yaml-mode
-     yasnippet)))
+     yasnippet
+     mmm-mode)))
 
 (condition-case nil
     (init--install-packages)
@@ -120,6 +123,7 @@
 (require 'neotree)
 (require 'window-purpose)
 
+
 ;; =======================================================================
 ;; Minor Modes
 
@@ -132,7 +136,7 @@
  '(coffee-tab-width 2)
  '(package-selected-packages
    (quote
-    (haskell-mode htmlize org ox-reveal epresent itail evil sass-mode toml-mode toml magit-filenotify control-mode robe window-purpose restclient flx-ido flx grizzl flymake-haml flymake-less flymake-sass scss-mode ido-vertical-mode ido-ubiquitous haml-mode projectile-ripgrep rg ripgrep ein neotree projectile rainbow-mode coffee-mode helm-gtags rtags cmake-ide pretty-symbols markdown-mode+ markdown-mode ac-racer racer yasnippet yaml-mode xclip smartparens smart-tab s rust-mode popwin osx-clipboard magit linum-relative kill-ring-search jedi inline-crypt indent-guide flycheck-pos-tip expand-region))))
+    (mmm-mode gist go-mode oauth use-package el-get rainbow-delimiters cargo helm-lobsters browse-at-remote org-sync rspec-mode slack haskell-mode htmlize org ox-reveal epresent itail evil sass-mode toml-mode toml magit-filenotify control-mode robe window-purpose restclient flx-ido flx grizzl flymake-haml flymake-less flymake-sass scss-mode ido-vertical-mode ido-ubiquitous haml-mode projectile-ripgrep rg ripgrep ein neotree projectile rainbow-mode coffee-mode helm-gtags rtags cmake-ide pretty-symbols markdown-mode+ markdown-mode ac-racer racer yasnippet yaml-mode xclip smartparens smart-tab s rust-mode popwin osx-clipboard magit linum-relative kill-ring-search jedi inline-crypt indent-guide flycheck-pos-tip expand-region))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -156,7 +160,16 @@
  '(org-block-begin-line ((t (:foreground "color-245" :background "black" :bold nil))))
  '(org-document-info ((t (:foreground "magenta" :bold nil))))
  '(org-document-title ((t (:foreground "magenta" :bold nil))))
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "color-253"))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "color-251"))))
+ '(rainbow-delimiters-depth-3-face ((t (:foreground "color-249"))))
+ '(rainbow-delimiters-depth-4-face ((t (:foreground "color-247"))))
+ '(rainbow-delimiters-depth-5-face ((t (:foreground "color-245"))))
+ '(rainbow-delimiters-depth-6-face ((t (:foreground "color-243"))))
+ '(rainbow-delimiters-depth-7-face ((t (:foreground "color-241"))))
+ '(rainbow-delimiters-depth-8-face ((t (:foreground "color-239"))))
  '(whitespace-empty ((t (:foreground "black" :background "black"))))
  '(whitespace-space ((t (:foreground "gray75" :bold t))))
  '(whitespace-tab ((t (:foreground "grey" :background "color-233"))))
  '(whitespace-trailing ((t (:foreground "red" :background "color-234")))))
+(put 'narrow-to-region 'disabled nil)

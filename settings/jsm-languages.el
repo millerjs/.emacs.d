@@ -16,6 +16,9 @@
  '(lambda ()
     (add-hook 'before-save-hook #'gofmt-before-save)))
 
+;; CSS
+(setq css-indent-offset 2)
+
 ;; ======================================================================
 ;; CoffeeScript
 
@@ -54,10 +57,47 @@
     (unless robe-running
       (call-interactively 'inf-ruby)))
 
-(add-hook 'enh-ruby-mode-hook #'my-robe-auto-start)
 
+;; Here doc syntax highlighting
+(require 'mmm-mode) ; install from melpa
+
+(eval-after-load 'mmm-mode
+'(progn
+ (mmm-add-classes
+  '((ruby-heredoc-js
+     :submode js2-mode
+     :front "<<-?JS_?.*\r?\n"
+     :back "[ \t]*JS_?.*"
+     :face mmm-code-submode-face)))
+ (mmm-add-mode-ext-class 'ruby-mode "\\.rb$" 'ruby-heredoc-js)))
+
+(eval-after-load 'mmm-mode
+ '(progn
+  (mmm-add-classes
+  '((ruby-heredoc-shell
+     :submode shell-script-mode
+     :front "<<-?SH_?.*\r?\n"
+     :back "[ \t]*SH_?.*"
+     :face mmm-code-submode-face)))
+ (mmm-add-mode-ext-class 'ruby-mode "\\.rb$" 'ruby-heredoc-shell)))
+
+(eval-after-load 'mmm-mode
+ '(progn
+  (mmm-add-classes
+  '((ruby-heredoc-sql
+     :submode sql-mode
+     :front "<<-?SQL_?.*\r?\n"
+     :back "[ \t]*SQL_?.*"
+     :face mmm-code-submode-face)))
+ (mmm-add-mode-ext-class 'ruby-mode "\\.rb$" 'ruby-heredoc-sql)))
+
+;; Robe
+(add-hook 'enh-ruby-mode-hook #'my-robe-auto-start)
+(add-hook 'enh-ruby-mode-hook #'mmm-mode)
 (add-hook 'ruby-mode-hook (lambda () (robe-mode) (robe-start)))
 (add-hook 'robe-mode-hook 'ac-robe-setup)
+
+
 
 ;; =======================================================================
 ;; Rust
@@ -92,9 +132,6 @@ The rest of the line must be blank."
   (s-matches? (rx bol (* space) (* word) (* space) eol)
               (buffer-substring (line-beginning-position) (line-end-position))))
 
-(setq ac-delay             0.5)
-(setq ac-quick-help-delay  0.5)
-
 (add-hook
  'rust-mode-hook
  '(lambda ()
@@ -103,8 +140,6 @@ The rest of the line must be blank."
     ;; Setup autocompletion
     (racer-mode)
     (ac-racer-setup)
-    (setq ac-delay             0.5)
-    (setq ac-quick-help-delay  0.5)
 
     ;; Defintiion lookup
     (local-set-key (kbd "M-.") 'racer-find-definition)
@@ -162,15 +197,29 @@ The rest of the line must be blank."
 ;; =======================================================================
 ;; Org
 
+(org-babel-do-load-languages
+ 'org-babel-load-languages '((sql . t) (ruby . t)))
+
+(defun my/return-t (orig-fun &rest args) t)
+(defun my/disable-yornp (orig-fun &rest args)
+  (advice-add 'yes-or-no-p :around #'my/return-t)
+  (advice-add 'y-or-n-p :around #'my/return-t)
+  (let ((res (apply orig-fun args)))
+    (advice-remove 'yes-or-no-p #'my/return-t)
+    (advice-remove 'y-or-n-p #'my/return-t)
+    res))
+
+(advice-add 'org-ctrl-c-ctrl-c :around #'my/disable-yornp)
+
 (defun org-archive-done-tasks ()
   (interactive)
   (org-map-entries 'org-archive-subtree "/DONE" 'file))
 
 (defun org-complete-and-archive ()
   (interactive)
-  (org-todo) (org-archive-subtree-default))
+  (org-todo) (org-archive-subtree))
 
-(setq org-log-done t)
+(setq org-log-done 0)
 
 
 ;; ======================================================================

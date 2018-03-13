@@ -28,6 +28,7 @@
 ;; =======================================================================
 ;; Magit
 
+(global-set-key (kbd "C-c l")     'magit-log-buffer-file)
 (global-set-key (kbd "C-c m d")   'magit-diff-dwim)
 (global-set-key (kbd "C-c m b")   'magit-blame)
 (global-set-key (kbd "C-c m l")   'magit-log-all)
@@ -74,6 +75,7 @@
 ;; =======================================================================
 ;; Navigation
 
+(global-set-key (kbd "C-c v")       'browse-at-remote)
 (global-set-key (kbd "C-x f")       'jsm-find-file)
 (global-set-key (kbd "C-x g")       'projectile-ripgrep)
 (global-set-key (kbd "C-x d")       'jsm-ruby-def-grep-goto)
@@ -112,7 +114,7 @@
 ;; Util
 
 ;; Org
-(global-set-key (kbd "C-c t")       'org-complete-and-archive)
+(global-set-key (kbd "C-c a")       'org-archive-subtree)
 
 ;; Spelling
 (global-set-key (kbd "C-c s")       'ispell)
@@ -137,6 +139,20 @@
   (define-key ido-completion-map (kbd "M-n") 'ido-next-match)
   (define-key ido-completion-map (kbd "M-p") 'ido-prev-match))
 (add-hook 'ido-setup-hook 'ido-define-keys)
+
+
+;; compilation
+(defun rspec-compilation-define-keys ()
+  (define-key rspec-compilation-mode-map (kbd "n") 'compilation-next-error)
+  (define-key rspec-compilation-mode-map (kbd "p") 'compilation-previous-error))
+(add-hook 'rspec-compilation-mode-hook 'rspec-compilation-define-keys)
+
+
+;; shell mode execute
+(defun shell-mode-define-keys ()
+  (define-key shell-mode-define-keys (kbd "C-c C-c") 'jsm-shell-command-on-region-or-line))
+(add-hook 'shell-mode-hook 'shell-mode-define-keys)
+
 
 ;; ======================================================================
 ;; Minor Modes

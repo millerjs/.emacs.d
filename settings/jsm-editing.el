@@ -62,8 +62,7 @@
       (forward-line)
       (transpose-lines 1))
     (forward-line)
-    (move-to-column col))
-  (forward-line 1))
+    (move-to-column col)))
 
 (defun move-line-up ()
   "Move entire line up one line"
@@ -72,9 +71,8 @@
     (save-excursion
       (forward-line)
       (transpose-lines -1))
-    (move-to-column col))
-  (forward-line -1))
-
+    (forward-line -2)
+    (move-to-column col)))
 
 ;; ======================================================================
 ;; YASnippet

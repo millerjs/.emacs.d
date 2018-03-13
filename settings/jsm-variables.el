@@ -1,3 +1,4 @@
+
 ;;; variables.el --- Basically any variable definition that doesn't fit elsewhere. -*-lexical-binding: t-*-
 
 ;; Version: 0.0.0
@@ -8,9 +9,17 @@
 
 ;;; Code:
 
-(setq ac-auto-show-menu 0.0)
-(setq ac-ignore-case 'smart)
-(setq ac-use-menu-map t)
+
+(ac-config-default)
+(global-auto-complete-mode t)
+(setq ac-auto-show-menu    0.2)
+(setq ac-delay             0.2)
+(setq ac-menu-height       20)
+(setq ac-auto-start        t)
+(setq ac-ignore-case       'smart)
+(setq ac-use-menu-map      t)
+(setq ac-use-fuzzy         t)
+
 (setq-default c-basic-offset                 4)
 (setq inhibit-startup-message                t)   ; no startup message
 (setq make-backup-files                      nil) ; no backup files
@@ -25,6 +34,10 @@
 (add-to-list 'completion-ignored-extensions  ".pyc")
 (add-to-list 'completion-ignored-extensions  ".o")
 (setq even-window-heights nil)
+
+;; Org mode
+
+(setq org-return-follows-link t)
 
 ;; ======================================================================
 ;; Flycheck
