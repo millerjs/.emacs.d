@@ -47,16 +47,6 @@
 
 
 ;; ======================================================================
-;; Purpose
-
-(require 'window-purpose)
-(purpose-x-magit-single-on)
-(add-to-list 'purpose-user-mode-purposes '(ripgrep-search-mode . ripgrep))
-;; (add-to-list 'purpose-user-mode-purposes '(inferior-python-mode . py-repl))
-(purpose-compile-user-configuration)
-
-
-;; ======================================================================
 ;; Linum
 
 (setq linum-relative-format "%3s› ")
