@@ -38,11 +38,9 @@
 (eval-after-load 'mmm-mode
   '(progn
      (set-face-background 'mmm-special-submode-face "color-250")
-     (set-face-italic  'mmm-default-submode-face t)
-     (set-face-background 'mmm-default-submode-face "color-233")))
+     (set-face-italic     'mmm-default-submode-face t)
+     (set-face-background 'mmm-default-submode-face "black")))
 
-
-;; mmm-default-submode-face
 
 ;; ======================================================================
 ;; Flycheck
