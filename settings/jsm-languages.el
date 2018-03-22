@@ -20,13 +20,68 @@
 (setq css-indent-offset 2)
 
 ;; ======================================================================
+;; Javascript
+
+(add-hook  'js-mode-hook    'skewer-mode)
+(add-hook  'skewer-mode    (lambda () (httpd-start)))
+(add-hook  'css-mode-hook   'skewer-css-mode)
+(add-hook  'html-mode-hook  'skewer-html-mode)
+
+;; ======================================================================
 ;; CoffeeScript
 
 (add-hook 'coffee-mode-hook
           (lambda ()
+            (skewer-mode 0)
+            (define-key coffee-mode-map (kbd "C-c C-k") 'coffee-compile-buffer)
+            (define-key coffee-mode-map (kbd "C-c C-r") 'skewer-reload)
+            (define-key coffee-mode-map (kbd "C-c C-e") 'skewer-load-coffee)
             (setq indent-tabs-mode nil)
             (setq-default tab-width 4)
             (setq indent-line-function 'insert-tab)))
+
+
+;; coffeescript
+(custom-set-variables
+ '(coffee-args-compile '("-c" "--no-header" "--bare")))
+
+(defun switch-to-previous-buffer ()
+  "Switch to previously open buffer.
+Repeated invocations toggle between the two most recently open buffers."
+  (interactive)
+  (switch-to-buffer (other-buffer (current-buffer) 1)))
+
+(defun skewer-load-coffee ()
+  (interactive)
+  (switch-to-buffer "*coffee-compiled*")
+  (skewer-load-buffer)
+  (switch-to-previous-buffer)
+  (skewer-mode 0))
+
+(defun skewer-reload ()
+  (interactive)
+  (skewer-eval "if (typeof skewerReload === 'function') { skewerReload(); }; console.log('skewer reloaded', Date())")
+  (skewer-mode 0))
+
+(defun coffee-compile-and-skewer ()
+  (interactive)
+  (coffee-compile-buffer)
+  (sit-for 1.0)
+  (skewer-load-coffee))
+
+(transient-mark-mode 1)
+
+(defun select-current-line ()
+  (interactive)
+  (end-of-line) ; move to end of line
+  (set-mark (line-beginning-position)))
+
+(defun coffee-compile-line ()
+  (interactive)
+  (select-current-line)
+  (coffee-compile-region))
+
+
 
 ;; ======================================================================
 ;; Ruby
@@ -92,11 +147,13 @@
  (mmm-add-mode-ext-class 'ruby-mode "\\.rb$" 'ruby-heredoc-sql)))
 
 ;; Robe
-(add-hook 'enh-ruby-mode-hook #'my-robe-auto-start)
-(add-hook 'enh-ruby-mode-hook #'mmm-mode)
-(add-hook 'ruby-mode-hook (lambda () (robe-mode) (robe-start)))
+;; (add-hook 'enh-ruby-mode-hook #'my-robe-auto-start)
+;; (add-hook 'ruby-mode-hook (lambda () (robe-mode) (robe-start) (mmm-mode)))
+;; (add-hook 'ruby-mode-hook 'my-robe-auto-start)
+(add-hook 'ruby-mode-hook 'rspec-mode)
+(add-hook 'ruby-mode-hook 'robe-mode)
+;; (add-hook 'ruby-mode-hook 'mmm-mode)
 (add-hook 'robe-mode-hook 'ac-robe-setup)
-
 
 
 ;; =======================================================================

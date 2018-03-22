@@ -12,9 +12,7 @@
 
 (ac-config-default)
 (global-auto-complete-mode t)
-(setq ac-auto-show-menu    0.2)
-(setq ac-delay             0.2)
-(setq ac-menu-height       20)
+(setq ac-auto-show-menu    t)
 (setq ac-auto-start        t)
 (setq ac-ignore-case       'smart)
 (setq ac-use-menu-map      t)
@@ -60,7 +58,7 @@
 (setq ac-show-menu-immediately-on-auto-complete t)
 
 ;; Popup menu delay
-(setq jsm-ac-delay         1.5)
+(setq jsm-ac-delay         1.0)
 (setq ac-auto-show-menu    jsm-ac-delay)
 (setq ac-delay             jsm-ac-delay)
 (setq ac-quick-help-delay  (+ jsm-ac-delay 0.1))

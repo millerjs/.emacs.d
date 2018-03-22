@@ -32,14 +32,19 @@
 (setq org-src-fontify-natively t)
 
 
-;; ======================================================================
 ;; MMM Mode
 
 (eval-after-load 'mmm-mode
   '(progn
      (set-face-background 'mmm-special-submode-face "color-250")
-     (set-face-italic     'mmm-default-submode-face t)
+     (set-face-italic     'mmm-default-submode-face nil)
      (set-face-background 'mmm-default-submode-face "black")))
+
+
+;; Ripgrep
+(eval-after-load 'ripgrep-search-mode
+  '(progn
+     (set-face-foreground 'ripgrep-hit-face "ForestGreen")))
 
 
 ;; ======================================================================
@@ -164,7 +169,7 @@
 ;; Window
 (set-face-attribute 'vertical-border nil :background  "color-233")
 (set-face-attribute 'vertical-border nil :foreground  "050505gray")
-(set-face-background 'mode-line                       "color-233")
+(set-face-background 'mode-line                       "color-235")
 (set-face-foreground 'mode-line                       "white")
 (setq split-height-threshold 1200)
 (setq split-width-threshold  2000)
@@ -174,6 +179,7 @@
 
 ;; Smartparens
 (set-face-background 'sp-pair-overlay-face            "black")
+
 
 ;; Magit
 (custom-set-faces
