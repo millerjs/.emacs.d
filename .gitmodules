@@ -4,3 +4,6 @@
 [submodule "site-lisp/relative-jump.el"]
 	path = site-lisp/relative-jump.el
 	url = https://github.com/millerjs/relative-jump.el.git
+[submodule "site-lisp/emacs-org-dnd"]
+	path = site-lisp/emacs-org-dnd
+	url = https://github.com/xeals/emacs-org-dnd.git
