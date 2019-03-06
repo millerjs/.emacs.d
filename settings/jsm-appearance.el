@@ -80,9 +80,9 @@
     (when matching-text (message matching-text))))
 
 (setq show-paren-delay .1)
-(set-face-background 'show-paren-match-face (face-background 'default))
-(set-face-foreground 'show-paren-match-face "blue")
-(set-face-attribute  'show-paren-match-face nil :weight 'extra-bold)
+(set-face-background 'show-paren-match (face-background 'default))
+(set-face-foreground 'show-paren-match "blue")
+(set-face-attribute  'show-paren-match nil :weight 'extra-bold)
 
 
 ;; =======================================================================
