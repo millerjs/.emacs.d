@@ -45,13 +45,12 @@
      flycheck-pos-tip
      flx
      flx-ido
+     ido-vertical-mode
      indent-guide
      inline-crypt
      jedi
      haml-mode
      htmlize
-     ido
-     ido-vertical-mode
      kill-ring-search
      linum-relative
      linum-relative
@@ -84,9 +83,9 @@
 
 (ac-config-default)
 
-(ido-vertical-mode             t)
-(ido-everywhere                t)
+
 (flx-ido-mode                  t)
+(ido-vertical-mode             t)
 (yas-global-mode               t)
 (column-number-mode            t)
 (global-auto-complete-mode     t)
@@ -108,7 +107,7 @@
 ;; Require eagerly
 
 (require 's)
-(require 'flx-ido)
+;; (require 'flx-ido)
 (require 'jsm-appearance)
 (require 'jsm-misc)
 (require 'jsm-bindings)
@@ -133,7 +132,7 @@
  '(coffee-tab-width 2)
  '(package-selected-packages
    (quote
-    (flx-isearch terraform-mode vue-mode gist dockerfile-mode graphviz-dot-mode skewer-mode mmm-mode haskell-mode htmlize epresent itail evil sass-mode toml-mode toml magit-filenotify control-mode robe restclient flx-ido flx grizzl flymake-haml flymake-less flymake-sass scss-mode ido-vertical-mode ido-ubiquitous haml-mode projectile-ripgrep rg ripgrep ein neotree projectile rainbow-mode coffee-mode helm-gtags rtags cmake-ide pretty-symbols markdown-mode+ markdown-mode ac-racer racer yasnippet yaml-mode smartparens smart-tab s rust-mode popwin osx-clipboard magit linum-relative kill-ring-search jedi inline-crypt indent-guide flycheck-pos-tip expand-region))))
+    (flycheck-rust flx-isearch terraform-mode vue-mode gist dockerfile-mode graphviz-dot-mode skewer-mode mmm-mode haskell-mode htmlize epresent itail evil sass-mode toml-mode toml magit-filenotify control-mode robe restclient grizzl flymake-haml flymake-less flymake-sass scss-mode ido-ubiquitous haml-mode projectile-ripgrep rg ripgrep ein neotree projectile rainbow-mode coffee-mode helm-gtags rtags cmake-ide pretty-symbols markdown-mode+ markdown-mode ac-racer racer yasnippet yaml-mode smartparens smart-tab s rust-mode popwin osx-clipboard magit linum-relative kill-ring-search jedi inline-crypt indent-guide flycheck-pos-tip expand-region))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
