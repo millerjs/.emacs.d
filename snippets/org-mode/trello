@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: trello
+# key: tr
+# --
+** TODO ${1:$(trello-url-to-name)}
+   :trello: $1

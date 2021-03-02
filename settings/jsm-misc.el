@@ -1,7 +1,6 @@
-;; Write backup files to own directory
-(setq backup-directory-alist
-      `(("." . ,(expand-file-name
-                 (concat user-emacs-directory "backups")))))
+;; Disable backup saving
+(setq auto-save-default nil)
+(setq make-backup-files nil)
 
 ;; Custom macros
 (fset 'jsm-magit-copy-filename "\C-rmodified   \C-m\C-[f\C-f\C-f\C-f\C-@\C-e\C-[w")
@@ -16,6 +15,15 @@
         ;; current selection
         (buffer-substring (region-beginning) (region-end))
         ;; current line
-        (thing-at-point 'line t))))
+      (thing-at-point 'line t))))
+
+(setq atomic-chrome-buffer-open-style 'frame)
+
+
+(defun jsm-gist-jira ()
+  "Create a new gist for the current jira org heading"
+  (interactive)
+  (shell-command "gist"))
+
 
 (provide 'jsm-misc)

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: psql
+# key: psql
+# --
+#+begin_src sql :results output :engine postgresql
+$1
+#+end_src

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: jira
+# key: jir
+# --
+** TODO ${1:$(jira-url-to-name)}
+   :jira: [[$1][${1:$(jira-url-to-name)}]]

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: remote_pry
+# key: rp
+# --
+binding.remote_pry

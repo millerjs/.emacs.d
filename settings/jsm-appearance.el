@@ -12,6 +12,24 @@
 (require 'indent-guide)
 
 ;; ======================================================================
+;; Adaptive Wrap
+
+(setq-default adaptive-wrap-extra-indent 2)
+(add-hook 'visual-line-mode-hook #'adaptive-wrap-prefix-mode)
+;; (global-visual-line-mode +1)
+
+;; ======================================================================
+;; Web Mode
+
+
+
+(eval-after-load 'web-mode
+  '(progn
+     (set-face-foreground 'web-mode-html-tag-bracket-face "color-238")
+     (set-face-foreground 'web-mode-html-attr-equal-face  "color-238")))
+
+
+;; ======================================================================
 ;; Org Mode
 
 (custom-set-faces
@@ -45,6 +63,21 @@
 (eval-after-load 'ripgrep-search-mode
   '(progn
      (set-face-foreground 'ripgrep-hit-face "ForestGreen")))
+
+;; Diff mode
+(eval-after-load 'diff-mode
+  '(progn
+     (set-face-background 'diff-added             nil)
+     (set-face-foreground 'diff-added             "green")
+     (set-face-background 'diff-removed           nil)
+     (set-face-foreground 'diff-removed           "red")
+     (set-face-background 'diff-file-header       nil)
+
+     (set-face-background 'diff-hunk-header       "color-235")
+     (set-face-background 'diff-function          "color-235")
+     (set-face-background 'diff-header            "color-234")
+     (set-face-background 'diff-refine-added      "color-234")
+  ))
 
 
 ;; ======================================================================
@@ -80,9 +113,9 @@
     (when matching-text (message matching-text))))
 
 (setq show-paren-delay .1)
-(set-face-background 'show-paren-match-face (face-background 'default))
-(set-face-foreground 'show-paren-match-face "blue")
-(set-face-attribute  'show-paren-match-face nil :weight 'extra-bold)
+(set-face-background 'show-paren-match (face-background 'default))
+(set-face-foreground 'show-paren-match "blue")
+(set-face-attribute  'show-paren-match nil :weight 'extra-bold)
 
 
 ;; =======================================================================
@@ -236,3 +269,14 @@
 
 (provide 'jsm-appearance)
 ;;; appearance.el ends here
+
+
+;; Compilation
+(setq compilation-scroll-output 'first-error)
+
+;; ======================================================================
+;; Delimiters
+
+(add-hook 'ruby-mode #'rainbow-delimiters-mode)
+(add-hook 'rust-mode #'rainbow-delimiters-mode)
+(add-hook 'javascript-mode #'rainbow-delimiters-mode)

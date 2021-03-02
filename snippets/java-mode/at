@@ -1,0 +1,10 @@
+# name : attribute property ... { ... }
+# key: at
+# --
+public ${1:Type} get${2:$(upcase-initials yas-text)}() {
+    return this.$2;
+}
+
+public void set${2:$(upcase-initials yas-text)}($1 value) {
+    this.$2 = value;
+}

@@ -1,0 +1,32 @@
+# -*- mode: web -*-
+# name: vue-component
+# key: vcomp
+# --
+
+<template>
+  <div>
+    <Component1 :arg1="example" />
+  </div>
+</template>
+
+<script>
+# import ReviewRequestTable from "../components/ReviewRequestTable";
+
+export default {
+  components: {},
+  props: {
+    prop1: {
+      type: String
+      default: 'prop1'
+    }
+  },
+  computed: {
+    example() {
+      return 0;
+    },
+  },
+};
+</script>
+
+<style scoped lang="scss">
+</style>

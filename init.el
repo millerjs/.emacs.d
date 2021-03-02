@@ -8,7 +8,7 @@
 
 ;;; Code:
 
-(package-initialize)
+;;(package-initialize)
 
 (setq inhibit-startup-message t)
 
@@ -19,6 +19,8 @@
 ;; Set up load path
 (add-to-list 'load-path site-lisp-dir)
 (add-to-list 'load-path settings-dir)
+
+(add-to-list 'load-path "~/.emacs_local.el")
 
 ;; Add external projects to load path
 (dolist (project (directory-files site-lisp-dir t "\\w+"))
@@ -36,13 +38,16 @@
 (defun init--install-packages ()
   (packages-install
    '(auto-complete
+     web-mode
+     emmet-mode
      browse-at-remote
+     atomic-chrome
      coffee-mode
      clean-buffers
      expand-region
      evil
-     flycheck
-     flycheck-pos-tip
+     ;; flycheck
+     ;; flycheck-pos-tip
      flx
      flx-ido
      indent-guide
@@ -101,6 +106,7 @@
 
 (menu-bar-mode              0)
 (global-smart-tab-mode      0)
+(add-hook 'after-init-hook 'global-company-mode)
 
 (setq server-use-tcp 0)
 
@@ -118,6 +124,7 @@
 (require 'jsm-variables)
 (require 'relative-jump)
 (require 'neotree)
+(require 'atomic-chrome)
 
 
 ;; =======================================================================
@@ -131,9 +138,11 @@
  '(coffee-args-compile (quote ("-c" "--no-header" "--bare")))
  '(coffee-indent-like-python-mode t)
  '(coffee-tab-width 2)
+ '(graphql-url "http://benchprep.localhost/api/graphql")
+ '(js-indent-level 2 t)
  '(package-selected-packages
    (quote
-    (terraform-mode vue-mode gist dockerfile-mode graphviz-dot-mode skewer-mode mmm-mode haskell-mode htmlize epresent itail evil sass-mode toml-mode toml magit-filenotify control-mode robe restclient flx-ido flx grizzl flymake-haml flymake-less flymake-sass scss-mode ido-vertical-mode ido-ubiquitous haml-mode projectile-ripgrep rg ripgrep ein neotree projectile rainbow-mode coffee-mode helm-gtags rtags cmake-ide pretty-symbols markdown-mode+ markdown-mode ac-racer racer yasnippet yaml-mode smartparens smart-tab s rust-mode popwin osx-clipboard magit linum-relative kill-ring-search jedi inline-crypt indent-guide flycheck-pos-tip expand-region))))
+    (graphql-mode nlinum command-log-mode flycheck-rust multi-web-mode rspec-mode rainbow-delimiters web-mode adaptive-wrap company flymake eglot lsp-ui lsp-java java-snippets gradle-mode dap-mode android-mode elixir-mode org-jira atomic-chrome edit-server gh gist kubernetes-tramp terraform-mode vue-mode dockerfile-mode graphviz-dot-mode skewer-mode mmm-mode haskell-mode htmlize epresent itail evil sass-mode toml-mode toml magit-filenotify control-mode robe restclient flx-ido flx grizzl flymake-haml flymake-less flymake-sass scss-mode ido-vertical-mode ido-ubiquitous haml-mode projectile-ripgrep rg ripgrep ein neotree projectile rainbow-mode coffee-mode helm-gtags rtags cmake-ide pretty-symbols markdown-mode+ markdown-mode ac-racer yasnippet yaml-mode smartparens smart-tab s popwin osx-clipboard magit linum-relative kill-ring-search jedi inline-crypt indent-guide flycheck-pos-tip expand-region))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -162,3 +171,8 @@
  '(whitespace-tab ((t (:foreground "grey" :background "color-233"))))
  '(whitespace-trailing ((t (:foreground "red" :background "color-234")))))
 (put 'narrow-to-region 'disabled nil)
+
+(setq jiralib-url "https://benchprep.atlassian.net")
+(require 'org-jira)
+
+(setq site-lisp-dir (expand-file-name "site-lisp" user-emacs-directory))

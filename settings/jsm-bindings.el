@@ -77,10 +77,10 @@
 
 (global-set-key (kbd "C-c v")       'browse-at-remote)
 (global-set-key (kbd "C-x f")       'jsm-find-file)
+(global-set-key (kbd "C-x C-f")     'ido-find-file)
 (global-set-key (kbd "C-x g")       'projectile-ripgrep)
 (global-set-key (kbd "C-x d")       'jsm-ruby-def-grep-goto)
 (global-set-key (kbd "C-c g")       'magit-status)
-(global-set-key (kbd "C-c n")       'neotree-toggle)
 (global-set-key (kbd "M-n")         'forward-paragraph)
 (global-set-key (kbd "M-p")         'backward-paragraph)
 (global-set-key (kbd "C-M-f")       'forward-midpoint)
@@ -121,8 +121,12 @@
 (global-set-key (kbd "<f7>")        'ispell-word)
 
 ;; Flycheck
-(global-set-key (kbd "C-c C-n")     'flycheck-next-error)
-(global-set-key (kbd "C-c C-l")     'flycheck-list-errors)
+(global-set-key (kbd "C-c C-n")     'flymake-goto-next-error)
+(global-set-key (kbd "C-c C-p")     'flymake-goto-prev-error)
+
+;; (global-set-key (kbd "C-c C-n")     'flycheck-next-error)
+;; (global-set-key (kbd "C-c C-l")     'flycheck-list-errors)
+
 (global-set-key (kbd "C-M-y")       'kill-ring-search)
 
 ;; Purpose
@@ -131,6 +135,16 @@
 ;; Yas
 (define-key yas-keymap (kbd "`")    'yas-next-field)
 (define-key yas-minor-mode-map (kbd "<backtab>") 'yas-expand)
+
+;; Company
+
+;; shell mode execute
+(defun company-active-map-define-keys ()
+  (define-key company-active-map (kbd "TAB")   'company-complete-selection)
+  (define-key company-active-map (kbd "M-TAB") 'company-complete-common))
+
+(add-hook 'shell-mode-hook 'company-active-map-define-keys)
+
 
 ;; ido
 (defun ido-define-keys ()
@@ -146,6 +160,12 @@
   (define-key rspec-compilation-mode-map (kbd "n") 'compilation-next-error)
   (define-key rspec-compilation-mode-map (kbd "p") 'compilation-previous-error))
 (add-hook 'rspec-compilation-mode-hook 'rspec-compilation-define-keys)
+
+;; compilation
+(defun compilation-define-keys ()
+  (define-key compilation-mode-map (kbd "n") 'compilation-next-error)
+  (define-key compilation-mode-map (kbd "p") 'compilation-previous-error))
+(add-hook 'compilation-mode-hook 'compilation-define-keys)
 
 
 ;; shell mode execute
@@ -169,11 +189,13 @@
 ;; =======================================================================
 ;; Binding overrides
 
+;; (define-key global-map (kbd "M-.") nil)
+
 (define-key override-mode-map (kbd "C-d")      'backward-kill-word)
+(define-key override-mode-map (kbd "C-M-h")    'backward-kill-word)
 (define-key override-mode-map (kbd "C-M-n")    'relative-jump-forward)
 (define-key override-mode-map (kbd "C-M-p")    'relative-jump-backward)
 (define-key override-mode-map (kbd "M-b")      'backward-word)
-(define-key override-mode-map (kbd "C-h")      'backward-delete-char)
 (define-key override-mode-map (kbd "C-c C-l")  'flycheck-list-errors)
 
 

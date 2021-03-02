@@ -18,6 +18,10 @@
 
 ;; CSS
 (setq css-indent-offset 2)
+(setq js-indent-level 2)
+(setq javascript-indent-level 2)
+
+
 
 ;; ======================================================================
 ;; Javascript
@@ -82,39 +86,68 @@ Repeated invocations toggle between the two most recently open buffers."
   (coffee-compile-region))
 
 
+;; ======================================================================
+;; Java / Android
+
+(defun jsm-gradle-compile (task)
+  (interactive)
+  (compile (concat "cd " (projectile-project-root) "; ./gradlew" " " task)))
+
+(defun jsm-gradle-task (task)
+  (interactive "sgradle task: ")
+  (jsm-gradle-compile task))
+
+(defun jsm-java-rg-definition ()
+  (interactive)
+  (projectile-ripgrep (concat "(public|private).*" (thing-at-point 'symbol))))
+
+
+(eval-after-load "android-mode"
+  '(progn
+     (define-key android-mode-map (kbd "C-c C-e") 'jsm-gradle-task)
+     (define-key android-mode-map (kbd "C-c e")   'recompile)
+     ;; (define-key android-mode-map (kbd "M-.")     'jsm-java-rg-definition)
+     ))
+
+(add-hook 'java-mode-hook 'flycheck-mode)
+(add-hook 'java-mode-hook #'lsp)
 
 ;; ======================================================================
 ;; Ruby
 
- ;; ruby-mode has keybinding [C-c C-s] for `inf-ruby'.
+(set-face-foreground 'font-lock-constant-face "color-21")
+(set-face-foreground 'font-lock-function-name-face "color-21")
+
+;; ruby-mode has keybinding [C-c C-s] for `inf-ruby'.
   ;; auto start robe `robe-start' after start `inf-ruby'.
   (defun my-robe-start ()
     (interactive)
     (unless robe-running
       (robe-start)))
 
-  (defadvice inf-ruby-console-auto (after inf-ruby-console-auto activate)
-    "Run `robe-start' after `inf-ruby-console-auto' started."
-    (my-robe-start))
+  ;; (defadvice inf-ruby-console-auto (after inf-ruby-console-auto activate)
+  ;;   "Run `robe-start' after `inf-ruby-console-auto' started."
+  ;;   (my-robe-start))
 
-  (with-eval-after-load 'projectile-rails
-    (define-key projectile-rails-mode-map
-      [remap inf-ruby] 'inf-ruby-console-auto))
+  ;; (with-eval-after-load 'projectile-rails
+  ;;   (define-key projectile-rails-mode-map
+  ;;     [remap inf-ruby] 'inf-ruby-console-auto))
 
-  (defadvice inf-ruby (after inf-ruby activate)
-    "Run `robe-start' after `inf-ruby' started."
-    (my-robe-start))
+  ;; (defadvice inf-ruby (after inf-ruby activate)
+  ;;   "Run `robe-start' after `inf-ruby' started."
+  ;;   (my-robe-start))
 
-  ;; (define-key enh-ruby-mode-map (kbd "C-c C-s") 'inf-ruby)
+  ;; ;; (define-key enh-ruby-mode-map (kbd "C-c C-s") 'inf-ruby)
 
-  ;; auto start robe process for completing
-  (defun my-robe-auto-start ()
-    (unless robe-running
-      (call-interactively 'inf-ruby)))
+  ;; ;; auto start robe process for completing
+  ;; (defun my-robe-auto-start ()
+  ;;   (unless robe-running
+  ;;     (call-interactively 'inf-ruby)))
 
 
 ;; Here doc syntax highlighting
 (require 'mmm-mode) ; install from melpa
+
 
 (eval-after-load 'mmm-mode
 '(progn
@@ -144,26 +177,41 @@ Repeated invocations toggle between the two most recently open buffers."
      :front "<<-?SQL_?.*\r?\n"
      :back "[ \t]*SQL_?.*"
      :face mmm-code-submode-face)))
- (mmm-add-mode-ext-class 'ruby-mode "\\.rb$" 'ruby-heredoc-sql)))
+  (mmm-add-mode-ext-class 'ruby-mode "\\.rb$" 'ruby-heredoc-sql)))
+
+(eval-after-load 'mmm-mode
+ '(progn
+  (mmm-add-classes
+  '((ruby-heredoc-graphql
+     :submode graphql-mode
+     :front "<<-?GRAPHQL_?.*\r?\n"
+     :back "[ \t]*GRAPHQL_?.*"
+     :face mmm-code-submode-face)))
+  (mmm-add-mode-ext-class 'ruby-mode "\\.rb$" 'ruby-heredoc-graphql)))
 
 ;; Robe
-;; (add-hook 'enh-ruby-mode-hook #'my-robe-auto-start)
-;; (add-hook 'ruby-mode-hook (lambda () (robe-mode) (robe-start) (mmm-mode)))
+(add-hook 'enh-ruby-mode-hook #'my-robe-auto-start)
 ;; (add-hook 'ruby-mode-hook 'my-robe-auto-start)
-(add-hook 'ruby-mode-hook 'rspec-mode)
-(add-hook 'ruby-mode-hook 'robe-mode)
+;; (add-hook 'robe-mode-hook 'ac-robe-setup)
+
+(add-hook 'enh-ruby-mode-hook #'rspec-mode)
+(add-hook 'enh-ruby-mode-hook #'rspec-install-snippets)
+
+;; (eval-after-load 'rspec-mode '(rspec-install-snippets))
+;; (eval-after-load 'ruby-mode '(rspec-mode t))
+;; (add-hook 'ruby-mode-hook '(progn (rspec-mode t)))
+;; (add-hook 'ruby-mode-hook 'robe-mode)
 ;; (add-hook 'ruby-mode-hook 'mmm-mode)
-(add-hook 'robe-mode-hook 'ac-robe-setup)
 
 
 ;; =======================================================================
 ;; Rust
 
 ;; (require 'rust-mode)
-(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
+;; (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
-(setq racer-cmd "racer")
-(setq racer-rust-src-path "~/src/rust/src")
+;; (setq racer-cmd "racer")
+;; (setq racer-rust-src-path "~/src/rust/src")
 
 ;; borrowed from
 ;; https://github.com/chrisbarrett/spacemacs-layers/blob/master/cb-yasnippet/funcs.el
@@ -189,36 +237,39 @@ The rest of the line must be blank."
   (s-matches? (rx bol (* space) (* word) (* space) eol)
               (buffer-substring (line-beginning-position) (line-end-position))))
 
-(add-hook
- 'rust-mode-hook
- '(lambda ()
-    ;; (rustfmt-enable-on-save)
 
-    ;; Setup autocompletion
-    (racer-mode)
-    (ac-racer-setup)
 
-    ;; Defintiion lookup
-    (local-set-key (kbd "M-.") 'racer-find-definition)
+(add-hook 'rust-mode-hook 'eglot-ensure)
 
-    ;; Don't autocomplete single quotes (it's annoying for lifetimes!)
-    (sp-pair "'" nil :actions :rem)
+(add-hook 'before-save-hook (lambda () (when (eq 'rust-mode major-mode)
+                                           (lsp-format-buffer))))
+;;     ;; (rustfmt-enable-on-save)
 
-    ;; Auto complete angle brackets
-    (sp-pair "<" ">")
+;;     ;; Setup autocompletion
+;;     (racer-mode)
+;;     (ac-racer-setup)
 
-    ;; Hook in racer with eldoc to provide documentation
-    (eldoc-mode)
-    (racer-turn-on-eldoc)
+;;     ;; Defintiion lookup
+;;     (local-set-key (kbd "M-.") 'racer-find-definition)
 
-    ;; Use flycheck-rust in rust-mode
-    (flycheck-rust-setup)
+;;     ;; Don't autocomplete single quotes (it's annoying for lifetimes!)
+;;     (sp-pair "'" nil :actions :rem)
 
-    ;; Use company-racer in rust mode
-    (set (make-local-variable 'company-backends) '(company-racer))
+;;     ;; Auto complete angle brackets
+;;     (sp-pair "<" ">")
 
-    ;; Key binding to jump to method definition
-    (local-set-key (kbd "M-.") #'racer-find-definition)))
+;;     ;; Hook in racer with eldoc to provide documentation
+;;     (eldoc-mode)
+;;     (racer-turn-on-eldoc)
+
+;;     ;; Use flycheck-rust in rust-mode
+;;     (flycheck-rust-setup)
+
+;;     ;; Use company-racer in rust mode
+;;     (set (make-local-variable 'company-backends) '(company-racer))
+
+;;     ;; Key binding to jump to method definition
+    ;;     (local-set-key (kbd "M-.") #'racer-find-definition))
 
 
 ;; =======================================================================
@@ -227,6 +278,16 @@ The rest of the line must be blank."
 (eval-after-load "emacs-lisp-mode"
   '(progn (sp-pair "'" nil :actions :rem)))
 
+(add-hook
+ 'org-mode-hook
+ '(lambda () (linum-mode 0)))
+
+
+(defconst org-jira-progress-issue-flow
+  '(("To Do" . "In Progress")
+    ("In Development" . "Ready For Review")
+    ("Code Review" . "Done")
+    ("Done" . "Reopen")))
 
 ;; =======================================================================
 ;; C/C++
@@ -255,7 +316,10 @@ The rest of the line must be blank."
 ;; Org
 
 (org-babel-do-load-languages
- 'org-babel-load-languages '((sql . t) (ruby . t)))
+ 'org-babel-load-languages
+ '((sql . t)
+   (ruby . t)
+   (shell . t)))
 
 (defun my/return-t (orig-fun &rest args) t)
 (defun my/disable-yornp (orig-fun &rest args)
@@ -279,6 +343,16 @@ The rest of the line must be blank."
 (setq org-log-done 0)
 
 
+(defun jsm/isearch-heading ()
+  (interactive)
+  (setq unread-command-events (listify-key-sequence "^*.*"))
+  (isearch-mode t t nil t))
+
+(defun org-mode-keys ()
+  (interactive)
+  (local-set-key (kbd "C-c s") 'jsm/isearch-heading))
+(add-hook 'org-mode-hook 'org-mode-keys)
+
 ;; ======================================================================
 ;; Other
 
@@ -294,6 +368,45 @@ The rest of the line must be blank."
 (add-to-list 'auto-mode-alist '("\\.par\\ '" . makefile-mode))
 (add-to-list 'auto-mode-alist '("\\.yml$"    . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.scss$"   . css-mode))
+(add-to-list 'auto-mode-alist '("\\.ejs\\'"  . web-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'"   . web-mode))
+(add-to-list 'auto-mode-alist '("\\.vue\\'"  . web-mode))
+
+
+;; ======================================================================
+;; Web mode
+
+(setq-default web-mode-script-padding 2)
+(setq-default web-mode-block-padding 2)
+(setq-default web-mode-part-padding 2)
+(setq-default web-mode-part-padding 2)
+
+(defun jsm-web-mode-hook ()
+  "Hooks for Web mode."
+  (setq web-mode-markup-indent-offset 2)
+  (setq indent-tabs-mode nil js-indent-level 2)
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq indent-tabs-mode nil)
+  (setq js-indent-level 2))
+
+(add-hook 'web-mode-hook  'jsm-web-mode-hook)
+
+;; (defun jsm-web-mode-hook ()
+;;   "Hooks for Web mode."
+;;   (setq web-mode-markup-indent-offset 2)
+;;   (emmet-mode t))
+
+;; (add-hook 'web-mode-hook 'jsm-web-mode-hook)
+;; (add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
+
+
+;; ======================================================================
+;; Atomic Chrome
+
+(setq atomic-chrome-url-major-mode-alist
+      '(("gist\\.github\\.com" . ruby-mode)))
 
 (provide 'jsm-languages)
 ;;; jsm-languages.el ends here

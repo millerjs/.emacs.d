@@ -70,10 +70,10 @@
 (setq ac-show-menu-immediately-on-auto-complete t)
 
 ;; Popup menu delay
-(setq jsm-ac-delay         1.0)
+(setq jsm-ac-delay         0.5)
 (setq ac-auto-show-menu    jsm-ac-delay)
 (setq ac-delay             jsm-ac-delay)
-(setq ac-quick-help-delay  (+ jsm-ac-delay 0.1))
+(setq ac-quick-help-delay  (+ jsm-ac-delay 0.3))
 (setq ac-persist-help      t)
 (setq ac-quick-help-height 10)
 (setq ac-menu-height       10)

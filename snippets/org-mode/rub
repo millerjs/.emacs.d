@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: ruby
+# key: rub
+# --
+#+BEGIN_SRC ruby :exports both
+  $2
+#+END_SRC
